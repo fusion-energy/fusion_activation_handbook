@@ -39,7 +39,7 @@ At this point the png files for each figure have been created in the figs folder
 ## 5. Produce the report in MarkDown
 
 ```bash
-python produce_markdown_report.py -nuc_data=ENDF/B8.0
+python produce_markdown_report.py
 ```
 This takes a report template and fills in details for the version of OpenMC used, nuclear data used in MarkDown format.
 
