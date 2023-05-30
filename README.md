@@ -31,7 +31,7 @@ download_nndc_chain -r b8.0
 
 ## 3. Run the simulation scripts and produce plots
 ```bash
-python simulate_irradiation.py --particles=10000 --batches=100
+python simulate_irradiation.py
 ```
 
 At this point the png files for each figure have been created in the figs folder
