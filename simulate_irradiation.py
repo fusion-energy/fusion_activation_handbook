@@ -20,8 +20,8 @@ import openmc_depletion_plotter
 Path.mkdir(Path('figs/atoms'), parents=True, exist_ok=True)
 Path.mkdir(Path('figs/activity'), parents=True, exist_ok=True)
 
-# loops through all the elements ignoring neutrons
 for element in elements:
+    print(f'element {element}')
 
     mats = openmc.Materials()
 
@@ -55,7 +55,7 @@ for element in elements:
     source = openmc.Source()
     source.space = openmc.stats.Point((0, 0, 0))
     source.angle = openmc.stats.Isotropic()
-    source.energy = openmc.stats.Discrete([14.06e6], [1]) # TODO allow different sources
+    source.energy = openmc.stats.Discrete([14.06e6], [1])  # TODO allow different sources
     source.particles = 'neutron'
 
     # Instantiate a Settings object
@@ -77,28 +77,33 @@ for element in elements:
         reduce_chain=True,  # reduced to only the isotopes present in depletable materials and their possible progeny
         reduce_chain_level=5,
     )
+    output_folder = Path(f'element') / element
+    operator.output_dir = output_folder
 
     # We define timesteps together with the source rate to make it clearer
     # TODO find fusion relevant time scales
     timesteps_and_source_rates = [
-        (24, 1e20),
-        (24, 0),
-        (24, 0),
-        (24, 0),
-        (24, 0),
-        (24, 0),
-        (24, 0),
-        (24, 0),
-        (24, 0),
-        (24, 0),
-        (24, 0),
-        (24, 0),
+        (1, 1e18),
+        (86400*2, 0),
+        (86400*2, 0),
+        (86400*2, 0),
+        (86400*2, 0),
+        (86400*2, 0),
+        (86400*2, 0),
+        (86400*2, 0),
+        (86400*2, 0),
+        (86400*2, 0),
+        (86400*2, 0),
+        (86400*2, 0),
+        (86400*2, 0),
+        (86400*2, 0),
+        (86400*2, 0),
+        (86400*2, 0),
     ]
 
     # Uses list Python comprehension to get the timesteps and source_rates separately
     timesteps = [item[0] for item in timesteps_and_source_rates]
     source_rates = [item[1] for item in timesteps_and_source_rates]
-
 
     # PredictorIntegrator has been selected as the depletion operator for this example as it is a fast first order Integrator
     # OpenMC offers several time-integration algorithms https://docs.openmc.org/en/stable/pythonapi/deplete.html#primary-api\n",
@@ -106,16 +111,26 @@ for element in elements:
     integrator = openmc.deplete.PredictorIntegrator(
         operator=operator,
         timesteps=timesteps,
-        source_rates=source_rates
+        source_rates=source_rates,
+        timestep_units='s'
     )
 
     integrator.integrate()
 
-    results = openmc.deplete.ResultsList.from_hdf5("depletion_results.h5")
+    results = openmc.deplete.ResultsList.from_hdf5(output_folder/"depletion_results.h5")
 
-    atoms_fig = results.plot_atoms_vs_time(excluded_material=my_material, plotting_backend='matplotlib')
+    atoms_fig = results.plot_atoms_vs_time(
+        excluded_material=my_material,
+        plotting_backend='matplotlib',
+        title=f'Atoms produced by {element} irradiation'
+    )
     atoms_fig.savefig(f'figs/atoms/element_{element}.png')
-    activity_fig = results.plot_activity_vs_time(excluded_material=my_material, plotting_backend='matplotlib')
+
+    activity_fig = results.plot_activity_vs_time(
+        excluded_material=my_material,
+        plotting_backend='matplotlib',
+        title=f'Activity produced by {element} irradiation'
+    )
     activity_fig.savefig(f'figs/activity/element_{element}.png')
 
     # TODO plots dose
