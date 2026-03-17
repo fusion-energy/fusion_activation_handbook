@@ -3,6 +3,8 @@
 Systematic activation screening of elements (Z=1–83) under DT fusion
 first-wall irradiation using OpenMC's transport-free material depletion.
 
+See the full write-up in the [report (PDF)](report.pdf).
+
 ## Prerequisites
 
 - Python 3.10+
