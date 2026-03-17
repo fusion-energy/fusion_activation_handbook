@@ -1,959 +1,1236 @@
-<!doctype html>
-<html lang="en-US">
-
-<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-	<meta name="theme-color" content="#0b0c0c">
-
-	<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
-
-	<!-- This site is optimized with the Yoast SEO plugin v27.0 - https://yoast.com/product/yoast-seo-wordpress/ -->
-	<title>FISPACT-II | UKAEA Fusion Energy</title>
-	<meta name="description" content="FISPACT-II is advanced nuclear simulation software providing predictive, spectral and temporal simulation methods using comprehensive nuclear data libraries." />
-	<link rel="canonical" href="https://www.ukaea.org/service/fispact/" />
-	<meta property="og:locale" content="en_US" />
-	<meta property="og:type" content="article" />
-	<meta property="og:title" content="FISPACT-II | UKAEA Fusion Energy" />
-	<meta property="og:description" content="FISPACT-II is advanced nuclear simulation software providing predictive, spectral and temporal simulation methods using comprehensive nuclear data libraries." />
-	<meta property="og:url" content="https://www.ukaea.org/service/fispact/" />
-	<meta property="og:site_name" content="UKAEA Fusion Energy" />
-	<meta property="article:publisher" content="https://www.facebook.com/UKAEAofficial/" />
-	<meta property="article:modified_time" content="2026-02-11T14:33:22+00:00" />
-	<meta property="og:image" content="https://www.ukaea.org/wp-content/uploads/2025/09/uk-atomic-energy-authority-logo-og.png" />
-	<meta property="og:image:width" content="1200" />
-	<meta property="og:image:height" content="675" />
-	<meta property="og:image:type" content="image/png" />
-	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:site" content="@UKAEAofficial" />
-	<meta name="twitter:label1" content="Est. reading time" />
-	<meta name="twitter:data1" content="4 minutes" />
-	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":["WebPage","ItemPage"],"@id":"https://www.ukaea.org/service/fispact/","url":"https://www.ukaea.org/service/fispact/","name":"FISPACT-II | UKAEA Fusion Energy","isPartOf":{"@id":"https://www.ukaea.org/#website"},"datePublished":"2025-08-18T13:38:55+00:00","dateModified":"2026-02-11T14:33:22+00:00","description":"FISPACT-II is advanced nuclear simulation software providing predictive, spectral and temporal simulation methods using comprehensive nuclear data libraries.","breadcrumb":{"@id":"https://www.ukaea.org/service/fispact/#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://www.ukaea.org/service/fispact/"]}]},{"@type":"BreadcrumbList","@id":"https://www.ukaea.org/service/fispact/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.ukaea.org/"},{"@type":"ListItem","position":2,"name":"FISPACT-II"}]},{"@type":"WebSite","@id":"https://www.ukaea.org/#website","url":"https://www.ukaea.org/","name":"UKAEA Fusion Energy","description":"","publisher":{"@id":"https://www.ukaea.org/#organization"},"alternateName":"UKAEA","potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://www.ukaea.org/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"en-US"},{"@type":"Organization","@id":"https://www.ukaea.org/#organization","name":"UKAEA Fusion Energy","alternateName":"UKAEA","url":"https://www.ukaea.org/","logo":{"@type":"ImageObject","inLanguage":"en-US","@id":"https://www.ukaea.org/#/schema/logo/image/","url":"https://www.ukaea.org/wp-content/uploads/2025/08/uk-atomic-energy-authority-logo.jpg","contentUrl":"https://www.ukaea.org/wp-content/uploads/2025/08/uk-atomic-energy-authority-logo.jpg","width":696,"height":696,"caption":"UKAEA Fusion Energy"},"image":{"@id":"https://www.ukaea.org/#/schema/logo/image/"},"sameAs":["https://www.facebook.com/UKAEAofficial/","https://x.com/UKAEAofficial","https://www.linkedin.com/company/ukaeaofficial/posts/?feedView=all","https://www.instagram.com/UKAEAofficial/","https://www.youtube.com/channel/UCyb9vG8oLE4XvZZLYpcDcFw","https://www.threads.com/@ukaeaofficial/post/DITQWQaiwRU"]}]}</script>
-	<!-- / Yoast SEO plugin. -->
-
-
-<link rel='dns-prefetch' href='//cc.cdn.civiccomputing.com' />
-<style id='wp-img-auto-sizes-contain-inline-css' type='text/css'>
-img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
-/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
-</style>
-<link rel='stylesheet' id='wp-block-library-css' href='https://www.ukaea.org/wp-includes/css/dist/block-library/style.min.css?ver=6.9.4' type='text/css' media='all' />
-
-<style id='wp-block-button-inline-css' type='text/css'>
-.wp-block-button__link{align-content:center;box-sizing:border-box;cursor:pointer;display:inline-block;height:100%;text-align:center;word-break:break-word}.wp-block-button__link.aligncenter{text-align:center}.wp-block-button__link.alignright{text-align:right}:where(.wp-block-button__link){border-radius:9999px;box-shadow:none;padding:calc(.667em + 2px) calc(1.333em + 2px);text-decoration:none}.wp-block-button[style*=text-decoration] .wp-block-button__link{text-decoration:inherit}.wp-block-buttons>.wp-block-button.has-custom-width{max-width:none}.wp-block-buttons>.wp-block-button.has-custom-width .wp-block-button__link{width:100%}.wp-block-buttons>.wp-block-button.has-custom-font-size .wp-block-button__link{font-size:inherit}.wp-block-buttons>.wp-block-button.wp-block-button__width-25{width:calc(25% - var(--wp--style--block-gap, .5em)*.75)}.wp-block-buttons>.wp-block-button.wp-block-button__width-50{width:calc(50% - var(--wp--style--block-gap, .5em)*.5)}.wp-block-buttons>.wp-block-button.wp-block-button__width-75{width:calc(75% - var(--wp--style--block-gap, .5em)*.25)}.wp-block-buttons>.wp-block-button.wp-block-button__width-100{flex-basis:100%;width:100%}.wp-block-buttons.is-vertical>.wp-block-button.wp-block-button__width-25{width:25%}.wp-block-buttons.is-vertical>.wp-block-button.wp-block-button__width-50{width:50%}.wp-block-buttons.is-vertical>.wp-block-button.wp-block-button__width-75{width:75%}.wp-block-button.is-style-squared,.wp-block-button__link.wp-block-button.is-style-squared{border-radius:0}.wp-block-button.no-border-radius,.wp-block-button__link.no-border-radius{border-radius:0!important}:root :where(.wp-block-button .wp-block-button__link.is-style-outline),:root :where(.wp-block-button.is-style-outline>.wp-block-button__link){border:2px solid;padding:.667em 1.333em}:root :where(.wp-block-button .wp-block-button__link.is-style-outline:not(.has-text-color)),:root :where(.wp-block-button.is-style-outline>.wp-block-button__link:not(.has-text-color)){color:currentColor}:root :where(.wp-block-button .wp-block-button__link.is-style-outline:not(.has-background)),:root :where(.wp-block-button.is-style-outline>.wp-block-button__link:not(.has-background)){background-color:initial;background-image:none}
-/*# sourceURL=https://www.ukaea.org/wp-includes/blocks/button/style.min.css */
-</style>
-<style id='wp-block-heading-inline-css' type='text/css'>
-h1:where(.wp-block-heading).has-background,h2:where(.wp-block-heading).has-background,h3:where(.wp-block-heading).has-background,h4:where(.wp-block-heading).has-background,h5:where(.wp-block-heading).has-background,h6:where(.wp-block-heading).has-background{padding:1.25em 2.375em}h1.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h1.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h2.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h2.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h3.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h3.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h4.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h4.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h5.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h5.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]),h6.has-text-align-left[style*=writing-mode]:where([style*=vertical-lr]),h6.has-text-align-right[style*=writing-mode]:where([style*=vertical-rl]){rotate:180deg}
-/*# sourceURL=https://www.ukaea.org/wp-includes/blocks/heading/style.min.css */
-</style>
-<style id='wp-block-image-inline-css' type='text/css'>
-.wp-block-image>a,.wp-block-image>figure>a{display:inline-block}.wp-block-image img{box-sizing:border-box;height:auto;max-width:100%;vertical-align:bottom}@media not (prefers-reduced-motion){.wp-block-image img.hide{visibility:hidden}.wp-block-image img.show{animation:show-content-image .4s}}.wp-block-image[style*=border-radius] img,.wp-block-image[style*=border-radius]>a{border-radius:inherit}.wp-block-image.has-custom-border img{box-sizing:border-box}.wp-block-image.aligncenter{text-align:center}.wp-block-image.alignfull>a,.wp-block-image.alignwide>a{width:100%}.wp-block-image.alignfull img,.wp-block-image.alignwide img{height:auto;width:100%}.wp-block-image .aligncenter,.wp-block-image .alignleft,.wp-block-image .alignright,.wp-block-image.aligncenter,.wp-block-image.alignleft,.wp-block-image.alignright{display:table}.wp-block-image .aligncenter>figcaption,.wp-block-image .alignleft>figcaption,.wp-block-image .alignright>figcaption,.wp-block-image.aligncenter>figcaption,.wp-block-image.alignleft>figcaption,.wp-block-image.alignright>figcaption{caption-side:bottom;display:table-caption}.wp-block-image .alignleft{float:left;margin:.5em 1em .5em 0}.wp-block-image .alignright{float:right;margin:.5em 0 .5em 1em}.wp-block-image .aligncenter{margin-left:auto;margin-right:auto}.wp-block-image :where(figcaption){margin-bottom:1em;margin-top:.5em}.wp-block-image.is-style-circle-mask img{border-radius:9999px}@supports ((-webkit-mask-image:none) or (mask-image:none)) or (-webkit-mask-image:none){.wp-block-image.is-style-circle-mask img{border-radius:0;-webkit-mask-image:url('data:image/svg+xml;utf8,<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="50"/></svg>');mask-image:url('data:image/svg+xml;utf8,<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><circle cx="50" cy="50" r="50"/></svg>');mask-mode:alpha;-webkit-mask-position:center;mask-position:center;-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat;-webkit-mask-size:contain;mask-size:contain}}:root :where(.wp-block-image.is-style-rounded img,.wp-block-image .is-style-rounded img){border-radius:9999px}.wp-block-image figure{margin:0}.wp-lightbox-container{display:flex;flex-direction:column;position:relative}.wp-lightbox-container img{cursor:zoom-in}.wp-lightbox-container img:hover+button{opacity:1}.wp-lightbox-container button{align-items:center;backdrop-filter:blur(16px) saturate(180%);background-color:#5a5a5a40;border:none;border-radius:4px;cursor:zoom-in;display:flex;height:20px;justify-content:center;opacity:0;padding:0;position:absolute;right:16px;text-align:center;top:16px;width:20px;z-index:100}@media not (prefers-reduced-motion){.wp-lightbox-container button{transition:opacity .2s ease}}.wp-lightbox-container button:focus-visible{outline:3px auto #5a5a5a40;outline:3px auto -webkit-focus-ring-color;outline-offset:3px}.wp-lightbox-container button:hover{cursor:pointer;opacity:1}.wp-lightbox-container button:focus{opacity:1}.wp-lightbox-container button:focus,.wp-lightbox-container button:hover,.wp-lightbox-container button:not(:hover):not(:active):not(.has-background){background-color:#5a5a5a40;border:none}.wp-lightbox-overlay{box-sizing:border-box;cursor:zoom-out;height:100vh;left:0;overflow:hidden;position:fixed;top:0;visibility:hidden;width:100%;z-index:100000}.wp-lightbox-overlay .close-button{align-items:center;cursor:pointer;display:flex;justify-content:center;min-height:40px;min-width:40px;padding:0;position:absolute;right:calc(env(safe-area-inset-right) + 16px);top:calc(env(safe-area-inset-top) + 16px);z-index:5000000}.wp-lightbox-overlay .close-button:focus,.wp-lightbox-overlay .close-button:hover,.wp-lightbox-overlay .close-button:not(:hover):not(:active):not(.has-background){background:none;border:none}.wp-lightbox-overlay .lightbox-image-container{height:var(--wp--lightbox-container-height);left:50%;overflow:hidden;position:absolute;top:50%;transform:translate(-50%,-50%);transform-origin:top left;width:var(--wp--lightbox-container-width);z-index:9999999999}.wp-lightbox-overlay .wp-block-image{align-items:center;box-sizing:border-box;display:flex;height:100%;justify-content:center;margin:0;position:relative;transform-origin:0 0;width:100%;z-index:3000000}.wp-lightbox-overlay .wp-block-image img{height:var(--wp--lightbox-image-height);min-height:var(--wp--lightbox-image-height);min-width:var(--wp--lightbox-image-width);width:var(--wp--lightbox-image-width)}.wp-lightbox-overlay .wp-block-image figcaption{display:none}.wp-lightbox-overlay button{background:none;border:none}.wp-lightbox-overlay .scrim{background-color:#fff;height:100%;opacity:.9;position:absolute;width:100%;z-index:2000000}.wp-lightbox-overlay.active{visibility:visible}@media not (prefers-reduced-motion){.wp-lightbox-overlay.active{animation:turn-on-visibility .25s both}.wp-lightbox-overlay.active img{animation:turn-on-visibility .35s both}.wp-lightbox-overlay.show-closing-animation:not(.active){animation:turn-off-visibility .35s both}.wp-lightbox-overlay.show-closing-animation:not(.active) img{animation:turn-off-visibility .25s both}.wp-lightbox-overlay.zoom.active{animation:none;opacity:1;visibility:visible}.wp-lightbox-overlay.zoom.active .lightbox-image-container{animation:lightbox-zoom-in .4s}.wp-lightbox-overlay.zoom.active .lightbox-image-container img{animation:none}.wp-lightbox-overlay.zoom.active .scrim{animation:turn-on-visibility .4s forwards}.wp-lightbox-overlay.zoom.show-closing-animation:not(.active){animation:none}.wp-lightbox-overlay.zoom.show-closing-animation:not(.active) .lightbox-image-container{animation:lightbox-zoom-out .4s}.wp-lightbox-overlay.zoom.show-closing-animation:not(.active) .lightbox-image-container img{animation:none}.wp-lightbox-overlay.zoom.show-closing-animation:not(.active) .scrim{animation:turn-off-visibility .4s forwards}}@keyframes show-content-image{0%{visibility:hidden}99%{visibility:hidden}to{visibility:visible}}@keyframes turn-on-visibility{0%{opacity:0}to{opacity:1}}@keyframes turn-off-visibility{0%{opacity:1;visibility:visible}99%{opacity:0;visibility:visible}to{opacity:0;visibility:hidden}}@keyframes lightbox-zoom-in{0%{transform:translate(calc((-100vw + var(--wp--lightbox-scrollbar-width))/2 + var(--wp--lightbox-initial-left-position)),calc(-50vh + var(--wp--lightbox-initial-top-position))) scale(var(--wp--lightbox-scale))}to{transform:translate(-50%,-50%) scale(1)}}@keyframes lightbox-zoom-out{0%{transform:translate(-50%,-50%) scale(1);visibility:visible}99%{visibility:visible}to{transform:translate(calc((-100vw + var(--wp--lightbox-scrollbar-width))/2 + var(--wp--lightbox-initial-left-position)),calc(-50vh + var(--wp--lightbox-initial-top-position))) scale(var(--wp--lightbox-scale));visibility:hidden}}
-/*# sourceURL=https://www.ukaea.org/wp-includes/blocks/image/style.min.css */
-</style>
-<style id='wp-block-list-inline-css' type='text/css'>
-ol,ul{box-sizing:border-box}:root :where(.wp-block-list.has-background){padding:1.25em 2.375em}
-/*# sourceURL=https://www.ukaea.org/wp-includes/blocks/list/style.min.css */
-</style>
-<style id='wp-block-buttons-inline-css' type='text/css'>
-.wp-block-buttons{box-sizing:border-box}.wp-block-buttons.is-vertical{flex-direction:column}.wp-block-buttons.is-vertical>.wp-block-button:last-child{margin-bottom:0}.wp-block-buttons>.wp-block-button{display:inline-block;margin:0}.wp-block-buttons.is-content-justification-left{justify-content:flex-start}.wp-block-buttons.is-content-justification-left.is-vertical{align-items:flex-start}.wp-block-buttons.is-content-justification-center{justify-content:center}.wp-block-buttons.is-content-justification-center.is-vertical{align-items:center}.wp-block-buttons.is-content-justification-right{justify-content:flex-end}.wp-block-buttons.is-content-justification-right.is-vertical{align-items:flex-end}.wp-block-buttons.is-content-justification-space-between{justify-content:space-between}.wp-block-buttons.aligncenter{text-align:center}.wp-block-buttons:not(.is-content-justification-space-between,.is-content-justification-right,.is-content-justification-left,.is-content-justification-center) .wp-block-button.aligncenter{margin-left:auto;margin-right:auto;width:100%}.wp-block-buttons[style*=text-decoration] .wp-block-button,.wp-block-buttons[style*=text-decoration] .wp-block-button__link{text-decoration:inherit}.wp-block-buttons.has-custom-font-size .wp-block-button__link{font-size:inherit}.wp-block-buttons .wp-block-button__link{width:100%}.wp-block-button.aligncenter{text-align:center}
-/*# sourceURL=https://www.ukaea.org/wp-includes/blocks/buttons/style.min.css */
-</style>
-<style id='wp-block-paragraph-inline-css' type='text/css'>
-.is-small-text{font-size:.875em}.is-regular-text{font-size:1em}.is-large-text{font-size:2.25em}.is-larger-text{font-size:3em}.has-drop-cap:not(:focus):first-letter{float:left;font-size:8.4em;font-style:normal;font-weight:100;line-height:.68;margin:.05em .1em 0 0;text-transform:uppercase}body.rtl .has-drop-cap:not(:focus):first-letter{float:none;margin-left:.1em}p.has-drop-cap.has-background{overflow:hidden}:root :where(p.has-background){padding:1.25em 2.375em}:where(p.has-text-color:not(.has-link-color)) a{color:inherit}p.has-text-align-left[style*="writing-mode:vertical-lr"],p.has-text-align-right[style*="writing-mode:vertical-rl"]{rotate:180deg}
-/*# sourceURL=https://www.ukaea.org/wp-includes/blocks/paragraph/style.min.css */
-</style>
-<style id='wp-block-social-links-inline-css' type='text/css'>
-.wp-block-social-links{background:none;box-sizing:border-box;margin-left:0;padding-left:0;padding-right:0;text-indent:0}.wp-block-social-links .wp-social-link a,.wp-block-social-links .wp-social-link a:hover{border-bottom:0;box-shadow:none;text-decoration:none}.wp-block-social-links .wp-social-link svg{height:1em;width:1em}.wp-block-social-links .wp-social-link span:not(.screen-reader-text){font-size:.65em;margin-left:.5em;margin-right:.5em}.wp-block-social-links.has-small-icon-size{font-size:16px}.wp-block-social-links,.wp-block-social-links.has-normal-icon-size{font-size:24px}.wp-block-social-links.has-large-icon-size{font-size:36px}.wp-block-social-links.has-huge-icon-size{font-size:48px}.wp-block-social-links.aligncenter{display:flex;justify-content:center}.wp-block-social-links.alignright{justify-content:flex-end}.wp-block-social-link{border-radius:9999px;display:block}@media not (prefers-reduced-motion){.wp-block-social-link{transition:transform .1s ease}}.wp-block-social-link{height:auto}.wp-block-social-link a{align-items:center;display:flex;line-height:0}.wp-block-social-link:hover{transform:scale(1.1)}.wp-block-social-links .wp-block-social-link.wp-social-link{display:inline-block;margin:0;padding:0}.wp-block-social-links .wp-block-social-link.wp-social-link .wp-block-social-link-anchor,.wp-block-social-links .wp-block-social-link.wp-social-link .wp-block-social-link-anchor svg,.wp-block-social-links .wp-block-social-link.wp-social-link .wp-block-social-link-anchor:active,.wp-block-social-links .wp-block-social-link.wp-social-link .wp-block-social-link-anchor:hover,.wp-block-social-links .wp-block-social-link.wp-social-link .wp-block-social-link-anchor:visited{color:currentColor;fill:currentColor}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link{background-color:#f0f0f0;color:#444}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-amazon{background-color:#f90;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-bandcamp{background-color:#1ea0c3;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-behance{background-color:#0757fe;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-bluesky{background-color:#0a7aff;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-codepen{background-color:#1e1f26;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-deviantart{background-color:#02e49b;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-discord{background-color:#5865f2;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-dribbble{background-color:#e94c89;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-dropbox{background-color:#4280ff;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-etsy{background-color:#f45800;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-facebook{background-color:#0866ff;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-fivehundredpx{background-color:#000;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-flickr{background-color:#0461dd;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-foursquare{background-color:#e65678;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-github{background-color:#24292d;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-goodreads{background-color:#eceadd;color:#382110}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-google{background-color:#ea4434;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-gravatar{background-color:#1d4fc4;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-instagram{background-color:#f00075;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-lastfm{background-color:#e21b24;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-linkedin{background-color:#0d66c2;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-mastodon{background-color:#3288d4;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-medium{background-color:#000;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-meetup{background-color:#f6405f;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-patreon{background-color:#000;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-pinterest{background-color:#e60122;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-pocket{background-color:#ef4155;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-reddit{background-color:#ff4500;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-skype{background-color:#0478d7;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-snapchat{background-color:#fefc00;color:#fff;stroke:#000}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-soundcloud{background-color:#ff5600;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-spotify{background-color:#1bd760;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-telegram{background-color:#2aabee;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-threads{background-color:#000;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-tiktok{background-color:#000;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-tumblr{background-color:#011835;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-twitch{background-color:#6440a4;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-twitter{background-color:#1da1f2;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-vimeo{background-color:#1eb7ea;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-vk{background-color:#4680c2;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-wordpress{background-color:#3499cd;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-whatsapp{background-color:#25d366;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-x{background-color:#000;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-yelp{background-color:#d32422;color:#fff}:where(.wp-block-social-links:not(.is-style-logos-only)) .wp-social-link-youtube{background-color:red;color:#fff}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link{background:none}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link svg{height:1.25em;width:1.25em}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-amazon{color:#f90}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-bandcamp{color:#1ea0c3}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-behance{color:#0757fe}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-bluesky{color:#0a7aff}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-codepen{color:#1e1f26}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-deviantart{color:#02e49b}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-discord{color:#5865f2}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-dribbble{color:#e94c89}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-dropbox{color:#4280ff}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-etsy{color:#f45800}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-facebook{color:#0866ff}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-fivehundredpx{color:#000}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-flickr{color:#0461dd}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-foursquare{color:#e65678}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-github{color:#24292d}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-goodreads{color:#382110}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-google{color:#ea4434}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-gravatar{color:#1d4fc4}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-instagram{color:#f00075}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-lastfm{color:#e21b24}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-linkedin{color:#0d66c2}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-mastodon{color:#3288d4}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-medium{color:#000}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-meetup{color:#f6405f}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-patreon{color:#000}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-pinterest{color:#e60122}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-pocket{color:#ef4155}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-reddit{color:#ff4500}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-skype{color:#0478d7}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-snapchat{color:#fff;stroke:#000}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-soundcloud{color:#ff5600}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-spotify{color:#1bd760}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-telegram{color:#2aabee}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-threads{color:#000}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-tiktok{color:#000}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-tumblr{color:#011835}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-twitch{color:#6440a4}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-twitter{color:#1da1f2}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-vimeo{color:#1eb7ea}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-vk{color:#4680c2}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-whatsapp{color:#25d366}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-wordpress{color:#3499cd}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-x{color:#000}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-yelp{color:#d32422}:where(.wp-block-social-links.is-style-logos-only) .wp-social-link-youtube{color:red}.wp-block-social-links.is-style-pill-shape .wp-social-link{width:auto}:root :where(.wp-block-social-links .wp-social-link a){padding:.25em}:root :where(.wp-block-social-links.is-style-logos-only .wp-social-link a){padding:0}:root :where(.wp-block-social-links.is-style-pill-shape .wp-social-link a){padding-left:.6666666667em;padding-right:.6666666667em}.wp-block-social-links:not(.has-icon-color):not(.has-icon-background-color) .wp-social-link-snapchat .wp-block-social-link-label{color:#000}
-/*# sourceURL=https://www.ukaea.org/wp-includes/blocks/social-links/style.min.css */
-</style>
-<style id='wp-block-table-inline-css' type='text/css'>
-.wp-block-table{overflow-x:auto}.wp-block-table table{border-collapse:collapse;width:100%}.wp-block-table thead{border-bottom:3px solid}.wp-block-table tfoot{border-top:3px solid}.wp-block-table td,.wp-block-table th{border:1px solid;padding:.5em}.wp-block-table .has-fixed-layout{table-layout:fixed;width:100%}.wp-block-table .has-fixed-layout td,.wp-block-table .has-fixed-layout th{word-break:break-word}.wp-block-table.aligncenter,.wp-block-table.alignleft,.wp-block-table.alignright{display:table;width:auto}.wp-block-table.aligncenter td,.wp-block-table.aligncenter th,.wp-block-table.alignleft td,.wp-block-table.alignleft th,.wp-block-table.alignright td,.wp-block-table.alignright th{word-break:break-word}.wp-block-table .has-subtle-light-gray-background-color{background-color:#f3f4f5}.wp-block-table .has-subtle-pale-green-background-color{background-color:#e9fbe5}.wp-block-table .has-subtle-pale-blue-background-color{background-color:#e7f5fe}.wp-block-table .has-subtle-pale-pink-background-color{background-color:#fcf0ef}.wp-block-table.is-style-stripes{background-color:initial;border-collapse:inherit;border-spacing:0}.wp-block-table.is-style-stripes tbody tr:nth-child(odd){background-color:#f0f0f0}.wp-block-table.is-style-stripes.has-subtle-light-gray-background-color tbody tr:nth-child(odd){background-color:#f3f4f5}.wp-block-table.is-style-stripes.has-subtle-pale-green-background-color tbody tr:nth-child(odd){background-color:#e9fbe5}.wp-block-table.is-style-stripes.has-subtle-pale-blue-background-color tbody tr:nth-child(odd){background-color:#e7f5fe}.wp-block-table.is-style-stripes.has-subtle-pale-pink-background-color tbody tr:nth-child(odd){background-color:#fcf0ef}.wp-block-table.is-style-stripes td,.wp-block-table.is-style-stripes th{border-color:#0000}.wp-block-table.is-style-stripes{border-bottom:1px solid #f0f0f0}.wp-block-table .has-border-color td,.wp-block-table .has-border-color th,.wp-block-table .has-border-color tr,.wp-block-table .has-border-color>*{border-color:inherit}.wp-block-table table[style*=border-top-color] tr:first-child,.wp-block-table table[style*=border-top-color] tr:first-child td,.wp-block-table table[style*=border-top-color] tr:first-child th,.wp-block-table table[style*=border-top-color]>*,.wp-block-table table[style*=border-top-color]>* td,.wp-block-table table[style*=border-top-color]>* th{border-top-color:inherit}.wp-block-table table[style*=border-top-color] tr:not(:first-child){border-top-color:initial}.wp-block-table table[style*=border-right-color] td:last-child,.wp-block-table table[style*=border-right-color] th,.wp-block-table table[style*=border-right-color] tr,.wp-block-table table[style*=border-right-color]>*{border-right-color:inherit}.wp-block-table table[style*=border-bottom-color] tr:last-child,.wp-block-table table[style*=border-bottom-color] tr:last-child td,.wp-block-table table[style*=border-bottom-color] tr:last-child th,.wp-block-table table[style*=border-bottom-color]>*,.wp-block-table table[style*=border-bottom-color]>* td,.wp-block-table table[style*=border-bottom-color]>* th{border-bottom-color:inherit}.wp-block-table table[style*=border-bottom-color] tr:not(:last-child){border-bottom-color:initial}.wp-block-table table[style*=border-left-color] td:first-child,.wp-block-table table[style*=border-left-color] th,.wp-block-table table[style*=border-left-color] tr,.wp-block-table table[style*=border-left-color]>*{border-left-color:inherit}.wp-block-table table[style*=border-style] td,.wp-block-table table[style*=border-style] th,.wp-block-table table[style*=border-style] tr,.wp-block-table table[style*=border-style]>*{border-style:inherit}.wp-block-table table[style*=border-width] td,.wp-block-table table[style*=border-width] th,.wp-block-table table[style*=border-width] tr,.wp-block-table table[style*=border-width]>*{border-style:inherit;border-width:inherit}
-/*# sourceURL=https://www.ukaea.org/wp-includes/blocks/table/style.min.css */
-</style>
-
-<link rel='stylesheet' id='ukaea-key-figures-editor-style-css' href='https://www.ukaea.org/wp-content/plugins/ukaea-key-figures/build/style-index.css?ver=6.9.4' type='text/css' media='all' />
-<link rel='stylesheet' id='gpc-card-style-css' href='https://www.ukaea.org/wp-content/plugins/dxw-govpress-components/assets/css/card.css?ver=6.9.4' type='text/css' media='all' />
-<style id='global-styles-inline-css' type='text/css'>
-:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--color--ukaea-jet-blue: #0a1a5c;--wp--preset--color--ukaea-plasma-teal: #86d2da;--wp--preset--color--ukaea-black: #000000;--wp--preset--color--ukaea-white: #ffffff;--wp--preset--color--ukaea-jet-blue-light: #2B3F78;--wp--preset--color--ukaea-jet-blue-subtle: #F2F4FD;--wp--preset--color--ukaea-jet-blue-darker: #091542;--wp--preset--color--ukaea-plasma-teal-light: #B1DCE3;--wp--preset--color--ukaea-plasma-teal-lighter: #C5E5EA;--wp--preset--color--ukaea-plasma-teal-subtle: #F8FCFD;--wp--preset--color--ukaea-plasma-teal-100: #EEF8F9;--wp--preset--color--ukaea-grey-800: #3C404F;--wp--preset--color--ukaea-grey-400: #9498AA;--wp--preset--color--ukaea-grey-200: #D8D9E0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--gradient--ukaea-primary: linear-gradient(.25turn, #0a1a5c, #86d2da);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--font-size--16: 1rem;--wp--preset--font-size--19: 1.1875rem;--wp--preset--font-size--24: clamp(1.3125rem, (100vw - 40rem) * 1000, 1.5rem);--wp--preset--font-size--36: clamp(1.6875rem, (100vw - 40rem) * 1000, 2.25rem);--wp--preset--font-size--48: clamp(2rem, (100vw - 40rem) * 1000, 3rem);--wp--preset--font-family--instrument: 'Instrument Sans', sans-serif;--wp--preset--font-family--system-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, Arial, sans-serif;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--spacing--1: 0.3125rem;--wp--preset--spacing--2: 0.625rem;--wp--preset--spacing--3: 0.9375rem;--wp--preset--spacing--4: clamp(0.9375rem, (100vw - 40rem) * 1000, 1.25rem);--wp--preset--spacing--5: clamp(0.9375rem, (100vw - 40rem) * 1000, 1.5625rem);--wp--preset--spacing--6: clamp(1.25rem, (100vw - 40rem) * 1000, 1.875rem);--wp--preset--spacing--7: clamp(1.5625rem, (100vw - 40rem) * 1000, 2.5rem);--wp--preset--spacing--8: clamp(1.875rem, (100vw - 40rem) * 1000, 3.125rem);--wp--preset--spacing--9: clamp(2.5rem, (100vw - 40rem) * 1000, 3.75rem);--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);--wp--custom--border-width: var(--wp--preset--spacing--20);--wp--custom--color--ukaea-alpha-green: #62bb46;--wp--custom--color--ukaea-black: #000000;--wp--custom--color--ukaea-cascade-green: #008171;--wp--custom--color--ukaea-deuterium-pink: #f287b7;--wp--custom--color--ukaea-fusion-ember: #fb4044;--wp--custom--color--ukaea-helion-gold: #fbad18;--wp--custom--color--ukaea-ignition-amber: #f57e20;--wp--custom--color--ukaea-jet-blue: #0a1a5c;--wp--custom--color--ukaea-jet-blue-subtle: #F2F4FD;--wp--custom--color--ukaea-magnetic-green: #c4d82e;--wp--custom--color--ukaea-plasma-teal: #86d2da;--wp--custom--color--ukaea-plasma-teal-lighter: #C5E5EA;--wp--custom--color--ukaea-plasma-teal-subtle: #F8FCFD;--wp--custom--color--ukaea-proton-pink: #e10379;--wp--custom--color--ukaea-quark-violet: #8d3995;--wp--custom--color--ukaea-stellar-yellow: #ffd500;--wp--custom--color--ukaea-thermal-red: #b90e31;--wp--custom--color--ukaea-tritium-violet: #d5add1;--wp--custom--color--ukaea-white: #ffffff;}.wp-block-group{--wp--preset--color--ukaea-jet-blue: #0a1a5c;--wp--preset--color--ukaea-plasma-teal: #86d2da;--wp--preset--color--ukaea-white: #ffffff;--wp--preset--color--ukaea-black: #000000;}.wp-block-dxw-cta{--wp--preset--color--ukaea-white: #ffffff;--wp--preset--color--ukaea-jet-blue: #0a1a5c;--wp--preset--color--ukaea-plasma-teal: #86d2da;--wp--preset--color--ukaea-black: #000000;--wp--preset--color--ukaea-stellar-yellow: #ffd500;--wp--preset--color--ukaea-helion-gold: #fbad18;--wp--preset--color--ukaea-ignition-amber: #f57e20;--wp--preset--color--ukaea-magnetic-green: #c4d82e;--wp--preset--color--ukaea-alpha-green: #62bb46;--wp--preset--color--ukaea-cascade-green: #008171;--wp--preset--color--ukaea-thermal-red: #b90e31;--wp--preset--color--ukaea-fusion-ember: #fb4044;--wp--preset--color--ukaea-proton-pink: #e10379;--wp--preset--color--ukaea-deuterium-pink: #f287b7;--wp--preset--color--ukaea-quark-violet: #8d3995;--wp--preset--color--ukaea-tritium-violet: #d5add1;}:root { --wp--style--global--content-size: 760px;--wp--style--global--wide-size: 1200px; }:where(body) { margin: 0; }.wp-site-blocks > .alignleft { float: left; margin-right: 2em; }.wp-site-blocks > .alignright { float: right; margin-left: 2em; }.wp-site-blocks > .aligncenter { justify-content: center; margin-left: auto; margin-right: auto; }:where(.wp-site-blocks) > * { margin-block-start: var(--wp--preset--spacing--4); margin-block-end: 0; }:where(.wp-site-blocks) > :first-child { margin-block-start: 0; }:where(.wp-site-blocks) > :last-child { margin-block-end: 0; }:root { --wp--style--block-gap: var(--wp--preset--spacing--4); }:root :where(.is-layout-flow) > :first-child{margin-block-start: 0;}:root :where(.is-layout-flow) > :last-child{margin-block-end: 0;}:root :where(.is-layout-flow) > *{margin-block-start: var(--wp--preset--spacing--4);margin-block-end: 0;}:root :where(.is-layout-constrained) > :first-child{margin-block-start: 0;}:root :where(.is-layout-constrained) > :last-child{margin-block-end: 0;}:root :where(.is-layout-constrained) > *{margin-block-start: var(--wp--preset--spacing--4);margin-block-end: 0;}:root :where(.is-layout-flex){gap: var(--wp--preset--spacing--4);}:root :where(.is-layout-grid){gap: var(--wp--preset--spacing--4);}.is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}.is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}.is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}.is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}.is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}body{background-color: var(--wp--preset--color--ukaea-white);color: var(--wp--preset--color--ukaea-grey-800);font-family: var(--wp--preset--font-family--instrument);font-size: var(--wp--preset--font-size--19);line-height: 1.31578947;padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}a:where(:not(.wp-element-button)){color: var(--wp--preset--color--ukaea-jet-blue);text-decoration: underline;}h1, h2, h3, h4, h5, h6{font-family: var(--wp--preset--font-family--instrument);font-size: var(--wp--preset--font-size--24);font-weight: 600;}h1{font-size: var(--wp--preset--font-size--48);line-height: 1.15;}h2{font-size: var(--wp--preset--font-size--36);line-height: 1.25;}:root :where(.wp-element-button, .wp-block-button__link){background-color: #32373c;border-width: 0;color: #fff;font-family: inherit;font-size: inherit;font-style: inherit;font-weight: inherit;letter-spacing: inherit;line-height: inherit;padding-top: calc(0.667em + 2px);padding-right: calc(1.333em + 2px);padding-bottom: calc(0.667em + 2px);padding-left: calc(1.333em + 2px);text-decoration: none;text-transform: inherit;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-ukaea-jet-blue-color{color: var(--wp--preset--color--ukaea-jet-blue) !important;}.has-ukaea-plasma-teal-color{color: var(--wp--preset--color--ukaea-plasma-teal) !important;}.has-ukaea-black-color{color: var(--wp--preset--color--ukaea-black) !important;}.has-ukaea-white-color{color: var(--wp--preset--color--ukaea-white) !important;}.has-ukaea-jet-blue-light-color{color: var(--wp--preset--color--ukaea-jet-blue-light) !important;}.has-ukaea-jet-blue-subtle-color{color: var(--wp--preset--color--ukaea-jet-blue-subtle) !important;}.has-ukaea-jet-blue-darker-color{color: var(--wp--preset--color--ukaea-jet-blue-darker) !important;}.has-ukaea-plasma-teal-light-color{color: var(--wp--preset--color--ukaea-plasma-teal-light) !important;}.has-ukaea-plasma-teal-lighter-color{color: var(--wp--preset--color--ukaea-plasma-teal-lighter) !important;}.has-ukaea-plasma-teal-subtle-color{color: var(--wp--preset--color--ukaea-plasma-teal-subtle) !important;}.has-ukaea-plasma-teal-100-color{color: var(--wp--preset--color--ukaea-plasma-teal-100) !important;}.has-ukaea-grey-800-color{color: var(--wp--preset--color--ukaea-grey-800) !important;}.has-ukaea-grey-400-color{color: var(--wp--preset--color--ukaea-grey-400) !important;}.has-ukaea-grey-200-color{color: var(--wp--preset--color--ukaea-grey-200) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-ukaea-jet-blue-background-color{background-color: var(--wp--preset--color--ukaea-jet-blue) !important;}.has-ukaea-plasma-teal-background-color{background-color: var(--wp--preset--color--ukaea-plasma-teal) !important;}.has-ukaea-black-background-color{background-color: var(--wp--preset--color--ukaea-black) !important;}.has-ukaea-white-background-color{background-color: var(--wp--preset--color--ukaea-white) !important;}.has-ukaea-jet-blue-light-background-color{background-color: var(--wp--preset--color--ukaea-jet-blue-light) !important;}.has-ukaea-jet-blue-subtle-background-color{background-color: var(--wp--preset--color--ukaea-jet-blue-subtle) !important;}.has-ukaea-jet-blue-darker-background-color{background-color: var(--wp--preset--color--ukaea-jet-blue-darker) !important;}.has-ukaea-plasma-teal-light-background-color{background-color: var(--wp--preset--color--ukaea-plasma-teal-light) !important;}.has-ukaea-plasma-teal-lighter-background-color{background-color: var(--wp--preset--color--ukaea-plasma-teal-lighter) !important;}.has-ukaea-plasma-teal-subtle-background-color{background-color: var(--wp--preset--color--ukaea-plasma-teal-subtle) !important;}.has-ukaea-plasma-teal-100-background-color{background-color: var(--wp--preset--color--ukaea-plasma-teal-100) !important;}.has-ukaea-grey-800-background-color{background-color: var(--wp--preset--color--ukaea-grey-800) !important;}.has-ukaea-grey-400-background-color{background-color: var(--wp--preset--color--ukaea-grey-400) !important;}.has-ukaea-grey-200-background-color{background-color: var(--wp--preset--color--ukaea-grey-200) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-ukaea-jet-blue-border-color{border-color: var(--wp--preset--color--ukaea-jet-blue) !important;}.has-ukaea-plasma-teal-border-color{border-color: var(--wp--preset--color--ukaea-plasma-teal) !important;}.has-ukaea-black-border-color{border-color: var(--wp--preset--color--ukaea-black) !important;}.has-ukaea-white-border-color{border-color: var(--wp--preset--color--ukaea-white) !important;}.has-ukaea-jet-blue-light-border-color{border-color: var(--wp--preset--color--ukaea-jet-blue-light) !important;}.has-ukaea-jet-blue-subtle-border-color{border-color: var(--wp--preset--color--ukaea-jet-blue-subtle) !important;}.has-ukaea-jet-blue-darker-border-color{border-color: var(--wp--preset--color--ukaea-jet-blue-darker) !important;}.has-ukaea-plasma-teal-light-border-color{border-color: var(--wp--preset--color--ukaea-plasma-teal-light) !important;}.has-ukaea-plasma-teal-lighter-border-color{border-color: var(--wp--preset--color--ukaea-plasma-teal-lighter) !important;}.has-ukaea-plasma-teal-subtle-border-color{border-color: var(--wp--preset--color--ukaea-plasma-teal-subtle) !important;}.has-ukaea-plasma-teal-100-border-color{border-color: var(--wp--preset--color--ukaea-plasma-teal-100) !important;}.has-ukaea-grey-800-border-color{border-color: var(--wp--preset--color--ukaea-grey-800) !important;}.has-ukaea-grey-400-border-color{border-color: var(--wp--preset--color--ukaea-grey-400) !important;}.has-ukaea-grey-200-border-color{border-color: var(--wp--preset--color--ukaea-grey-200) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-ukaea-primary-gradient-background{background: var(--wp--preset--gradient--ukaea-primary) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}.has-16-font-size{font-size: var(--wp--preset--font-size--16) !important;}.has-19-font-size{font-size: var(--wp--preset--font-size--19) !important;}.has-24-font-size{font-size: var(--wp--preset--font-size--24) !important;}.has-36-font-size{font-size: var(--wp--preset--font-size--36) !important;}.has-48-font-size{font-size: var(--wp--preset--font-size--48) !important;}.has-instrument-font-family{font-family: var(--wp--preset--font-family--instrument) !important;}.has-system-sans-serif-font-family{font-family: var(--wp--preset--font-family--system-sans-serif) !important;}.wp-block-group.has-ukaea-jet-blue-color{color: var(--wp--preset--color--ukaea-jet-blue) !important;}.wp-block-group.has-ukaea-plasma-teal-color{color: var(--wp--preset--color--ukaea-plasma-teal) !important;}.wp-block-group.has-ukaea-white-color{color: var(--wp--preset--color--ukaea-white) !important;}.wp-block-group.has-ukaea-black-color{color: var(--wp--preset--color--ukaea-black) !important;}.wp-block-group.has-ukaea-jet-blue-background-color{background-color: var(--wp--preset--color--ukaea-jet-blue) !important;}.wp-block-group.has-ukaea-plasma-teal-background-color{background-color: var(--wp--preset--color--ukaea-plasma-teal) !important;}.wp-block-group.has-ukaea-white-background-color{background-color: var(--wp--preset--color--ukaea-white) !important;}.wp-block-group.has-ukaea-black-background-color{background-color: var(--wp--preset--color--ukaea-black) !important;}.wp-block-group.has-ukaea-jet-blue-border-color{border-color: var(--wp--preset--color--ukaea-jet-blue) !important;}.wp-block-group.has-ukaea-plasma-teal-border-color{border-color: var(--wp--preset--color--ukaea-plasma-teal) !important;}.wp-block-group.has-ukaea-white-border-color{border-color: var(--wp--preset--color--ukaea-white) !important;}.wp-block-group.has-ukaea-black-border-color{border-color: var(--wp--preset--color--ukaea-black) !important;}.wp-block-dxw-cta.has-ukaea-white-color{color: var(--wp--preset--color--ukaea-white) !important;}.wp-block-dxw-cta.has-ukaea-jet-blue-color{color: var(--wp--preset--color--ukaea-jet-blue) !important;}.wp-block-dxw-cta.has-ukaea-plasma-teal-color{color: var(--wp--preset--color--ukaea-plasma-teal) !important;}.wp-block-dxw-cta.has-ukaea-black-color{color: var(--wp--preset--color--ukaea-black) !important;}.wp-block-dxw-cta.has-ukaea-stellar-yellow-color{color: var(--wp--preset--color--ukaea-stellar-yellow) !important;}.wp-block-dxw-cta.has-ukaea-helion-gold-color{color: var(--wp--preset--color--ukaea-helion-gold) !important;}.wp-block-dxw-cta.has-ukaea-ignition-amber-color{color: var(--wp--preset--color--ukaea-ignition-amber) !important;}.wp-block-dxw-cta.has-ukaea-magnetic-green-color{color: var(--wp--preset--color--ukaea-magnetic-green) !important;}.wp-block-dxw-cta.has-ukaea-alpha-green-color{color: var(--wp--preset--color--ukaea-alpha-green) !important;}.wp-block-dxw-cta.has-ukaea-cascade-green-color{color: var(--wp--preset--color--ukaea-cascade-green) !important;}.wp-block-dxw-cta.has-ukaea-thermal-red-color{color: var(--wp--preset--color--ukaea-thermal-red) !important;}.wp-block-dxw-cta.has-ukaea-fusion-ember-color{color: var(--wp--preset--color--ukaea-fusion-ember) !important;}.wp-block-dxw-cta.has-ukaea-proton-pink-color{color: var(--wp--preset--color--ukaea-proton-pink) !important;}.wp-block-dxw-cta.has-ukaea-deuterium-pink-color{color: var(--wp--preset--color--ukaea-deuterium-pink) !important;}.wp-block-dxw-cta.has-ukaea-quark-violet-color{color: var(--wp--preset--color--ukaea-quark-violet) !important;}.wp-block-dxw-cta.has-ukaea-tritium-violet-color{color: var(--wp--preset--color--ukaea-tritium-violet) !important;}.wp-block-dxw-cta.has-ukaea-white-background-color{background-color: var(--wp--preset--color--ukaea-white) !important;}.wp-block-dxw-cta.has-ukaea-jet-blue-background-color{background-color: var(--wp--preset--color--ukaea-jet-blue) !important;}.wp-block-dxw-cta.has-ukaea-plasma-teal-background-color{background-color: var(--wp--preset--color--ukaea-plasma-teal) !important;}.wp-block-dxw-cta.has-ukaea-black-background-color{background-color: var(--wp--preset--color--ukaea-black) !important;}.wp-block-dxw-cta.has-ukaea-stellar-yellow-background-color{background-color: var(--wp--preset--color--ukaea-stellar-yellow) !important;}.wp-block-dxw-cta.has-ukaea-helion-gold-background-color{background-color: var(--wp--preset--color--ukaea-helion-gold) !important;}.wp-block-dxw-cta.has-ukaea-ignition-amber-background-color{background-color: var(--wp--preset--color--ukaea-ignition-amber) !important;}.wp-block-dxw-cta.has-ukaea-magnetic-green-background-color{background-color: var(--wp--preset--color--ukaea-magnetic-green) !important;}.wp-block-dxw-cta.has-ukaea-alpha-green-background-color{background-color: var(--wp--preset--color--ukaea-alpha-green) !important;}.wp-block-dxw-cta.has-ukaea-cascade-green-background-color{background-color: var(--wp--preset--color--ukaea-cascade-green) !important;}.wp-block-dxw-cta.has-ukaea-thermal-red-background-color{background-color: var(--wp--preset--color--ukaea-thermal-red) !important;}.wp-block-dxw-cta.has-ukaea-fusion-ember-background-color{background-color: var(--wp--preset--color--ukaea-fusion-ember) !important;}.wp-block-dxw-cta.has-ukaea-proton-pink-background-color{background-color: var(--wp--preset--color--ukaea-proton-pink) !important;}.wp-block-dxw-cta.has-ukaea-deuterium-pink-background-color{background-color: var(--wp--preset--color--ukaea-deuterium-pink) !important;}.wp-block-dxw-cta.has-ukaea-quark-violet-background-color{background-color: var(--wp--preset--color--ukaea-quark-violet) !important;}.wp-block-dxw-cta.has-ukaea-tritium-violet-background-color{background-color: var(--wp--preset--color--ukaea-tritium-violet) !important;}.wp-block-dxw-cta.has-ukaea-white-border-color{border-color: var(--wp--preset--color--ukaea-white) !important;}.wp-block-dxw-cta.has-ukaea-jet-blue-border-color{border-color: var(--wp--preset--color--ukaea-jet-blue) !important;}.wp-block-dxw-cta.has-ukaea-plasma-teal-border-color{border-color: var(--wp--preset--color--ukaea-plasma-teal) !important;}.wp-block-dxw-cta.has-ukaea-black-border-color{border-color: var(--wp--preset--color--ukaea-black) !important;}.wp-block-dxw-cta.has-ukaea-stellar-yellow-border-color{border-color: var(--wp--preset--color--ukaea-stellar-yellow) !important;}.wp-block-dxw-cta.has-ukaea-helion-gold-border-color{border-color: var(--wp--preset--color--ukaea-helion-gold) !important;}.wp-block-dxw-cta.has-ukaea-ignition-amber-border-color{border-color: var(--wp--preset--color--ukaea-ignition-amber) !important;}.wp-block-dxw-cta.has-ukaea-magnetic-green-border-color{border-color: var(--wp--preset--color--ukaea-magnetic-green) !important;}.wp-block-dxw-cta.has-ukaea-alpha-green-border-color{border-color: var(--wp--preset--color--ukaea-alpha-green) !important;}.wp-block-dxw-cta.has-ukaea-cascade-green-border-color{border-color: var(--wp--preset--color--ukaea-cascade-green) !important;}.wp-block-dxw-cta.has-ukaea-thermal-red-border-color{border-color: var(--wp--preset--color--ukaea-thermal-red) !important;}.wp-block-dxw-cta.has-ukaea-fusion-ember-border-color{border-color: var(--wp--preset--color--ukaea-fusion-ember) !important;}.wp-block-dxw-cta.has-ukaea-proton-pink-border-color{border-color: var(--wp--preset--color--ukaea-proton-pink) !important;}.wp-block-dxw-cta.has-ukaea-deuterium-pink-border-color{border-color: var(--wp--preset--color--ukaea-deuterium-pink) !important;}.wp-block-dxw-cta.has-ukaea-quark-violet-border-color{border-color: var(--wp--preset--color--ukaea-quark-violet) !important;}.wp-block-dxw-cta.has-ukaea-tritium-violet-border-color{border-color: var(--wp--preset--color--ukaea-tritium-violet) !important;}
-/*# sourceURL=global-styles-inline-css */
-</style>
-
-<link rel='stylesheet' id='analytics-with-consent-styles-css' href='https://www.ukaea.org/wp-content/plugins/analytics-with-consent/assets/css/styles.css?ver=6.9.4' type='text/css' media='all' />
-<link rel='stylesheet' id='ukaea-key-figures-style-css' href='https://www.ukaea.org/wp-content/plugins/ukaea-key-figures/build/style-index.css?ver=6.9.4' type='text/css' media='all' />
-<link rel='stylesheet' id='ep_general_styles-css' href='https://www.ukaea.org/wp-content/plugins/elasticpress/dist/css/general-styles.css?ver=66295efe92a630617c00' type='text/css' media='all' />
-<link rel='stylesheet' id='main-css' href='https://www.ukaea.org/wp-content/themes/govpress-product-theme/static/css/main.min.beaf114cb7.css?ver=6.9.4' type='text/css' media='all' />
-<link rel='stylesheet' id='child-main-css' href='https://www.ukaea.org/wp-content/themes/ukaea-theme/static/css/main.min.cf5ba52dfb.css?ver=6.9.4' type='text/css' media='all' />
-<script type="text/javascript" src="https://cc.cdn.civiccomputing.com/9/cookieControl-9.x.min.js?ver=6.9.4" id="civicCookieControl-js"></script>
-<script type="text/javascript" id="civicCookieControlDefaultAnalytics-js-extra">
-/* <![CDATA[ */
-var cookieControlDefaultAnalytics = {"googleAnalyticsId":"","ga4Id":"G-0QP4YTVKCF","gtmId":"GTM-N6CD4KZF","hjid":""};
-//# sourceURL=civicCookieControlDefaultAnalytics-js-extra
-/* ]]> */
-</script>
-<script type="text/javascript" src="https://www.ukaea.org/wp-content/plugins/analytics-with-consent/assets/js/analytics.js?ver=6.9.4" id="civicCookieControlDefaultAnalytics-js"></script>
-<script type="text/javascript" id="civicCookieControlConfig-js-extra">
-/* <![CDATA[ */
-var cookieControlConfig = {"apiKey":"645dfd0fe1dfbee90048c5b93a83b6228519ce73","product":"COMMUNITY","closeStyle":"button","initialState":"open","text":{"closeLabel":"Save and Close","acceptSettings":"Accept all cookies","rejectSettings":"Only accept necessary cookies"},"branding":{"removeAbout":true},"position":"LEFT","theme":"DARK","subDomains":"","toggleType":"checkbox","optionalCookies":[{"name":"analytics","label":"Analytical Cookies","description":"Analytical cookies help us to improve our website by collecting and reporting information on its usage.","cookies":["_ga","_gid","_gat","__utma","__utmt","__utmb","__utmc","__utmz","__utmv"],"onAccept":"analyticsWithConsent.gaAccept","onRevoke":"analyticsWithConsent.gaRevoke"},{"name":"marketing","label":"Marketing Cookies","description":"Marketing cookies help us to improve the relevancy of advertising campaigns you receive from us.","cookies":["CLID","ANONCHK","MR","MUID","SM"],"onAccept":"analyticsWithConsent.marketingAccept","onRevoke":"analyticsWithConsent.marketingRevoke"}],"necessaryCookies":["wp-postpass_*"]};
-//# sourceURL=civicCookieControlConfig-js-extra
-/* ]]> */
-</script>
-<script type="text/javascript" id="civicCookieControlConfig-js-before">
-/* <![CDATA[ */
-/* globals analyticsWithConsent */
-/* eslint-disable */
-analyticsWithConsent.marketingAccept = function () {
-  gtag('consent', 'update', {
-    'ad_storage': 'granted',
-    'ad_user_data': 'granted'
-  });
-}
-analyticsWithConsent.marketingRevoke = function () {
-  gtag('consent', 'update', {
-    'ad_storage': 'denied',
-    'ad_user_data': 'denied'
-  });
-}
-//# sourceURL=civicCookieControlConfig-js-before
-/* ]]> */
-</script>
-<script type="text/javascript" src="https://www.ukaea.org/wp-content/plugins/analytics-with-consent/assets/js/config.js?ver=6.9.4" id="civicCookieControlConfig-js"></script>
-<script type="text/javascript" src="https://www.ukaea.org/wp-content/themes/govpress-product-theme/static/js/main.min.js?ver=6.9.4" id="main-js"></script>
-<script async id="awc_gtag" src="https://www.googletagmanager.com/gtag/js?id=G-0QP4YTVKCF"></script><script>window.dataLayer = window.dataLayer || []; (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-N6CD4KZF')</script><meta name="tec-api-version" content="v1"><meta name="tec-api-origin" content="https://www.ukaea.org"><link rel="alternate" href="https://www.ukaea.org/wp-json/tribe/events/v1/" /><style class='wp-fonts-local' type='text/css'>
-@font-face{font-family:"Instrument Sans";font-style:regular;font-weight:400;font-display:fallback;src:url('https://www.ukaea.org/wp-content/themes/ukaea-theme/templates/../static/fonts/instrument-sans/instrument-sans-regular.woff2') format('woff2');}
-@font-face{font-family:"Instrument Sans";font-style:italic;font-weight:400;font-display:fallback;src:url('https://www.ukaea.org/wp-content/themes/ukaea-theme/templates/../static/fonts/instrument-sans/instrument-sans-italic.woff2') format('woff2');}
-@font-face{font-family:"Instrument Sans";font-style:regular;font-weight:600;font-display:fallback;src:url('https://www.ukaea.org/wp-content/themes/ukaea-theme/templates/../static/fonts/instrument-sans/instrument-sans-semibold.woff2') format('woff2');}
-@font-face{font-family:"Instrument Sans";font-style:italic;font-weight:600;font-display:fallback;src:url('https://www.ukaea.org/wp-content/themes/ukaea-theme/templates/../static/fonts/instrument-sans/instrument-sans-semibold-italic.woff2') format('woff2');}
-</style>
-<link rel="icon" href="https://www.ukaea.org/wp-content/uploads/2025/09/uk-atomic-energy-authority-favicon512x512-150x150.jpg" sizes="32x32" />
-<link rel="icon" href="https://www.ukaea.org/wp-content/uploads/2025/09/uk-atomic-energy-authority-favicon512x512-300x300.jpg" sizes="192x192" />
-<link rel="apple-touch-icon" href="https://www.ukaea.org/wp-content/uploads/2025/09/uk-atomic-energy-authority-favicon512x512-300x300.jpg" />
-<meta name="msapplication-TileImage" content="https://www.ukaea.org/wp-content/uploads/2025/09/uk-atomic-energy-authority-favicon512x512-300x300.jpg" />
-<style id='block-style-variation-styles-inline-css' type='text/css'>
-:root :where(.wp-block-button.is-style-outline--1 .wp-block-button__link){background: transparent none;border-color: currentColor;border-width: 2px;border-style: solid;color: currentColor;padding-top: 0.667em;padding-right: 1.33em;padding-bottom: 0.667em;padding-left: 1.33em;}
-:root :where(.wp-block-button.is-style-outline--2 .wp-block-button__link){background: transparent none;border-color: currentColor;border-width: 2px;border-style: solid;color: currentColor;padding-top: 0.667em;padding-right: 1.33em;padding-bottom: 0.667em;padding-left: 1.33em;}
-/*# sourceURL=block-style-variation-styles-inline-css */
-</style>
-
-</head>
-
-	<body class="wp-singular service-template-default single single-service postid-456 wp-custom-logo wp-theme-govpress-product-themetemplates wp-child-theme-ukaea-themetemplates tribe-no-js">
-
-		<script>
-        	document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');
-    	</script>
-
-		<a href="#main-content" class="sr-only focus:not-sr-only">Skip to main content</a>
-
-		
-		<header role="banner" class="[ gp-container gp-site-header ] [ relative py-8 ]">
-			
-<div class="[ gp-site-header__inner ] [ flex flex-row gap-4 justify-between ]">
-
-	<!-- BRANDING -->
-	<div class="[ gp-site-header__branding ] [ mr-3 ]">
-					<a href="https://www.ukaea.org">
-				<img class="max-h-[100px]" src="https://www.ukaea.org/wp-content/uploads/2025/08/uk-atomic-energy-authority-logo-stacked.svg" alt="UKAEA Fusion Energy">
-			</a>
-		
-			</div><!-- /.gp-site-header__branding -->
-
-	<div class="[ gp-site-header__actions ] [ flex flex-col justify-center items-end ]">
-
-		<div class="gp-site-header__widget"><div class="menu-header-secondary-navigation-container"><ul id="menu-header-secondary-navigation" class="menu"><li id="menu-item-1035" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1035"><a href="https://www.ukaea.org/news/">News </a></li>
-<li id="menu-item-1090" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1090"><a href="https://www.ukaea.org/events/">Events</a></li>
-<li id="menu-item-1034" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1034"><a href="https://www.ukaea.org/stay-updated/">Stay updated </a></li>
-<li id="menu-item-1032" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1032"><a href="https://www.ukaea.org/contact/">Contact</a></li>
-</ul></div></div>			<!-- SEARCH -->
-			<div class="[ gp-site-header__search ] [ mb-auto pb-4 ]">
-				<form class="gp-search-form"  method="get" action="https://www.ukaea.org/" aria-label="search-form">
-		<input class="govuk-input [ gp-input-reset ] [ md:max-w-[200px] ] [ px-2 py-1 ] [ focus:outline-0 ]" type="search" value="" name="s" id="site-search" placeholder="Search">
-		<label class="sr-only" for="site-search">Search on  UKAEA Fusion Energy</label>
-
-		<button class="govuk-button [ gp-input-reset ] [ p-1 pl-2 ] [ hover:bg-foreground hover:text-background focus:bg-foreground focus:text-background ] [ cursor-pointer ]" type="submit" aria-labelledby="site-search-button-label">
-			<span id="site-search-button-label" hidden="">Search</span>
-			<svg class="block" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-				<path d="M16.6 18L10.3 11.7C9.8 12.1 9.225 12.4167 8.575 12.65C7.925 12.8833 7.23333 13 6.5 13C4.68333 13 3.14583 12.3708 1.8875 11.1125C0.629167 9.85417 0 8.31667 0 6.5C0 4.68333 0.629167 3.14583 1.8875 1.8875C3.14583 0.629167 4.68333 0 6.5 0C8.31667 0 9.85417 0.629167 11.1125 1.8875C12.3708 3.14583 13 4.68333 13 6.5C13 7.23333 12.8833 7.925 12.65 8.575C12.4167 9.225 12.1 9.8 11.7 10.3L18 16.6L16.6 18ZM6.5 11C7.75 11 8.8125 10.5625 9.6875 9.6875C10.5625 8.8125 11 7.75 11 6.5C11 5.25 10.5625 4.1875 9.6875 3.3125C8.8125 2.4375 7.75 2 6.5 2C5.25 2 4.1875 2.4375 3.3125 3.3125C2.4375 4.1875 2 5.25 2 6.5C2 7.75 2.4375 8.8125 3.3125 9.6875C4.1875 10.5625 5.25 11 6.5 11Z" fill="currentColor"/>
-			</svg>
-		</button>
-</form>
-
-
-			</div><!-- /.gp-site-header__search -->
-
-		
-		<!-- NAVIGATION -->
-		<div class="gp-site-header__navigation">
-			
-<div class="[ gp-header-navigation gp-header-navigation--mega ] [ flex flex-row ]">
-	<button type="button" id="header-search-toggle" class="[ gp-header-search__toggle js-header-search-toggle ] [ absolute top-16 ]" aria-controls="header-search" aria-expanded="false">
-		<span class="sr-only">Search</span>
-		<svg class="block" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
-			<path d="M16.6 18L10.3 11.7C9.8 12.1 9.225 12.4167 8.575 12.65C7.925 12.8833 7.23333 13 6.5 13C4.68333 13 3.14583 12.3708 1.8875 11.1125C0.629167 9.85417 0 8.31667 0 6.5C0 4.68333 0.629167 3.14583 1.8875 1.8875C3.14583 0.629167 4.68333 0 6.5 0C8.31667 0 9.85417 0.629167 11.1125 1.8875C12.3708 3.14583 13 4.68333 13 6.5C13 7.23333 12.8833 7.925 12.65 8.575C12.4167 9.225 12.1 9.8 11.7 10.3L18 16.6L16.6 18ZM6.5 11C7.75 11 8.8125 10.5625 9.6875 9.6875C10.5625 8.8125 11 7.75 11 6.5C11 5.25 10.5625 4.1875 9.6875 3.3125C8.8125 2.4375 7.75 2 6.5 2C5.25 2 4.1875 2.4375 3.3125 3.3125C2.4375 4.1875 2 5.25 2 6.5C2 7.75 2.4375 8.8125 3.3125 9.6875C4.1875 10.5625 5.25 11 6.5 11Z" fill="currentColor"/>
-		</svg>
-	</button><!-- /.gp-header-search__toggle -->
-	<button type="button" id="header-menu-toggle" class="[ gp-header-navigation__toggle js-header-menu-toggle ] [ absolute top-16 right-10 lg:invisible ]" aria-controls="header-navigation" aria-expanded="false">
-		Menu
-	</button><!-- /.gp-header-navigation__toggle -->
-	<nav role="navigation" id="header-navigation" class="[ gp-header-navigation__nav ] [ grow ]">
-		<div class="menu-main-nav-container"><ul id="header-menu" class="gp-header-navigation__items header-navigation__items [ flex flex-wrap justify-end gap-x-4 m-0 p-0 ] [ list-none leading-none ]"><li id="menu-item-277" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-277"><a href="https://www.ukaea.org/about-ukaea/">About UKAEA </a><button class="header-navigation__submenu-toggle js-header-submenu-toggle" type="button" aria-controls="header-navigation-submenu-1" aria-expanded="false"><span>About UKAEA </span><svg width="12" height="9" viewBox="0 0 12 9" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-<path d="M6 8.37498L0 2.37498L1.4 0.974976L6 5.54998L10.6 0.974976L12 2.37498L6 8.37498Z" fill="currentColor"/>
-</svg>
-</button>
-<ul class="sub-menu" id="header-navigation-submenu-1">
-	<li id="menu-item-1037" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1037 menu-item--section-header"><a aria-describedby="menu-item-description-1037" href="https://www.ukaea.org/about-ukaea/">About UKAEA </a><div id="menu-item-description-1037" class="menu-item-description">Our fusion energy mission, strategies, impact and governance – and how to join us.</div></li>
-	<li id="menu-item-23962" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-23962 menu-item--link"><a aria-describedby="menu-item-description-23962" href="https://www.ukaea.org/case-studies/">Case studies </a><div id="menu-item-description-23962" class="menu-item-description">Read case studies of our work advancing fusion energy technology.</div></li>
-	<li id="menu-item-278" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-278 menu-item--link"><a aria-describedby="menu-item-description-278" href="https://www.ukaea.org/about-ukaea/governance/">Governance </a><div id="menu-item-description-278" class="menu-item-description">Details about our governance.</div></li>
-	<li id="menu-item-24130" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-24130 menu-item--link"><a aria-describedby="menu-item-description-24130" href="https://www.ukaea.org/about-ukaea/history/">Our history </a><div id="menu-item-description-24130" class="menu-item-description">Our place in the history of fusion energy.</div></li>
-	<li id="menu-item-21761" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-21761 menu-item--link"><a aria-describedby="menu-item-description-21761" href="https://www.ukaea.org/about-ukaea/our-impact/">Our impact</a><div id="menu-item-description-21761" class="menu-item-description">What we are aiming for and how we are performing.</div></li>
-	<li id="menu-item-283" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-283 menu-item--link"><a aria-describedby="menu-item-description-283" href="https://www.ukaea.org/about-ukaea/mission/">Our mission </a><div id="menu-item-description-283" class="menu-item-description">Our fusion energy mission and strategies for achieving it.</div></li>
-	<li id="menu-item-406" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-406 menu-item--link"><a aria-describedby="menu-item-description-406" href="https://www.ukaea.org/about-ukaea/publications/">Publications</a><div id="menu-item-description-406" class="menu-item-description">Our publications and access to our public data.</div></li>
-	<li id="menu-item-24379" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-24379 menu-item--link"><a aria-describedby="menu-item-description-24379" href="https://www.ukaea.org/about-ukaea/visit/">Visit UKAEA</a><div id="menu-item-description-24379" class="menu-item-description">Learn about open events and educational visits to our fusion energy facilities.</div></li>
-	<li id="menu-item-407" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-407 menu-item--link"><a aria-describedby="menu-item-description-407" href="https://www.ukaea.org/about-ukaea/careers/">Work for UKAEA</a><div id="menu-item-description-407" class="menu-item-description">How to find a job with UKAEA.</div></li>
-	<li id="menu-item-408" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-408 menu-item--link"><a aria-describedby="menu-item-description-408" href="https://www.ukaea.org/about-ukaea/commercial/">Working with UKAEA: Commercial opportunities</a><div id="menu-item-description-408" class="menu-item-description">How organisations can work with UKAEA.</div></li>
-</ul>
-</li>
-<li id="menu-item-1041" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1041"><a href="https://www.ukaea.org/expertise/">Our expertise</a><button class="header-navigation__submenu-toggle js-header-submenu-toggle" type="button" aria-controls="header-navigation-submenu-2" aria-expanded="false"><span>Our expertise</span><svg width="12" height="9" viewBox="0 0 12 9" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-<path d="M6 8.37498L0 2.37498L1.4 0.974976L6 5.54998L10.6 0.974976L12 2.37498L6 8.37498Z" fill="currentColor"/>
-</svg>
-</button>
-<ul class="sub-menu" id="header-navigation-submenu-2">
-	<li id="menu-item-1042" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1042 menu-item--section-header"><a aria-describedby="menu-item-description-1042" href="https://www.ukaea.org/expertise/">Our expertise</a><div id="menu-item-description-1042" class="menu-item-description">Our technical capabilities in engineering, robotics, plasmas, computing and materials.</div></li>
-	<li id="menu-item-23120" class="menu-item menu-item-type-post_type menu-item-object-expertise menu-item-23120 menu-item--link"><a aria-describedby="menu-item-description-23120" href="https://www.ukaea.org/expertise/computing/">Computing</a><div id="menu-item-description-23120" class="menu-item-description">Accelerating fusion energy research via modelling, engineering design, materials analysis, and data processing.</div></li>
-	<li id="menu-item-1099" class="menu-item menu-item-type-post_type menu-item-object-expertise menu-item-1099 menu-item--link"><a aria-describedby="menu-item-description-1099" href="https://www.ukaea.org/expertise/decommissioning/">Decommissioning</a><div id="menu-item-description-1099" class="menu-item-description">Completing JET’s life cycle and setting a roadmap for future fusion machines.</div></li>
-	<li id="menu-item-1098" class="menu-item menu-item-type-post_type menu-item-object-expertise menu-item-1098 menu-item--link"><a aria-describedby="menu-item-description-1098" href="https://www.ukaea.org/expertise/engineering/">Engineering</a><div id="menu-item-description-1098" class="menu-item-description">Enabling the journey to sustainable fusion energy by solving complex challenges and building the systems that make fusion possible.</div></li>
-	<li id="menu-item-1097" class="menu-item menu-item-type-post_type menu-item-object-expertise menu-item-1097 menu-item--link"><a aria-describedby="menu-item-description-1097" href="https://www.ukaea.org/expertise/tritium/">Tritium</a><div id="menu-item-description-1097" class="menu-item-description">World’s leading research organisation related to tritium and hydrogen science.</div></li>
-	<li id="menu-item-1096" class="menu-item menu-item-type-post_type menu-item-object-expertise menu-item-1096 menu-item--link"><a aria-describedby="menu-item-description-1096" href="https://www.ukaea.org/expertise/materials/">Materials</a><div id="menu-item-description-1096" class="menu-item-description">Providing key capabilities and expertise for the development of materials for the fusion energy industry.</div></li>
-	<li id="menu-item-1095" class="menu-item menu-item-type-post_type menu-item-object-expertise menu-item-1095 menu-item--link"><a aria-describedby="menu-item-description-1095" href="https://www.ukaea.org/expertise/plasmas/">Plasmas</a><div id="menu-item-description-1095" class="menu-item-description">Exploring the behaviour of plasma – the hot gas that powers fusion reactions.</div></li>
-	<li id="menu-item-1094" class="menu-item menu-item-type-post_type menu-item-object-expertise menu-item-1094 menu-item--link"><a aria-describedby="menu-item-description-1094" href="https://www.ukaea.org/expertise/robotics/">Robotics</a><div id="menu-item-description-1094" class="menu-item-description">Developing robotics for fusion power plants and other extreme environments.</div></li>
-	<li id="menu-item-1093" class="menu-item menu-item-type-post_type menu-item-object-expertise menu-item-1093 menu-item--link"><a aria-describedby="menu-item-description-1093" href="https://www.ukaea.org/expertise/technology/">Technology</a><div id="menu-item-description-1093" class="menu-item-description">Developing a qualified suite of all the technologies needed to realise fusion power plants.</div></li>
-</ul>
-</li>
-<li id="menu-item-295" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-295"><a href="https://www.ukaea.org/work/">Our work </a><button class="header-navigation__submenu-toggle js-header-submenu-toggle" type="button" aria-controls="header-navigation-submenu-3" aria-expanded="false"><span>Our work </span><svg width="12" height="9" viewBox="0 0 12 9" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-<path d="M6 8.37498L0 2.37498L1.4 0.974976L6 5.54998L10.6 0.974976L12 2.37498L6 8.37498Z" fill="currentColor"/>
-</svg>
-</button>
-<ul class="sub-menu" id="header-navigation-submenu-3">
-	<li id="menu-item-1038" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1038 menu-item--section-header"><a aria-describedby="menu-item-description-1038" href="https://www.ukaea.org/work/">Our work </a><div id="menu-item-description-1038" class="menu-item-description">Major programmes and projects advancing fusion energy development.</div></li>
-	<li id="menu-item-1110" class="menu-item menu-item-type-post_type menu-item-object-work menu-item-1110 menu-item--link"><a aria-describedby="menu-item-description-1110" href="https://www.ukaea.org/work/foster/">FOSTER</a><div id="menu-item-description-1110" class="menu-item-description">Fusion Opportunities in Skills, Training, Education and Research.</div></li>
-	<li id="menu-item-1111" class="menu-item menu-item-type-post_type menu-item-object-work menu-item-1111 menu-item--link"><a aria-describedby="menu-item-description-1111" href="https://www.ukaea.org/work/fusion-futures/">Fusion Futures</a><div id="menu-item-description-1111" class="menu-item-description">World-leading innovation stimulating industry capacity.</div></li>
-	<li id="menu-item-1109" class="menu-item menu-item-type-post_type menu-item-object-work menu-item-1109 menu-item--link"><a aria-describedby="menu-item-description-1109" href="https://www.ukaea.org/work/jet-decommissioning-and-repurposing/">JET Decommissioning and Repurposing</a><div id="menu-item-description-1109" class="menu-item-description">Repurposing and decommissioning the Joint European Torus (JET).</div></li>
-	<li id="menu-item-1108" class="menu-item menu-item-type-post_type menu-item-object-work menu-item-1108 menu-item--link"><a aria-describedby="menu-item-description-1108" href="https://www.ukaea.org/work/librti/">LIBRTI</a><div id="menu-item-description-1108" class="menu-item-description">The Lithium Breeding Tritium Innovation Programme.</div></li>
-	<li id="menu-item-1106" class="menu-item menu-item-type-post_type menu-item-object-work menu-item-1106 menu-item--link"><a aria-describedby="menu-item-description-1106" href="https://www.ukaea.org/work/mast-upgrade/">MAST Upgrade</a><div id="menu-item-description-1106" class="menu-item-description">The world’s largest operational spherical tokamak.</div></li>
-	<li id="menu-item-22096" class="menu-item menu-item-type-post_type menu-item-object-work menu-item-22096 menu-item--link"><a aria-describedby="menu-item-description-22096" href="https://www.ukaea.org/work/raico/">RAICo: Robotics and AI Collaboration</a><div id="menu-item-description-22096" class="menu-item-description">Solving decommissioning and fusion engineering challenges by accelerating deployment of robotics and AI.</div></li>
-	<li id="menu-item-22097" class="menu-item menu-item-type-post_type menu-item-object-work menu-item-22097 menu-item--link"><a aria-describedby="menu-item-description-22097" href="https://www.ukaea.org/work/neurone/">NEURONE: NEUtron iRradiatiOn of advaNced stEels</a><div id="menu-item-description-22097" class="menu-item-description">Developing and delivering an industrially scalable fusion-grade advanced steel.</div></li>
-	<li id="menu-item-22098" class="menu-item menu-item-type-post_type menu-item-object-work menu-item-22098 menu-item--link"><a aria-describedby="menu-item-description-22098" href="https://www.ukaea.org/work/step/">STEP Fusion: Spherical Tokamak for Energy Production</a><div id="menu-item-description-22098" class="menu-item-description">Bringing government and industry together to develop fusion energy, scale it, and then deliver it at pace.</div></li>
-	<li id="menu-item-22152" class="menu-item menu-item-type-post_type menu-item-object-work menu-item-22152 menu-item--link"><a aria-describedby="menu-item-description-22152" href="https://www.ukaea.org/work/collaborative-robotics-research/">Collaborative Robotics Research</a><div id="menu-item-description-22152" class="menu-item-description">Pioneering robotics innovation through close collaboration with academic partners.​</div></li>
-	<li id="menu-item-24388" class="menu-item menu-item-type-post_type menu-item-object-work menu-item-24388 menu-item--link"><a aria-describedby="menu-item-description-24388" href="https://www.ukaea.org/work/ukaea-eni-h3at-tritium-loop-facility/">UKAEA-Eni H3AT Tritium Loop Facility</a><div id="menu-item-description-24388" class="menu-item-description">A ground-breaking collaboration to develop skills and technologies for managing tritium within future fusion power plants.</div></li>
-</ul>
-</li>
-<li id="menu-item-325" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-325"><a href="https://www.ukaea.org/services/">Services</a><button class="header-navigation__submenu-toggle js-header-submenu-toggle" type="button" aria-controls="header-navigation-submenu-4" aria-expanded="false"><span>Services</span><svg width="12" height="9" viewBox="0 0 12 9" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-<path d="M6 8.37498L0 2.37498L1.4 0.974976L6 5.54998L10.6 0.974976L12 2.37498L6 8.37498Z" fill="currentColor"/>
-</svg>
-</button>
-<ul class="sub-menu" id="header-navigation-submenu-4">
-	<li id="menu-item-1039" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1039 menu-item--section-header"><a aria-describedby="menu-item-description-1039" href="https://www.ukaea.org/services/">Services</a><div id="menu-item-description-1039" class="menu-item-description">Access specialist facilities, software tools and laboratory services for fusion research.</div></li>
-	<li id="menu-item-21085" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-21085 menu-item--link"><a aria-describedby="menu-item-description-21085" href="https://www.ukaea.org/services/facilities-equipment/">Facilities and equipment</a><div id="menu-item-description-21085" class="menu-item-description">Facilities and equipment we have available for research.</div></li>
-	<li id="menu-item-21086" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-21086 menu-item--link"><a aria-describedby="menu-item-description-21086" href="https://www.ukaea.org/services/laboratory-services/">Laboratory services </a><div id="menu-item-description-21086" class="menu-item-description">Laboratory services we have available.</div></li>
-	<li id="menu-item-326" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-326 menu-item--link"><a aria-describedby="menu-item-description-326" href="https://www.ukaea.org/services/software/">Software </a><div id="menu-item-description-326" class="menu-item-description">Software developed by UKAEA and available for research.</div></li>
-	<li id="menu-item-24127" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-24127 menu-item--link"><a aria-describedby="menu-item-description-24127" href="https://www.ukaea.org/services/training/">Training</a><div id="menu-item-description-24127" class="menu-item-description">Training courses to develop people and their skills to work in the fusion energy industry.</div></li>
-</ul>
-</li>
-<li id="menu-item-21819" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-21819"><a href="https://www.ukaea.org/fusion-energy/">Fusion energy</a><button class="header-navigation__submenu-toggle js-header-submenu-toggle" type="button" aria-controls="header-navigation-submenu-5" aria-expanded="false"><span>Fusion energy</span><svg width="12" height="9" viewBox="0 0 12 9" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-<path d="M6 8.37498L0 2.37498L1.4 0.974976L6 5.54998L10.6 0.974976L12 2.37498L6 8.37498Z" fill="currentColor"/>
-</svg>
-</button>
-<ul class="sub-menu" id="header-navigation-submenu-5">
-	<li id="menu-item-1081" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1081 menu-item--section-header"><a aria-describedby="menu-item-description-1081" href="https://www.ukaea.org/fusion-energy/">Fusion energy</a><div id="menu-item-description-1081" class="menu-item-description">Understand fusion from basic principles to advanced concepts.</div></li>
-	<li id="menu-item-21485" class="menu-item menu-item-type-post_type menu-item-object-guide menu-item-21485 menu-item--link"><a aria-describedby="menu-item-description-21485" href="https://www.ukaea.org/fusion-energy/why-we-need-fusion/">Why we need fusion energy</a><div id="menu-item-description-21485" class="menu-item-description">Fusion promises to be a safe, low carbon and sustainable part of the world’s future energy supply.</div></li>
-	<li id="menu-item-21484" class="menu-item menu-item-type-post_type menu-item-object-guide menu-item-21484 menu-item--link"><a aria-describedby="menu-item-description-21484" href="https://www.ukaea.org/fusion-energy/how-fusion-works/">How fusion works</a><div id="menu-item-description-21484" class="menu-item-description">Fusing hydrogen nuclei to make helium releases huge amounts of energy.</div></li>
-	<li id="menu-item-21483" class="menu-item menu-item-type-post_type menu-item-object-guide menu-item-21483 menu-item--link"><a aria-describedby="menu-item-description-21483" href="https://www.ukaea.org/fusion-energy/fusion-energy-questions/">Fusion energy questions</a><div id="menu-item-description-21483" class="menu-item-description">Our answers to fusion energy questions we are often asked.</div></li>
-	<li id="menu-item-21482" class="menu-item menu-item-type-post_type menu-item-object-guide menu-item-21482 menu-item--link"><a aria-describedby="menu-item-description-21482" href="https://www.ukaea.org/fusion-energy/tokamak/">The tokamak</a><div id="menu-item-description-21482" class="menu-item-description">We are researching the tokamak – the most successful fusion concept yet developed.</div></li>
-	<li id="menu-item-21518" class="menu-item menu-item-type-post_type menu-item-object-guide menu-item-21518 menu-item--link"><a aria-describedby="menu-item-description-21518" href="https://www.ukaea.org/fusion-energy/fusion-in-brief/">Fusion energy in brief</a><div id="menu-item-description-21518" class="menu-item-description">Get a brief overview of fusion energy, why we need it and how it works.</div></li>
-	<li id="menu-item-21753" class="menu-item menu-item-type-post_type menu-item-object-guide menu-item-21753 menu-item--link"><a aria-describedby="menu-item-description-21753" href="https://www.ukaea.org/fusion-energy/teach-fusion-energy/">Teach fusion energy</a><div id="menu-item-description-21753" class="menu-item-description">Free classroom resources to help teach fusion energy.</div></li>
-</ul>
-</li>
-<li id="menu-item-316" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-316"><a href="https://www.ukaea.org/innovation/">Innovation </a><button class="header-navigation__submenu-toggle js-header-submenu-toggle" type="button" aria-controls="header-navigation-submenu-6" aria-expanded="false"><span>Innovation </span><svg width="12" height="9" viewBox="0 0 12 9" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-<path d="M6 8.37498L0 2.37498L1.4 0.974976L6 5.54998L10.6 0.974976L12 2.37498L6 8.37498Z" fill="currentColor"/>
-</svg>
-</button>
-<ul class="sub-menu" id="header-navigation-submenu-6">
-	<li id="menu-item-1040" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1040 menu-item--section-header"><a aria-describedby="menu-item-description-1040" href="https://www.ukaea.org/innovation/">Innovation </a><div id="menu-item-description-1040" class="menu-item-description">Explore spinouts, patents, funding opportunities, and partnerships driving fusion innovation.</div></li>
-	<li id="menu-item-323" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-323 menu-item--link"><a aria-describedby="menu-item-description-323" href="https://www.ukaea.org/innovation/innovation-approach/">Our approach to innovation </a><div id="menu-item-description-323" class="menu-item-description">Learn about our approach to innovation as a core strategic capability.</div></li>
-	<li id="menu-item-413" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-413 menu-item--link"><a aria-describedby="menu-item-description-413" href="https://www.ukaea.org/innovation/collaboration/">Collaboration</a><div id="menu-item-description-413" class="menu-item-description">Learn how to collaborate with us to maximise impact.</div></li>
-</ul>
-</li>
-</ul></div><div class="gp-site-header__widget"><div class="menu-header-secondary-navigation-container"><ul id="menu-header-secondary-navigation-1" class="menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1035"><a href="https://www.ukaea.org/news/">News </a></li>
-<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1090"><a href="https://www.ukaea.org/events/">Events</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1034"><a href="https://www.ukaea.org/stay-updated/">Stay updated </a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1032"><a href="https://www.ukaea.org/contact/">Contact</a></li>
-</ul></div></div>	</nav><!-- /.gp-header-navigation__nav -->
-</div><!-- /.gp-header-navigation -->
-		</div><!-- /.gp-site-header__navigation -->
-
-			</div><!-- /.gp-site-header__actions -->
-</div><!-- /.gp-site-header__inner  -->
-		</header>
-
-	 	
-		  <nav class="gp-breadcrumb gp-breadcrumb--collapse" aria-label="Breadcrumb">
-    <ol class="gp-breadcrumb__list">
-              <li class="gp-breadcrumb__list-item">
-          <a class="gp-breadcrumb__link" href="https://www.ukaea.org">Home</a>
-        </li>
-              <li class="gp-breadcrumb__list-item">
-          <a class="gp-breadcrumb__link" href="https://www.ukaea.org/services/">Services</a>
-        </li>
-              <li class="gp-breadcrumb__list-item">
-          <a class="gp-breadcrumb__link" href="https://www.ukaea.org/services/software/">Software</a>
-        </li>
-          </ol>
-  </nav>
-		
-		
-		<main id="main-content" role="main" class="gp-container">
-			
-<article class="gp-single__post is-layout-flow alignwide post-456 service type-service status-publish hentry category-services our-expertise-computing service-type-software">
-
-	<div class="gp-single__header">
-			<!-- wp-block-dxw-cta is required to give access to all background colours -->
-	<div class="ukaea-cta ukaea-banner wp-block-dxw-cta alignfull has-background has-ukaea-jet-blue-background-color">
-		<div class="ukaea-container gp-container  ">
-			<div class=" ukaea-cta__content">
-							<h1 class="decorated">FISPACT-II</h1>
-
-				<div class="service_meta">
-				<span class='description'><p>FISPACT-II is advanced nuclear simulation software providing predictive, spectral and temporal simulation methods using comprehensive nuclear data libraries.</p></span><div class="wp-block-buttons is-layout-flex wp-block-buttons-is-layout-flex"><div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="https://github.com/fispact/">Go to FISPACT II on GitHub</a></div><div class="wp-block-button is-style-outline "><a class="wp-block-button__link wp-element-button" href="/contact">Request a commercial licence</a></div></div>				</div>
-			</div>
-		</div>
-	</div>
-
-	</div><!-- /.gp-single__header -->
-
-				<div class="gp-single__post-with-sidebar">
-				<div class="gp-single__post-sidebar">
-						<div class="ukaea-post__nav">
-		<nav id="ukaea-post-nav" aria-label="In page links">
-            <h2 class="ukaea-post__nav__title">On this page</h2>
-            <ul class="ukaea-post__nav__list list-navigation">
-                            <li class="ukaea-post__nav__list__item"><a class="post-nav-link" href="#overview">Overview</a></li>
-                            <li class="ukaea-post__nav__list__item"><a class="post-nav-link" href="#software">Software details</a></li>
-                            <li class="ukaea-post__nav__list__item"><a class="post-nav-link" href="#licence">Licence information</a></li>
-                            <li class="ukaea-post__nav__list__item"><a class="post-nav-link" href="#support">Support and resources</a></li>
-                            <li class="ukaea-post__nav__list__item"><a class="post-nav-link" href="#nuclear-data">Nuclear data</a></li>
-                        </ul>
-        </nav>
-	</div>
-					</div>
-				<div class="gp-single__post-main is-layout-flow">
-	
-<h2 class="wp-block-heading" id="overview">Overview</h2>
-
-
-
-<p>FISPACT-II is an enhanced multiphysics, inventory and source-term code system developed by the UK Atomic Energy Authority at Culham. It provides advanced predictive, spectral and temporal simulation methods for neutron and charged-particle interactions using comprehensive nuclear data.</p>
-
-
-
-<p>FISPACT-II has applications in:</p>
-
-
-
-<ul class="wp-block-list">
-<li>magnetic and inertial confinement fusion</li>
-
-
-
-<li>advanced fission Generation IV and beyond</li>
-
-
-
-<li>other advanced energy and fuel systems</li>
-
-
-
-<li>high energy and accelerator physics</li>
-
-
-
-<li>medical applications, including isotope production</li>
-
-
-
-<li>earth exploration and astrophysics</li>
-
-
-
-<li>homeland security</li>
-
-
-
-<li>materials science</li>
-
-
-
-<li>nuclear maintenance and decommissioning</li>
-
-
-
-<li>… and more</li>
-</ul>
-
-
-
-<p>FISPACT-II is capable of various analysis techniques including:</p>
-
-
-
-<ul class="wp-block-list">
-<li>activation analysis</li>
-
-
-
-<li>transmutation calculations</li>
-
-
-
-<li>depletion and burn-up simulations</li>
-
-
-
-<li>decay modelling</li>
-
-
-
-<li>source definition</li>
-
-
-
-<li>full inventories</li>
-
-
-
-<li>displacement per atom (dpa) calculations</li>
-
-
-
-<li>Kerma calculations</li>
-
-
-
-<li>Primary damage (PKA) spectra</li>
-
-
-
-<li>gas / radionuclide production simulations</li>
-</ul>
-
-
-
-<h3 class="wp-block-heading" id="key-benefits">Key benefits</h3>
-
-
-
-<ul class="wp-block-list">
-<li>nuclear data agnostic – you can pick the best nuclear data library for your neutron, proton or other calculations</li>
-
-
-
-<li>Application Programming Interface (API) allows easy and safe linkage to other codes</li>
-
-
-
-<li>validated – used on ITER, DEMO and STEP for fusion, and on fission power plants (e.g. characterising fuel rods, shut down dose calculations)</li>
-
-
-
-<li>pathways analysis (where does key nuclei come from) can help with material engineering</li>
-
-
-
-<li>can identify radioactive emission of a given sample</li>
-
-
-
-<li>can predict decay heat and gamma dose</li>
-</ul>
-
-
-
-<h2 class="wp-block-heading" id="software">Software details</h2>
-
-
-
-<p>FISPACT-II supports users in:</p>
-
-
-
-<ul class="wp-block-list">
-<li>full processing of ENDF-6 nuclear data with complete TENDL data and covariances</li>
-
-
-
-<li>self-shielding factors calculation</li>
-
-
-
-<li>temperature dependence modelling</li>
-
-
-
-<li>thin / thick target yields</li>
-
-
-
-<li>robust pathway analysis</li>
-
-
-
-<li>Monte-Carlo sensitivity and uncertainty quantification</li>
-
-
-
-<li>covariance data propagation</li>
-
-
-
-<li>for a given neutron flux, activation/transmutation of fusion materials/metals/alloys can be calculated</li>
-
-
-
-<li>radiation shielding calculations can be completed to help design new power plants</li>
-
-
-
-<li>displacements per atom (DPA) can be calculated to quantify radiation damage in materials from nuclear collisions and reactions</li>
-
-
-
-<li>shut down dose calculations for fission and fusion power plants to help design safe operations and shielding needs</li>
-
-
-
-<li>waste calculations for the running of future fusion and fission power plants</li>
-
-
-
-<li>medical radio-isotope sector – understanding design, target needs and safe operation</li>
-
-
-
-<li>ability for FISPACT-II to model waste processing using irradiation</li>
-
-
-
-<li>waste assessment for nuclear materials prior to decommissioning</li>
-</ul>
-
-
-
-<h3 class="wp-block-heading" id="technical-specifications">Technical specifications</h3>
-
-
-
-<h4 class="wp-block-heading" id="programming-languages">Programming languages</h4>
-
-
-
-<p>C-LANGUAGE, C++, FORTRAN 2003, PYTHON</p>
-
-
-
-<h4 class="wp-block-heading" id="libraries-used">Libraries used</h4>
-
-
-
-<p>TENDL-2017, ENDF/B-VIII.1, JEFF-4, JENDL-5.0, CENDL-3.2, GEFY-6.2, and more.</p>
-
-
-
-<h4 class="wp-block-heading" id="processing-tools">Processing tools</h4>
-
-
-
-<p>PREPRO, NJOY, CALENDF</p>
-
-
-
-<h4 class="wp-block-heading" id="system-requirements">System requirements</h4>
-
-
-
-<p>The memory requirement at run-time is case dependent, dynamic allocation, usually not above 1 Gb of RAM.</p>
-
-
-
-<p>64-bit Linux, macOS and Windows executables, built using GNU Fortran compilers on:</p>
-
-
-
-<ul class="wp-block-list">
-<li>macOS Ventura (Intel)</li>
-
-
-
-<li>Ubuntu 22.04</li>
-
-
-
-<li>Windows 10</li>
-</ul>
-
-
-
-<p>The bin subdirectory contains FISPACT-II executable compiled under different operating systems (Linux, macOS and Windows).</p>
-
-
-
-<p>FISPACT-II has been tested at the NEA Data Bank on:</p>
-
-
-
-<h5 class="wp-block-heading" id="windows-10">WINDOWS 10</h5>
-
-
-
-<p>COMPUTER: Dell Precision with Intel(R) Core (TM) i7-7600U CPU at 2.80 GHz, RAM: 16.0 GB</p>
-
-
-
-<h5 class="wp-block-heading" id="linux-ubuntu-20-04">LINUX – Ubuntu 20.04</h5>
-
-
-
-<p>COMPUTER: Dell Precision M6800 with Intel(R) Core (TM) i7-4800MQ CPU at 2.70 GHz x 8, RAM: 16.0 GB</p>
-
-
-
-<h2 class="wp-block-heading" id="licence">Licence information</h2>
-
-
-
-<p>The NEA Data Bank Computer Program Service offers a licence that does not include commercial applications.</p>
-
-
-
-<h3 class="wp-block-heading" id="commercial">Commercial and Research licence options</h3>
-
-
-
-<p><a href="https://www.ukaea.org/contact/">Contact us</a> to discuss tailored solutions for organisations.</p>
-
-
-
-<p>Licences are non-transferable, site specific and for multiple users.</p>
-
-
-
-<figure class="wp-block-table"><table><thead><tr><th>FISPACT-II Item</th><th>Commercial licence</th><th>Research licence</th></tr></thead><tbody><tr><td>&#8211; Executable and all data sets<br>&#8211; One year maintenance and upgrades</td><td>£35,000</td><td>£15,000</td></tr><tr><td>Annual maintenance and upgrades</td><td>£5,500</td><td>£3,250</td></tr><tr><td>Training</td><td>Price on application</td><td>Price on application</td></tr></tbody></table></figure>
-
-
-
-<p>Please note that:</p>
-
-
-
-<ol class="wp-block-list">
-<li>Research licences are only for academic or public sector research establishments.</li>
-
-
-
-<li>Research licences at a nominal fee are available for UK universities and close. collaborators</li>
-
-
-
-<li>Research licences specifically forbid use in contract work.</li>
-</ol>
-
-
-
-<h3 class="wp-block-heading" id="other-code-distribution">Other code distribution</h3>
-
-
-
-<p>The OECD-NEA Data Bank offers a licencing and distribution service through the various members states. The version 4.0 is available as NEA-1890:</p>
-
-
-
-<p><a href="https://www.oecd-nea.org/tools/abstract/detail/nea-1890">https://www.oecd-nea.org/tools/abstract/detail/nea-1890</a></p>
-
-
-
-<p>The US ORNL Radiation Safety Information Computational Center distributes the code as CCC-836:</p>
-
-
-
-<p><a href="https://rsicc.ornl.gov/codes/ccc/ccc8/ccc-836.html">https://rsicc.ornl.gov/codes/ccc/ccc8/ccc-836.html</a></p>
-
-
-
-<p>These distributions come with specific licence agreements which include many limitations, for example forbidding use in commercial applications. Those interested in using FISPACT-II for such applications should <a href="https://www.ukaea.org/contact/">contact us</a>.</p>
-
-
-
-<h2 class="wp-block-heading" id="support">Support and resources</h2>
-
-
-
-<h3 class="wp-block-heading" id="online-resources">Online resources</h3>
-
-
-
-<p>Useful tools and resources are available on the FISPACT-II GitHub repository:&nbsp;<a href="https://github.com/fispact/" target="_blank" rel="noreferrer noopener">https://github.com/fispact/.</a></p>
-
-
-
-<p>The FISPACT-II wiki serves as an online resource for code users and provides a comprehensive description of the code, keywords and physics, as well as&nbsp;tutorial examples.</p>
-
-
-
-<div class="wp-block-buttons is-layout-flex wp-block-buttons-is-layout-flex">
-<div class="wp-block-button is-style-outline is-style-outline--1"><a class="wp-block-button__link wp-element-button" href="https://fispact.ukaea.uk/wiki/Main_Page">Visit the FISPACT-II wiki</a></div>
-</div>
-
-
-
-<h3 class="wp-block-heading" id="nuclear-data">Documentation</h3>
-
-
-
-<p>Download the <a href="https://scientific-publications.ukaea.uk/wp-content/uploads/user_manual-4.pdf">latest version of the FISPACT-II manual</a> (PDF, 2MB).</p>
-
-
-
-<p>Download the <a href="https://scientific-publications.ukaea.uk/wp-content/uploads/UKAEA-R18001.pdf" target="_blank" rel="noreferrer noopener">previous version of the FISPACT-II manual</a> (PDF, 2MB).</p>
-
-
-
-<p>Download the l<a href="https://scientific-publications.ukaea.uk/wp-content/uploads/api_manual.pdf">atest version of the FISPACT-II API manual</a> (PDF, 1MB).</p>
-
-
-
-<p>Read <a href="https://www.sciencedirect.com/science/article/abs/pii/S0090375217300029">FISPACT-II: An Advanced Simulation System for Activation, Transmutation and Material Modelling</a> on the ScienceDirect website.</p>
-
-
-
-<h3 class="wp-block-heading" id="training">Training</h3>
-
-
-
-<p>The NEA Data Bank organises training courses on the FISPACT-II code with the UKAEA. Course material&nbsp;and presentations can be found on the&nbsp;<a href="https://fispact.github.io/">FISPACT-II GitHub Pages</a>.</p>
-
-
-
-<p>The UKAEA regularly organises training courses through the NEA Data Bank. You can find more information on the&nbsp;<a href="https://www.oecd-nea.org/jcms/pl_25601/nea-data-bank-training">currently scheduled events&nbsp;online</a>.</p>
-
-
-
-<h2 class="wp-block-heading" id="nuclear-data">Nuclear data</h2>
-
-
-
-<p>You need to download the nuclear data in order to use FISPACT-II. The FISPACT-II nuclear data resource repository is located at <a href="https://www.oecd-nea.org/dbdata/fispact/" target="_blank" rel="noreferrer noopener">https://git.oecd-nea.org/fispact/nuclear_data/</a>.</p>
-
-
-
-<p></p>
-		</div>
-			</div>
-	</article><!-- /.gp-single__post -->
-		</main>
-
-		
-		<footer role="contentinfo" class="gp-footer">
-			<div class="[ gp-footer__row gp-footer__row--1 ] [ py-8 ]">
-	<div class="gp-container">
-		<div class="flex flex-col md:flex-row gap-20">
-							<div class="[ gp-footer__widget gp-footer__widget-1-1 ] [ grow ]">
-					
-<figure class="wp-block-image size-full"><img decoding="async" src="https://www.ukaea.org/wp-content/uploads/2025/08/uk-atomic-energy-authority-logo-white-stacked.svg" alt="UK Atomic Energy Authority" class="wp-image-1143"/></figure>
-				</div>
-							<div class="[ gp-footer__widget gp-footer__widget-1-2 ] [ grow ]">
-					
-<div class="wp-block-buttons is-layout-flex wp-block-buttons-is-layout-flex">
-<div class="wp-block-button is-style-fill"><a class="wp-block-button__link wp-element-button" href="https://www.ukaea.org/stay-updated/">Sign up for updates</a></div>
-
-
-
-<div class="wp-block-button is-style-outline is-style-outline--2"><a class="wp-block-button__link wp-element-button" href="https://www.ukaea.org/contact/">Contact us</a></div>
-</div>
-				</div>
-					</div>
-	</div>
-</div>
-<div class="[ gp-footer__row gp-footer__row--2 ] [ py-8 ]">
-	<div class="gp-container">
-		<div class="flex flex-col md:flex-row gap-20">
-							<div class="[ gp-footer__widget gp-footer__widget-2-1 ] [ grow ]">
-					<h2 class="widgettitle">UKAEA Fusion Energy</h2>
-<div class="menu-footer-menu-1-container"><ul id="menu-footer-menu-1" class="menu"><li id="menu-item-720" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-720"><a href="https://www.ukaea.org/about-ukaea/">About UKAEA </a></li>
-<li id="menu-item-721" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-721"><a href="https://www.ukaea.org/expertise/">Our expertise</a></li>
-<li id="menu-item-722" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-722"><a href="https://www.ukaea.org/work/">Our work</a></li>
-<li id="menu-item-723" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-723"><a href="https://www.ukaea.org/innovation/">Innovation </a></li>
-<li id="menu-item-724" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-724"><a href="https://www.ukaea.org/services/">Services</a></li>
-<li id="menu-item-726" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-726"><a href="https://www.ukaea.org/news/">News</a></li>
-<li id="menu-item-725" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-725"><a href="https://www.ukaea.org/events/">Events</a></li>
-<li id="menu-item-23893" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-23893"><a href="https://www.ukaea.org/news/press-releases/">Press releases </a></li>
-<li id="menu-item-24117" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-24117"><a href="https://www.ukaea.org/about-ukaea/commercial/">Find opportunities to work with UKAEA</a></li>
-<li id="menu-item-24198" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-24198"><a href="https://www.gov.uk/government/publications/ukaea-procurement-pipeline">UKAEA procurement pipeline</a></li>
-<li id="menu-item-24378" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-24378"><a href="https://www.ukaea.org/about-ukaea/visit/">Visit UKAEA</a></li>
-<li id="menu-item-1072" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1072"><a href="https://careers.ukaea.uk/">Find a job with UKAEA</a></li>
-<li id="menu-item-1073" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1073"><a href="https://www.gov.uk/government/organisations/uk-atomic-energy-authority">UKAEA on GOV.UK</a></li>
-<li id="menu-item-23342" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-23342"><a href="https://www.ukaea.org/about-ukaea/governance/#freedom-of-information-requests">Freedom of information (FOI)</a></li>
-<li id="menu-item-23114" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-23114"><a href="https://www.ukaea.org/feedback/">Give us feedback about ukaea.org</a></li>
-<li id="menu-item-23988" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-23988"><a href="https://www.ukaea.org/it-support/">IT support</a></li>
-</ul></div>				</div>
-							<div class="[ gp-footer__widget gp-footer__widget-2-2 ] [ grow ]">
-					<h2 class="widgettitle">Sites of interest</h2>
-<div class="menu-footer-menu-2-container"><ul id="menu-footer-menu-2" class="menu"><li id="menu-item-1069" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1069"><a href="https://www.gov.uk/government/organisations/uk-industrial-fusion-solutions">UK Industrial Fusion Solutions</a></li>
-<li id="menu-item-1070" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1070"><a href="https://stepfusion.com/">STEP Fusion</a></li>
-<li id="menu-item-1065" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1065"><a href="https://scientific-publications.ukaea.uk">UKAEA Scientific publications</a></li>
-<li id="menu-item-1066" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1066"><a href="https://opendata.ukaea.uk">UKAEA Open data</a></li>
-<li id="menu-item-1067" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1067"><a href="https://thefusioncluster.com/">The Fusion Cluster</a></li>
-<li id="menu-item-1068" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1068"><a href="https://raico.org/">Robotics and AI Collaboration (RAICo)</a></li>
-<li id="menu-item-1071" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1071"><a href="https://www.oas.ukaea.uk">Oxford Advanced Skills</a></li>
-<li id="menu-item-20886" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20886"><a href="https://culham.org.uk/">Culham Campus</a></li>
-</ul></div>				</div>
-					</div>
-	</div>
-</div>
-<div class="[ gp-footer__row gp-footer__row--3 ] [ py-8 ]">
-	<div class="gp-container">
-		<div class="flex flex-col md:flex-row gap-20">
-							<div class="[ gp-footer__widget gp-footer__widget-3-1 ] [ grow ]">
-					
-<ul class="wp-block-social-links has-icon-color has-icon-background-color is-style-default is-layout-flex wp-block-social-links-is-layout-flex"><li style="color:#0a1a5c;background-color:#ffffff;" class="wp-social-link wp-social-link-linkedin has-ukaea-jet-blue-color wp-block-social-link"><a href="https://www.linkedin.com/company/ukaeaofficial/posts/?feedView=all" class="wp-block-social-link-anchor"><svg width="24" height="24" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M19.7,3H4.3C3.582,3,3,3.582,3,4.3v15.4C3,20.418,3.582,21,4.3,21h15.4c0.718,0,1.3-0.582,1.3-1.3V4.3 C21,3.582,20.418,3,19.7,3z M8.339,18.338H5.667v-8.59h2.672V18.338z M7.004,8.574c-0.857,0-1.549-0.694-1.549-1.548 c0-0.855,0.691-1.548,1.549-1.548c0.854,0,1.547,0.694,1.547,1.548C8.551,7.881,7.858,8.574,7.004,8.574z M18.339,18.338h-2.669 v-4.177c0-0.996-0.017-2.278-1.387-2.278c-1.389,0-1.601,1.086-1.601,2.206v4.249h-2.667v-8.59h2.559v1.174h0.037 c0.356-0.675,1.227-1.387,2.526-1.387c2.703,0,3.203,1.779,3.203,4.092V18.338z"></path></svg><span class="wp-block-social-link-label screen-reader-text">LinkedIn</span></a></li>
-
-<li style="color:#0a1a5c;background-color:#ffffff;" class="wp-social-link wp-social-link-x has-ukaea-jet-blue-color wp-block-social-link"><a href="https://x.com/UKAEAofficial" class="wp-block-social-link-anchor"><svg width="24" height="24" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M13.982 10.622 20.54 3h-1.554l-5.693 6.618L8.745 3H3.5l6.876 10.007L3.5 21h1.554l6.012-6.989L15.868 21h5.245l-7.131-10.378Zm-2.128 2.474-.697-.997-5.543-7.93H8l4.474 6.4.697.996 5.815 8.318h-2.387l-4.745-6.787Z" /></svg><span class="wp-block-social-link-label screen-reader-text">X</span></a></li>
-
-<li style="color:#0a1a5c;background-color:#ffffff;" class="wp-social-link wp-social-link-instagram has-ukaea-jet-blue-color wp-block-social-link"><a href="https://www.instagram.com/UKAEAofficial/" class="wp-block-social-link-anchor"><svg width="24" height="24" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M12,4.622c2.403,0,2.688,0.009,3.637,0.052c0.877,0.04,1.354,0.187,1.671,0.31c0.42,0.163,0.72,0.358,1.035,0.673 c0.315,0.315,0.51,0.615,0.673,1.035c0.123,0.317,0.27,0.794,0.31,1.671c0.043,0.949,0.052,1.234,0.052,3.637 s-0.009,2.688-0.052,3.637c-0.04,0.877-0.187,1.354-0.31,1.671c-0.163,0.42-0.358,0.72-0.673,1.035 c-0.315,0.315-0.615,0.51-1.035,0.673c-0.317,0.123-0.794,0.27-1.671,0.31c-0.949,0.043-1.233,0.052-3.637,0.052 s-2.688-0.009-3.637-0.052c-0.877-0.04-1.354-0.187-1.671-0.31c-0.42-0.163-0.72-0.358-1.035-0.673 c-0.315-0.315-0.51-0.615-0.673-1.035c-0.123-0.317-0.27-0.794-0.31-1.671C4.631,14.688,4.622,14.403,4.622,12 s0.009-2.688,0.052-3.637c0.04-0.877,0.187-1.354,0.31-1.671c0.163-0.42,0.358-0.72,0.673-1.035 c0.315-0.315,0.615-0.51,1.035-0.673c0.317-0.123,0.794-0.27,1.671-0.31C9.312,4.631,9.597,4.622,12,4.622 M12,3 C9.556,3,9.249,3.01,8.289,3.054C7.331,3.098,6.677,3.25,6.105,3.472C5.513,3.702,5.011,4.01,4.511,4.511 c-0.5,0.5-0.808,1.002-1.038,1.594C3.25,6.677,3.098,7.331,3.054,8.289C3.01,9.249,3,9.556,3,12c0,2.444,0.01,2.751,0.054,3.711 c0.044,0.958,0.196,1.612,0.418,2.185c0.23,0.592,0.538,1.094,1.038,1.594c0.5,0.5,1.002,0.808,1.594,1.038 c0.572,0.222,1.227,0.375,2.185,0.418C9.249,20.99,9.556,21,12,21s2.751-0.01,3.711-0.054c0.958-0.044,1.612-0.196,2.185-0.418 c0.592-0.23,1.094-0.538,1.594-1.038c0.5-0.5,0.808-1.002,1.038-1.594c0.222-0.572,0.375-1.227,0.418-2.185 C20.99,14.751,21,14.444,21,12s-0.01-2.751-0.054-3.711c-0.044-0.958-0.196-1.612-0.418-2.185c-0.23-0.592-0.538-1.094-1.038-1.594 c-0.5-0.5-1.002-0.808-1.594-1.038c-0.572-0.222-1.227-0.375-2.185-0.418C14.751,3.01,14.444,3,12,3L12,3z M12,7.378 c-2.552,0-4.622,2.069-4.622,4.622S9.448,16.622,12,16.622s4.622-2.069,4.622-4.622S14.552,7.378,12,7.378z M12,15 c-1.657,0-3-1.343-3-3s1.343-3,3-3s3,1.343,3,3S13.657,15,12,15z M16.804,6.116c-0.596,0-1.08,0.484-1.08,1.08 s0.484,1.08,1.08,1.08c0.596,0,1.08-0.484,1.08-1.08S17.401,6.116,16.804,6.116z"></path></svg><span class="wp-block-social-link-label screen-reader-text">Instagram</span></a></li>
-
-<li style="color:#0a1a5c;background-color:#ffffff;" class="wp-social-link wp-social-link-facebook has-ukaea-jet-blue-color wp-block-social-link"><a href="https://www.facebook.com/UKAEAofficial/" class="wp-block-social-link-anchor"><svg width="24" height="24" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M12 2C6.5 2 2 6.5 2 12c0 5 3.7 9.1 8.4 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.3v7C18.3 21.1 22 17 22 12c0-5.5-4.5-10-10-10z"></path></svg><span class="wp-block-social-link-label screen-reader-text">Facebook</span></a></li>
-
-<li style="color:#0a1a5c;background-color:#ffffff;" class="wp-social-link wp-social-link-youtube has-ukaea-jet-blue-color wp-block-social-link"><a href="https://www.youtube.com/channel/UCyb9vG8oLE4XvZZLYpcDcFw" class="wp-block-social-link-anchor"><svg width="24" height="24" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M21.8,8.001c0,0-0.195-1.378-0.795-1.985c-0.76-0.797-1.613-0.801-2.004-0.847c-2.799-0.202-6.997-0.202-6.997-0.202 h-0.009c0,0-4.198,0-6.997,0.202C4.608,5.216,3.756,5.22,2.995,6.016C2.395,6.623,2.2,8.001,2.2,8.001S2,9.62,2,11.238v1.517 c0,1.618,0.2,3.237,0.2,3.237s0.195,1.378,0.795,1.985c0.761,0.797,1.76,0.771,2.205,0.855c1.6,0.153,6.8,0.201,6.8,0.201 s4.203-0.006,7.001-0.209c0.391-0.047,1.243-0.051,2.004-0.847c0.6-0.607,0.795-1.985,0.795-1.985s0.2-1.618,0.2-3.237v-1.517 C22,9.62,21.8,8.001,21.8,8.001z M9.935,14.594l-0.001-5.62l5.404,2.82L9.935,14.594z"></path></svg><span class="wp-block-social-link-label screen-reader-text">YouTube</span></a></li>
-
-<li style="color:#0a1a5c;background-color:#ffffff;" class="wp-social-link wp-social-link-threads has-ukaea-jet-blue-color wp-block-social-link"><a href="https://www.threads.com/@ukaeaofficial/" class="wp-block-social-link-anchor"><svg width="24" height="24" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false"><path d="M16.3 11.3c-.1 0-.2-.1-.2-.1-.1-2.6-1.5-4-3.9-4-1.4 0-2.6.6-3.3 1.7l1.3.9c.5-.8 1.4-1 2-1 .8 0 1.4.2 1.7.7.3.3.5.8.5 1.3-.7-.1-1.4-.2-2.2-.1-2.2.1-3.7 1.4-3.6 3.2 0 .9.5 1.7 1.3 2.2.7.4 1.5.6 2.4.6 1.2-.1 2.1-.5 2.7-1.3.5-.6.8-1.4.9-2.4.6.3 1 .8 1.2 1.3.4.9.4 2.4-.8 3.6-1.1 1.1-2.3 1.5-4.3 1.5-2.1 0-3.8-.7-4.8-2S5.7 14.3 5.7 12c0-2.3.5-4.1 1.5-5.4 1.1-1.3 2.7-2 4.8-2 2.2 0 3.8.7 4.9 2 .5.7.9 1.5 1.2 2.5l1.5-.4c-.3-1.2-.8-2.2-1.5-3.1-1.3-1.7-3.3-2.6-6-2.6-2.6 0-4.7.9-6 2.6C4.9 7.2 4.3 9.3 4.3 12s.6 4.8 1.9 6.4c1.4 1.7 3.4 2.6 6 2.6 2.3 0 4-.6 5.3-2 1.8-1.8 1.7-4 1.1-5.4-.4-.9-1.2-1.7-2.3-2.3zm-4 3.8c-1 .1-2-.4-2-1.3 0-.7.5-1.5 2.1-1.6h.5c.6 0 1.1.1 1.6.2-.2 2.3-1.3 2.7-2.2 2.7z"/></svg><span class="wp-block-social-link-label screen-reader-text">Threads</span></a></li></ul>
-				</div>
-							<div class="[ gp-footer__widget gp-footer__widget-3-2 ] [ grow ]">
-					<div class="menu-footer-menu-3-container"><ul id="menu-footer-menu-3" class="menu"><li id="menu-item-22998" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-22998"><a rel="privacy-policy" href="https://www.ukaea.org/privacy-policy-terms-of-use-and-cookies/">Privacy policy, terms of use and cookies</a></li>
-<li id="menu-item-1076" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1076"><a href="https://www.ukaea.org/accessibility-statement/">Accessibility</a></li>
-<li id="menu-item-1078" class="copyright menu-item menu-item-type-custom menu-item-object-custom menu-item-1078"><a>© Copyright United Kingdom Atomic Energy Authority</a></li>
-</ul></div>				</div>
-					</div>
-	</div>
-</div>
-		</footer>
-
-		
-		<script type="speculationrules">
-{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/ukaea-theme/templates/*","/wp-content/themes/govpress-product-theme/templates/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
-</script>
-		<script>
-		( function ( body ) {
-			'use strict';
-			body.className = body.className.replace( /\btribe-no-js\b/, 'tribe-js' );
-		} )( document.body );
-		</script>
-		<script> /* <![CDATA[ */var tribe_l10n_datatables = {"aria":{"sort_ascending":": activate to sort column ascending","sort_descending":": activate to sort column descending"},"length_menu":"Show _MENU_ entries","empty_table":"No data available in table","info":"Showing _START_ to _END_ of _TOTAL_ entries","info_empty":"Showing 0 to 0 of 0 entries","info_filtered":"(filtered from _MAX_ total entries)","zero_records":"No matching records found","search":"Search:","all_selected_text":"All items on this page were selected. ","select_all_link":"Select all pages","clear_selection":"Clear Selection.","pagination":{"all":"All","next":"Next","previous":"Previous"},"select":{"rows":{"0":"","_":": Selected %d rows","1":": Selected 1 row"}},"datepicker":{"dayNames":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"dayNamesShort":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],"dayNamesMin":["S","M","T","W","T","F","S"],"monthNames":["January","February","March","April","May","June","July","August","September","October","November","December"],"monthNamesShort":["January","February","March","April","May","June","July","August","September","October","November","December"],"monthNamesMin":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"nextText":"Next","prevText":"Prev","currentText":"Today","closeText":"Done","today":"Today","clear":"Clear"}};/* ]]> */ </script><script type="text/javascript" src="https://www.ukaea.org/wp-content/plugins/the-events-calendar/common/build/js/user-agent.js?ver=da75d0bdea6dde3898df" id="tec-user-agent-js"></script>
-<script type="text/javascript" src="https://www.ukaea.org/wp-includes/js/dist/vendor/react.min.js?ver=18.3.1.1" id="react-js"></script>
-<script type="text/javascript" src="https://www.ukaea.org/wp-includes/js/dist/vendor/react-jsx-runtime.min.js?ver=18.3.1" id="react-jsx-runtime-js"></script>
-<script type="text/javascript" src="https://www.ukaea.org/wp-includes/js/dist/vendor/react-dom.min.js?ver=18.3.1.1" id="react-dom-js"></script>
-<script type="text/javascript" src="https://www.ukaea.org/wp-includes/js/dist/dom-ready.min.js?ver=f77871ff7694fffea381" id="wp-dom-ready-js"></script>
-<script type="text/javascript" src="https://www.ukaea.org/wp-includes/js/dist/hooks.min.js?ver=dd5603f07f9220ed27f1" id="wp-hooks-js"></script>
-<script type="text/javascript" src="https://www.ukaea.org/wp-includes/js/dist/i18n.min.js?ver=c26c3dc7bed366793375" id="wp-i18n-js"></script>
-<script type="text/javascript" id="wp-i18n-js-after">
-/* <![CDATA[ */
-wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
-//# sourceURL=wp-i18n-js-after
-/* ]]> */
-</script>
-<script type="text/javascript" src="https://www.ukaea.org/wp-includes/js/dist/a11y.min.js?ver=cb460b4676c94bd228ed" id="wp-a11y-js"></script>
-<script type="text/javascript" src="https://www.ukaea.org/wp-includes/js/dist/url.min.js?ver=9e178c9516d1222dc834" id="wp-url-js"></script>
-<script type="text/javascript" src="https://www.ukaea.org/wp-includes/js/dist/api-fetch.min.js?ver=3a4d9af2b423048b0dee" id="wp-api-fetch-js"></script>
-<script type="text/javascript" id="wp-api-fetch-js-after">
-/* <![CDATA[ */
-wp.apiFetch.use( wp.apiFetch.createRootURLMiddleware( "https://www.ukaea.org/wp-json/" ) );
-wp.apiFetch.nonceMiddleware = wp.apiFetch.createNonceMiddleware( "e69700ec67" );
-wp.apiFetch.use( wp.apiFetch.nonceMiddleware );
-wp.apiFetch.use( wp.apiFetch.mediaUploadMiddleware );
-wp.apiFetch.nonceEndpoint = "https://www.ukaea.org/wp-admin/admin-ajax.php?action=rest-nonce";
-//# sourceURL=wp-api-fetch-js-after
-/* ]]> */
-</script>
-<script type="text/javascript" src="https://www.ukaea.org/wp-includes/js/dist/blob.min.js?ver=9113eed771d446f4a556" id="wp-blob-js"></script>
-<script type="text/javascript" src="https://www.ukaea.org/wp-includes/js/dist/block-serialization-default-parser.min.js?ver=14d44daebf663d05d330" id="wp-block-serialization-default-parser-js"></script>
-<script type="text/javascript" src="https://www.ukaea.org/wp-includes/js/dist/autop.min.js?ver=9fb50649848277dd318d" id="wp-autop-js"></script>
-<script type="text/javascript" src="https://www.ukaea.org/wp-includes/js/dist/deprecated.min.js?ver=e1f84915c5e8ae38964c" id="wp-deprecated-js"></script>
-<script type="text/javascript" src="https://www.ukaea.org/wp-includes/js/dist/dom.min.js?ver=26edef3be6483da3de2e" id="wp-dom-js"></script>
-<script type="text/javascript" src="https://www.ukaea.org/wp-includes/js/dist/escape-html.min.js?ver=6561a406d2d232a6fbd2" id="wp-escape-html-js"></script>
-<script type="text/javascript" src="https://www.ukaea.org/wp-includes/js/dist/element.min.js?ver=6a582b0c827fa25df3dd" id="wp-element-js"></script>
-<script type="text/javascript" src="https://www.ukaea.org/wp-includes/js/dist/is-shallow-equal.min.js?ver=e0f9f1d78d83f5196979" id="wp-is-shallow-equal-js"></script>
-<script type="text/javascript" src="https://www.ukaea.org/wp-includes/js/dist/keycodes.min.js?ver=34c8fb5e7a594a1c8037" id="wp-keycodes-js"></script>
-<script type="text/javascript" src="https://www.ukaea.org/wp-includes/js/dist/priority-queue.min.js?ver=2d59d091223ee9a33838" id="wp-priority-queue-js"></script>
-<script type="text/javascript" src="https://www.ukaea.org/wp-includes/js/dist/compose.min.js?ver=7a9b375d8c19cf9d3d9b" id="wp-compose-js"></script>
-<script type="text/javascript" src="https://www.ukaea.org/wp-includes/js/dist/private-apis.min.js?ver=4f465748bda624774139" id="wp-private-apis-js"></script>
-<script type="text/javascript" src="https://www.ukaea.org/wp-includes/js/dist/redux-routine.min.js?ver=8bb92d45458b29590f53" id="wp-redux-routine-js"></script>
-<script type="text/javascript" src="https://www.ukaea.org/wp-includes/js/dist/data.min.js?ver=f940198280891b0b6318" id="wp-data-js"></script>
-<script type="text/javascript" id="wp-data-js-after">
-/* <![CDATA[ */
-( function() {
-	var userId = 0;
-	var storageKey = "WP_DATA_USER_" + userId;
-	wp.data
-		.use( wp.data.plugins.persistence, { storageKey: storageKey } );
-} )();
-//# sourceURL=wp-data-js-after
-/* ]]> */
-</script>
-<script type="text/javascript" src="https://www.ukaea.org/wp-includes/js/dist/html-entities.min.js?ver=e8b78b18a162491d5e5f" id="wp-html-entities-js"></script>
-<script type="text/javascript" src="https://www.ukaea.org/wp-includes/js/dist/rich-text.min.js?ver=5bdbb44f3039529e3645" id="wp-rich-text-js"></script>
-<script type="text/javascript" src="https://www.ukaea.org/wp-includes/js/dist/shortcode.min.js?ver=0b3174183b858f2df320" id="wp-shortcode-js"></script>
-<script type="text/javascript" src="https://www.ukaea.org/wp-includes/js/dist/warning.min.js?ver=d69bc18c456d01c11d5a" id="wp-warning-js"></script>
-<script type="text/javascript" src="https://www.ukaea.org/wp-includes/js/dist/blocks.min.js?ver=57eca4d23daac7159d88" id="wp-blocks-js"></script>
-<script type="text/javascript" src="https://www.ukaea.org/wp-includes/js/dist/vendor/moment.min.js?ver=2.30.1" id="moment-js"></script>
-<script type="text/javascript" id="moment-js-after">
-/* <![CDATA[ */
-moment.updateLocale( 'en_US', {"months":["January","February","March","April","May","June","July","August","September","October","November","December"],"monthsShort":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"weekdays":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"weekdaysShort":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],"week":{"dow":1},"longDateFormat":{"LT":"g:i a","LTS":null,"L":null,"LL":"j F Y","LLL":"F j, Y g:i a","LLLL":null}} );
-//# sourceURL=moment-js-after
-/* ]]> */
-</script>
-<script type="text/javascript" src="https://www.ukaea.org/wp-includes/js/dist/date.min.js?ver=795a56839718d3ff7eae" id="wp-date-js"></script>
-<script type="text/javascript" id="wp-date-js-after">
-/* <![CDATA[ */
-wp.date.setSettings( {"l10n":{"locale":"en_US","months":["January","February","March","April","May","June","July","August","September","October","November","December"],"monthsShort":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"weekdays":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"weekdaysShort":["Sun","Mon","Tue","Wed","Thu","Fri","Sat"],"meridiem":{"am":"am","pm":"pm","AM":"AM","PM":"PM"},"relative":{"future":"%s from now","past":"%s ago","s":"a second","ss":"%d seconds","m":"a minute","mm":"%d minutes","h":"an hour","hh":"%d hours","d":"a day","dd":"%d days","M":"a month","MM":"%d months","y":"a year","yy":"%d years"},"startOfWeek":1},"formats":{"time":"g:i a","date":"j F Y","datetime":"F j, Y g:i a","datetimeAbbreviated":"M j, Y g:i a"},"timezone":{"offset":0,"offsetFormatted":"0","string":"Europe/London","abbr":"GMT"}} );
-//# sourceURL=wp-date-js-after
-/* ]]> */
-</script>
-<script type="text/javascript" src="https://www.ukaea.org/wp-includes/js/dist/primitives.min.js?ver=0b5dcc337aa7cbf75570" id="wp-primitives-js"></script>
-<script type="text/javascript" src="https://www.ukaea.org/wp-includes/js/dist/components.min.js?ver=0d72a218dfea8f6f442f" id="wp-components-js"></script>
-<script type="text/javascript" src="https://www.ukaea.org/wp-includes/js/dist/keyboard-shortcuts.min.js?ver=fbc45a34ce65c5723afa" id="wp-keyboard-shortcuts-js"></script>
-<script type="text/javascript" src="https://www.ukaea.org/wp-includes/js/dist/commands.min.js?ver=cac8f4817ab7cea0ac49" id="wp-commands-js"></script>
-<script type="text/javascript" src="https://www.ukaea.org/wp-includes/js/dist/notices.min.js?ver=f62fbf15dcc23301922f" id="wp-notices-js"></script>
-<script type="text/javascript" src="https://www.ukaea.org/wp-includes/js/dist/preferences-persistence.min.js?ver=e954d3a4426d311f7d1a" id="wp-preferences-persistence-js"></script>
-<script type="text/javascript" src="https://www.ukaea.org/wp-includes/js/dist/preferences.min.js?ver=2ca086aed510c242a1ed" id="wp-preferences-js"></script>
-<script type="text/javascript" id="wp-preferences-js-after">
-/* <![CDATA[ */
-( function() {
-				var serverData = false;
-				var userId = "0";
-				var persistenceLayer = wp.preferencesPersistence.__unstableCreatePersistenceLayer( serverData, userId );
-				var preferencesStore = wp.preferences.store;
-				wp.data.dispatch( preferencesStore ).setPersistenceLayer( persistenceLayer );
-			} ) ();
-//# sourceURL=wp-preferences-js-after
-/* ]]> */
-</script>
-<script type="text/javascript" src="https://www.ukaea.org/wp-includes/js/dist/style-engine.min.js?ver=7c6fcedc37dadafb8a81" id="wp-style-engine-js"></script>
-<script type="text/javascript" src="https://www.ukaea.org/wp-includes/js/dist/token-list.min.js?ver=cfdf635a436c3953a965" id="wp-token-list-js"></script>
-<script type="text/javascript" src="https://www.ukaea.org/wp-includes/js/dist/block-editor.min.js?ver=addf558a422e2ee57920" id="wp-block-editor-js"></script>
-<script type="text/javascript" src="https://www.ukaea.org/wp-content/plugins/ukaea-key-figures/build/index.js?ver=6.9.4" id="ukaea-key-figures-editor-script-js"></script>
-<script type="text/javascript" id="child-main-js-before">
-/* <![CDATA[ */
-document.body.className += " js-enabled" + ("noModule" in HTMLScriptElement.prototype ? " govuk-frontend-supported" : "");
-//# sourceURL=child-main-js-before
-/* ]]> */
-</script>
-<script type="text/javascript" src="https://www.ukaea.org/wp-content/themes/ukaea-theme/static/js/main.min.ff69422390.js?ver=6.9.4" id="child-main-js"></script>
-	</body>
-
-</html>
+2.00000000E+07
+1.99530000E+07
+1.90550000E+07
+1.81970000E+07
+1.73780000E+07
+1.65960000E+07
+1.58490000E+07
+1.51360000E+07
+1.44540000E+07
+1.38040000E+07
+1.31830000E+07
+1.25890000E+07
+1.20230000E+07
+1.14820000E+07
+1.09650000E+07
+1.04710000E+07
+1.00000000E+07
+9.54990000E+06
+9.12010000E+06
+8.70960000E+06
+8.31760000E+06
+7.94330000E+06
+7.58580000E+06
+7.24440000E+06
+6.91830000E+06
+6.60690000E+06
+6.30960000E+06
+6.02560000E+06
+5.75440000E+06
+5.49540000E+06
+5.24810000E+06
+5.01190000E+06
+4.78630000E+06
+4.57090000E+06
+4.36520000E+06
+4.16870000E+06
+3.98110000E+06
+3.80190000E+06
+3.63080000E+06
+3.46740000E+06
+3.31130000E+06
+3.16230000E+06
+3.02000000E+06
+2.88400000E+06
+2.75420000E+06
+2.63030000E+06
+2.51190000E+06
+2.39880000E+06
+2.29090000E+06
+2.18780000E+06
+2.08930000E+06
+1.99530000E+06
+1.90550000E+06
+1.81970000E+06
+1.73780000E+06
+1.65960000E+06
+1.58490000E+06
+1.51360000E+06
+1.44540000E+06
+1.38040000E+06
+1.31830000E+06
+1.25890000E+06
+1.20230000E+06
+1.14820000E+06
+1.09650000E+06
+1.04710000E+06
+1.00000000E+06
+9.54990000E+05
+9.12010000E+05
+8.70960000E+05
+8.31760000E+05
+7.94330000E+05
+7.58580000E+05
+7.24440000E+05
+6.91830000E+05
+6.60690000E+05
+6.30960000E+05
+6.02560000E+05
+5.75440000E+05
+5.49540000E+05
+5.24810000E+05
+5.01190000E+05
+4.78630000E+05
+4.57090000E+05
+4.36520000E+05
+4.16870000E+05
+3.98110000E+05
+3.80190000E+05
+3.63080000E+05
+3.46740000E+05
+3.31130000E+05
+3.16230000E+05
+3.02000000E+05
+2.88400000E+05
+2.75420000E+05
+2.63030000E+05
+2.51190000E+05
+2.39880000E+05
+2.29090000E+05
+2.18780000E+05
+2.08930000E+05
+1.99530000E+05
+1.90550000E+05
+1.81970000E+05
+1.73780000E+05
+1.65960000E+05
+1.58490000E+05
+1.51360000E+05
+1.44540000E+05
+1.38040000E+05
+1.31830000E+05
+1.25890000E+05
+1.20230000E+05
+1.14820000E+05
+1.09650000E+05
+1.04710000E+05
+1.00000000E+05
+9.54990000E+04
+9.12010000E+04
+8.70960000E+04
+8.31760000E+04
+7.94330000E+04
+7.58580000E+04
+7.24440000E+04
+6.91830000E+04
+6.60690000E+04
+6.30960000E+04
+6.02560000E+04
+5.75440000E+04
+5.49540000E+04
+5.24810000E+04
+5.01190000E+04
+4.78630000E+04
+4.57090000E+04
+4.36520000E+04
+4.16870000E+04
+3.98110000E+04
+3.80190000E+04
+3.63080000E+04
+3.46740000E+04
+3.31130000E+04
+3.16230000E+04
+3.02000000E+04
+2.88400000E+04
+2.75420000E+04
+2.63030000E+04
+2.51190000E+04
+2.39880000E+04
+2.29090000E+04
+2.18780000E+04
+2.08930000E+04
+1.99530000E+04
+1.90550000E+04
+1.81970000E+04
+1.73780000E+04
+1.65960000E+04
+1.58490000E+04
+1.51360000E+04
+1.44540000E+04
+1.38040000E+04
+1.31830000E+04
+1.25890000E+04
+1.20230000E+04
+1.14820000E+04
+1.09650000E+04
+1.04710000E+04
+1.00000000E+04
+9.54990000E+03
+9.12010000E+03
+8.70960000E+03
+8.31760000E+03
+7.94330000E+03
+7.58580000E+03
+7.24440000E+03
+6.91830000E+03
+6.60690000E+03
+6.30960000E+03
+6.02560000E+03
+5.75440000E+03
+5.49540000E+03
+5.24810000E+03
+5.01190000E+03
+4.78630000E+03
+4.57090000E+03
+4.36520000E+03
+4.16870000E+03
+3.98110000E+03
+3.80190000E+03
+3.63080000E+03
+3.46740000E+03
+3.31130000E+03
+3.16230000E+03
+3.01990000E+03
+2.88400000E+03
+2.75420000E+03
+2.63030000E+03
+2.51190000E+03
+2.39880000E+03
+2.29090000E+03
+2.18780000E+03
+2.08930000E+03
+1.99530000E+03
+1.90550000E+03
+1.81970000E+03
+1.73780000E+03
+1.65960000E+03
+1.58490000E+03
+1.51360000E+03
+1.44540000E+03
+1.38040000E+03
+1.31830000E+03
+1.25890000E+03
+1.20230000E+03
+1.14810000E+03
+1.09650000E+03
+1.04710000E+03
+1.00000000E+03
+9.54990000E+02
+9.12010000E+02
+8.70960000E+02
+8.31760000E+02
+7.94330000E+02
+7.58580000E+02
+7.24440000E+02
+6.91830000E+02
+6.60690000E+02
+6.30960000E+02
+6.02560000E+02
+5.75440000E+02
+5.49540000E+02
+5.24810000E+02
+5.01190000E+02
+4.78630000E+02
+4.57090000E+02
+4.36520000E+02
+4.16870000E+02
+3.98110000E+02
+3.80190000E+02
+3.63080000E+02
+3.46740000E+02
+3.31130000E+02
+3.16230000E+02
+3.01990000E+02
+2.88400000E+02
+2.75420000E+02
+2.63030000E+02
+2.51190000E+02
+2.39880000E+02
+2.29090000E+02
+2.18780000E+02
+2.08930000E+02
+1.99530000E+02
+1.90550000E+02
+1.81970000E+02
+1.73780000E+02
+1.65960000E+02
+1.58490000E+02
+1.51360000E+02
+1.44540000E+02
+1.38040000E+02
+1.31830000E+02
+1.25890000E+02
+1.20230000E+02
+1.14820000E+02
+1.09650000E+02
+1.04710000E+02
+1.00000000E+02
+9.54990000E+01
+9.12010000E+01
+8.70960000E+01
+8.31760000E+01
+7.94330000E+01
+7.58580000E+01
+7.24440000E+01
+6.91830000E+01
+6.60690000E+01
+6.30960000E+01
+6.02560000E+01
+5.75440000E+01
+5.49540000E+01
+5.24810000E+01
+5.01190000E+01
+4.78630000E+01
+4.57090000E+01
+4.36520000E+01
+4.16870000E+01
+3.98110000E+01
+3.80190000E+01
+3.63080000E+01
+3.46740000E+01
+3.31130000E+01
+3.16230000E+01
+3.02000000E+01
+2.88400000E+01
+2.75420000E+01
+2.63030000E+01
+2.51190000E+01
+2.39880000E+01
+2.29090000E+01
+2.18780000E+01
+2.08930000E+01
+1.99530000E+01
+1.90550000E+01
+1.81970000E+01
+1.73780000E+01
+1.65960000E+01
+1.58490000E+01
+1.51360000E+01
+1.44540000E+01
+1.38040000E+01
+1.31830000E+01
+1.25890000E+01
+1.20230000E+01
+1.14820000E+01
+1.09650000E+01
+1.04710000E+01
+1.00000000E+01
+9.54990000E+00
+9.12010000E+00
+8.70960000E+00
+8.31760000E+00
+7.94330000E+00
+7.58580000E+00
+7.24440000E+00
+6.91830000E+00
+6.60690000E+00
+6.30960000E+00
+6.02560000E+00
+5.75440000E+00
+5.49540000E+00
+5.24810000E+00
+5.01190000E+00
+4.78630000E+00
+4.57090000E+00
+4.36520000E+00
+4.16870000E+00
+3.98110000E+00
+3.80190000E+00
+3.63080000E+00
+3.46740000E+00
+3.31130000E+00
+3.16230000E+00
+3.02000000E+00
+2.88400000E+00
+2.75420000E+00
+2.63030000E+00
+2.51190000E+00
+2.39880000E+00
+2.29090000E+00
+2.18780000E+00
+2.08930000E+00
+1.99530000E+00
+1.90550000E+00
+1.81970000E+00
+1.73780000E+00
+1.65960000E+00
+1.58490000E+00
+1.51360000E+00
+1.44540000E+00
+1.38040000E+00
+1.31830000E+00
+1.25890000E+00
+1.20230000E+00
+1.14810000E+00
+1.09650000E+00
+1.04710000E+00
+1.00000000E+00
+9.54990000E-01
+9.12010000E-01
+8.70960000E-01
+8.31760000E-01
+7.94330000E-01
+7.58580000E-01
+7.24440000E-01
+6.91830000E-01
+6.60690000E-01
+6.30960000E-01
+6.02560000E-01
+5.75440000E-01
+5.49540000E-01
+5.24810000E-01
+5.01190000E-01
+4.78630000E-01
+4.57090000E-01
+4.36520000E-01
+4.16870000E-01
+3.98110000E-01
+3.80190000E-01
+3.63080000E-01
+3.46740000E-01
+3.31130000E-01
+3.16230000E-01
+3.01990000E-01
+2.88400000E-01
+2.75420000E-01
+2.63030000E-01
+2.51190000E-01
+2.39880000E-01
+2.29090000E-01
+2.18780000E-01
+2.08930000E-01
+1.99530000E-01
+1.90550000E-01
+1.81970000E-01
+1.73780000E-01
+1.65960000E-01
+1.58490000E-01
+1.51360000E-01
+1.44540000E-01
+1.38040000E-01
+1.31830000E-01
+1.25890000E-01
+1.20230000E-01
+1.14810000E-01
+1.09650000E-01
+1.04710000E-01
+1.00000000E-01
+9.54990000E-02
+9.12010000E-02
+8.70960000E-02
+8.31760000E-02
+7.94330000E-02
+7.58580000E-02
+7.24440000E-02
+6.91830000E-02
+6.60690000E-02
+6.30960000E-02
+6.02560000E-02
+5.75440000E-02
+5.49540000E-02
+5.24810000E-02
+5.01190000E-02
+4.78630000E-02
+4.57090000E-02
+4.36520000E-02
+4.16870000E-02
+3.98110000E-02
+3.80190000E-02
+3.63080000E-02
+3.46740000E-02
+3.31130000E-02
+3.16230000E-02
+3.01990000E-02
+2.88400000E-02
+2.75420000E-02
+2.63030000E-02
+2.51190000E-02
+2.39880000E-02
+2.29090000E-02
+2.18780000E-02
+2.08930000E-02
+1.99530000E-02
+1.90550000E-02
+1.81970000E-02
+1.73780000E-02
+1.65960000E-02
+1.58490000E-02
+1.51360000E-02
+1.44540000E-02
+1.38040000E-02
+1.31830000E-02
+1.25890000E-02
+1.20230000E-02
+1.14810000E-02
+1.09650000E-02
+1.04710000E-02
+1.00000000E-02
+9.54990000E-03
+9.12010000E-03
+8.70960000E-03
+8.31760000E-03
+7.94330000E-03
+7.58580000E-03
+7.24440000E-03
+6.91830000E-03
+6.60690000E-03
+6.30960000E-03
+6.02560000E-03
+5.75440000E-03
+5.49540000E-03
+5.24810000E-03
+5.01190000E-03
+4.78630000E-03
+4.57090000E-03
+4.36520000E-03
+4.16870000E-03
+3.98110000E-03
+3.80190000E-03
+3.63080000E-03
+3.46740000E-03
+3.31130000E-03
+3.16230000E-03
+3.02000000E-03
+2.88400000E-03
+2.75420000E-03
+2.63030000E-03
+2.51190000E-03
+2.39880000E-03
+2.29090000E-03
+2.18780000E-03
+2.08930000E-03
+1.99530000E-03
+1.90550000E-03
+1.81970000E-03
+1.73780000E-03
+1.65960000E-03
+1.58490000E-03
+1.51360000E-03
+1.44540000E-03
+1.38040000E-03
+1.31830000E-03
+1.25890000E-03
+1.20230000E-03
+1.14820000E-03
+1.09650000E-03
+1.04710000E-03
+1.00000000E-03
+9.54990000E-04
+9.12010000E-04
+8.70960000E-04
+8.31760000E-04
+7.94330000E-04
+7.58580000E-04
+7.24440000E-04
+6.91830000E-04
+6.60690000E-04
+6.30960000E-04
+6.02560000E-04
+5.75440000E-04
+5.49540000E-04
+5.24810000E-04
+5.01190000E-04
+4.78630000E-04
+4.57090000E-04
+4.36520000E-04
+4.16870000E-04
+3.98110000E-04
+3.80190000E-04
+3.63080000E-04
+3.46740000E-04
+3.31130000E-04
+3.16230000E-04
+3.01990000E-04
+2.88400000E-04
+2.75420000E-04
+2.63030000E-04
+2.51190000E-04
+2.39880000E-04
+2.29090000E-04
+2.18780000E-04
+2.08930000E-04
+1.99530000E-04
+1.90550000E-04
+1.81970000E-04
+1.73780000E-04
+1.65960000E-04
+1.58490000E-04
+1.51360000E-04
+1.44540000E-04
+1.38040000E-04
+1.31830000E-04
+1.25890000E-04
+1.20230000E-04
+1.14820000E-04
+1.09650000E-04
+1.04710000E-04
+1.00000000E-04
+9.54990000E-05
+9.12010000E-05
+8.70960000E-05
+8.31760000E-05
+7.94330000E-05
+7.58580000E-05
+7.24440000E-05
+6.91830000E-05
+6.60690000E-05
+6.30960000E-05
+6.02560000E-05
+5.75440000E-05
+5.49540000E-05
+5.24810000E-05
+5.01190000E-05
+4.78630000E-05
+4.57090000E-05
+4.36520000E-05
+4.16870000E-05
+3.98110000E-05
+3.80190000E-05
+3.63080000E-05
+3.46740000E-05
+3.31130000E-05
+3.16230000E-05
+3.01990000E-05
+2.88400000E-05
+2.75420000E-05
+2.63030000E-05
+2.51190000E-05
+2.39880000E-05
+2.29090000E-05
+2.18780000E-05
+2.08930000E-05
+1.99530000E-05
+1.90550000E-05
+1.81970000E-05
+1.73780000E-05
+1.65960000E-05
+1.58490000E-05
+1.51360000E-05
+1.44540000E-05
+1.38040000E-05
+1.31830000E-05
+1.25890000E-05
+1.20230000E-05
+1.14820000E-05
+1.09650000E-05
+1.04710000E-05
+1.00000000E-05
+ 
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+3.10655000E+09
+5.88996000E+12
+5.64204000E+13
+1.44967000E+13
+1.88680000E+12
+9.25925000E+11
+5.32548000E+11
+5.67828000E+11
+7.41284000E+11
+8.69800000E+11
+9.15980000E+11
+9.81887000E+11
+9.27728000E+11
+7.86509000E+11
+7.65563000E+11
+7.72225000E+11
+7.89287000E+11
+7.83073000E+11
+7.65421000E+11
+7.83372000E+11
+8.19308000E+11
+8.53067000E+11
+8.96702000E+11
+9.40677000E+11
+9.79255000E+11
+1.01600000E+12
+1.05969000E+12
+1.08705000E+12
+1.12223000E+12
+1.16859000E+12
+1.17997000E+12
+1.20665000E+12
+1.23219000E+12
+1.27838000E+12
+1.32110000E+12
+1.37306000E+12
+1.44915000E+12
+1.48252000E+12
+1.60501000E+12
+1.68370000E+12
+1.86884000E+12
+1.98676000E+12
+2.01252000E+12
+2.12387000E+12
+2.14401000E+12
+2.18521000E+12
+2.35303000E+12
+2.71646000E+12
+2.92536000E+12
+2.78033000E+12
+2.84822000E+12
+2.96430000E+12
+2.90664000E+12
+3.14062000E+12
+3.10101000E+12
+3.27763000E+12
+3.78966000E+12
+3.51575000E+12
+3.24017000E+12
+3.23770000E+12
+3.49386000E+12
+3.82150000E+12
+3.63400000E+12
+3.62974000E+12
+3.60386000E+12
+3.60038000E+12
+3.81423000E+12
+4.89075000E+12
+4.09651000E+12
+4.91736000E+12
+4.20310000E+12
+3.83838000E+12
+3.87103000E+12
+3.86057000E+12
+3.78478000E+12
+3.98653000E+12
+4.29214000E+12
+3.88754000E+12
+3.47772000E+12
+3.38612000E+12
+3.42669000E+12
+5.25737000E+12
+5.56299000E+12
+4.44031000E+12
+2.92763000E+12
+6.21263000E+12
+4.22451000E+12
+2.47918000E+12
+4.68434000E+12
+3.34007000E+12
+3.33060000E+12
+3.39451000E+12
+2.86520000E+12
+3.92616000E+12
+2.86524000E+12
+2.19060000E+12
+3.97514000E+12
+4.35333000E+12
+3.37506000E+12
+3.83643000E+12
+2.95197000E+12
+2.19646000E+12
+2.15293000E+12
+5.60720000E+12
+3.63953000E+12
+3.52247000E+12
+3.31347000E+12
+2.97616000E+12
+2.80068000E+12
+2.50039000E+12
+2.13911000E+12
+2.84921000E+12
+2.66865000E+12
+1.47876000E+12
+5.50427000E+12
+2.99028000E+12
+2.11352000E+12
+3.90631000E+12
+3.04884000E+12
+2.65231000E+12
+2.48988000E+12
+2.40464000E+12
+2.27869000E+12
+1.98771000E+12
+1.89753000E+12
+2.74293000E+12
+2.83994000E+12
+2.69306000E+12
+2.29757000E+12
+2.24936000E+12
+2.18293000E+12
+2.01864000E+12
+1.89564000E+12
+1.78295000E+12
+1.61067000E+12
+1.25673000E+12
+7.80407000E+11
+3.69202000E+11
+1.59593000E+12
+5.28617000E+12
+5.53199000E+12
+2.94493000E+12
+2.32731000E+12
+1.84533000E+12
+2.04027000E+12
+2.12817000E+12
+2.01639000E+12
+1.93764000E+12
+2.22046000E+12
+2.10413000E+12
+2.12152000E+12
+2.02746000E+12
+1.91887000E+12
+1.73537000E+12
+1.95280000E+12
+1.87979000E+12
+1.84168000E+12
+1.72969000E+12
+1.63915000E+12
+1.61656000E+12
+1.53276000E+12
+1.35989000E+12
+1.24303000E+12
+1.00967000E+12
+7.64962000E+11
+7.75860000E+11
+1.07847000E+12
+1.42602000E+12
+1.67341000E+12
+1.56024000E+12
+1.52097000E+12
+1.80361000E+12
+1.69786000E+12
+1.68879000E+12
+1.96349000E+12
+1.79872000E+12
+1.82497000E+12
+1.61963000E+12
+1.61304000E+12
+1.46802000E+12
+1.48657000E+12
+1.86473000E+12
+1.88870000E+12
+1.87077000E+12
+1.83665000E+12
+1.77167000E+12
+1.75370000E+12
+1.67340000E+12
+1.45705000E+12
+1.33552000E+12
+1.42541000E+12
+1.30664000E+12
+1.37812000E+12
+1.42789000E+12
+1.00444000E+12
+1.76483000E+12
+1.80099000E+12
+1.75580000E+12
+1.70983000E+12
+1.61814000E+12
+1.57665000E+12
+1.57186000E+12
+1.52406000E+12
+1.52882000E+12
+1.49945000E+12
+1.50405000E+12
+1.36607000E+12
+1.15622000E+12
+1.16598000E+12
+1.35018000E+12
+1.33357000E+12
+1.38516000E+12
+1.36922000E+12
+1.35578000E+12
+1.32162000E+12
+1.34972000E+12
+1.31102000E+12
+1.31844000E+12
+1.28745000E+12
+1.29774000E+12
+1.28373000E+12
+1.10370000E+12
+1.24085000E+12
+1.20374000E+12
+1.21251000E+12
+1.20186000E+12
+1.21518000E+12
+1.20498000E+12
+1.18181000E+12
+1.16237000E+12
+1.12438000E+12
+1.03056000E+12
+7.99804000E+11
+5.14262000E+11
+8.11938000E+11
+1.13251000E+12
+1.23351000E+12
+1.24242000E+12
+1.24115000E+12
+1.22155000E+12
+1.18006000E+12
+1.14877000E+12
+1.11320000E+12
+1.15580000E+12
+1.12857000E+12
+1.11835000E+12
+1.01461000E+12
+1.13612000E+12
+1.09603000E+12
+1.08827000E+12
+1.07121000E+12
+1.06921000E+12
+1.06701000E+12
+1.06368000E+12
+1.06024000E+12
+1.05550000E+12
+1.03378000E+12
+1.00506000E+12
+1.01480000E+12
+9.97479000E+11
+1.00225000E+12
+9.97237000E+11
+9.95558000E+11
+9.96431000E+11
+9.94071000E+11
+9.91891000E+11
+9.90807000E+11
+9.90678000E+11
+9.87006000E+11
+9.76939000E+11
+9.74438000E+11
+9.72095000E+11
+9.68643000E+11
+9.63475000E+11
+9.60577000E+11
+9.34290000E+11
+8.24011000E+11
+9.09213000E+11
+8.76971000E+11
+8.71012000E+11
+8.52120000E+11
+8.55445000E+11
+8.39626000E+11
+8.43396000E+11
+8.41887000E+11
+8.40078000E+11
+8.33996000E+11
+8.24247000E+11
+7.24203000E+11
+7.45253000E+11
+7.50703000E+11
+7.37182000E+11
+7.31914000E+11
+5.49763000E+11
+5.83833000E+11
+4.10444000E+11
+2.55207000E+11
+4.41949000E+11
+4.73190000E+11
+4.92738000E+11
+5.10976000E+11
+5.23648000E+11
+5.27349000E+11
+5.31127000E+11
+5.34066000E+11
+5.37593000E+11
+5.36020000E+11
+5.36508000E+11
+5.30825000E+11
+5.14184000E+11
+5.32802000E+11
+5.03704000E+11
+5.06920000E+11
+5.02653000E+11
+4.96920000E+11
+4.58300000E+11
+4.52107000E+11
+4.48244000E+11
+4.47111000E+11
+4.42811000E+11
+4.38036000E+11
+4.34258000E+11
+4.27918000E+11
+4.22457000E+11
+4.14142000E+11
+4.06684000E+11
+3.96758000E+11
+3.73928000E+11
+2.44849000E+11
+1.98429000E+11
+2.30007000E+11
+2.42923000E+11
+2.51746000E+11
+2.57199000E+11
+2.61266000E+11
+2.61965000E+11
+2.60949000E+11
+2.58023000E+11
+2.56592000E+11
+2.51358000E+11
+2.48555000E+11
+2.44273000E+11
+2.39937000E+11
+2.34103000E+11
+2.29640000E+11
+2.23590000E+11
+2.17234000E+11
+2.12718000E+11
+2.05568000E+11
+2.00359000E+11
+1.94395000E+11
+1.88366000E+11
+1.82624000E+11
+1.76472000E+11
+1.70654000E+11
+1.64173000E+11
+1.59047000E+11
+1.53063000E+11
+1.47023000E+11
+1.41729000E+11
+1.35707000E+11
+1.30953000E+11
+1.25247000E+11
+1.19133000E+11
+1.14309000E+11
+1.09801000E+11
+1.05300000E+11
+9.92123000E+10
+9.46803000E+10
+8.98073000E+10
+8.63088000E+10
+8.13132000E+10
+7.75309000E+10
+7.32356000E+10
+6.94481000E+10
+6.58296000E+10
+6.17387000E+10
+5.81809000E+10
+5.48797000E+10
+5.10258000E+10
+4.83748000E+10
+4.50461000E+10
+4.18889000E+10
+3.88714000E+10
+3.66346000E+10
+3.41496000E+10
+3.17841000E+10
+2.93487000E+10
+2.72347000E+10
+2.52247000E+10
+2.31698000E+10
+2.15314000E+10
+1.96917000E+10
+1.81968000E+10
+1.66050000E+10
+1.52157000E+10
+1.38441000E+10
+1.27275000E+10
+1.14248000E+10
+1.04732000E+10
+9.51636000E+09
+8.67421000E+09
+7.83506000E+09
+7.03700000E+09
+6.33935000E+09
+5.80344000E+09
+5.09875000E+09
+4.56411000E+09
+4.07138000E+09
+3.79886000E+09
+3.39319000E+09
+2.94239000E+09
+2.57655000E+09
+2.34557000E+09
+2.00452000E+09
+1.88607000E+09
+1.60759000E+09
+1.47810000E+09
+1.26899000E+09
+1.12560000E+09
+1.01027000E+09
+8.94590000E+08
+7.83185000E+08
+6.94809000E+08
+6.12973000E+08
+5.37193000E+08
+4.88665000E+08
+3.93023000E+08
+3.82527000E+08
+3.16043000E+08
+2.48256000E+08
+2.28791000E+08
+2.06296000E+08
+2.00357000E+08
+1.62698000E+08
+1.56485000E+08
+1.26559000E+08
+1.06787000E+08
+1.06593000E+08
+8.57803000E+07
+7.51026000E+07
+6.98836000E+07
+5.24787000E+07
+5.01668000E+07
+4.14003000E+07
+3.51967000E+07
+3.33569000E+07
+4.30844000E+07
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+0.00000000E+00
+1.0
+hcpb_ht.spectrum617

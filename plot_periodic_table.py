@@ -20,6 +20,7 @@ import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches
+import matplotlib.ticker as ticker
 from matplotlib.colors import LogNorm, BoundaryNorm
 
 # ============================================================================
@@ -94,11 +95,9 @@ def draw_periodic_table(ax, values, title, units,
     else:
         lo, hi = 1.0, 10.0
 
-    # Discrete colormap with n_levels bins (log-spaced boundaries)
-    bounds = np.logspace(np.log10(lo), np.log10(hi), n_levels + 1)
-    base_cmap = plt.get_cmap(cmap_name, n_levels)
-    norm = BoundaryNorm(bounds, ncolors=base_cmap.N)
-    cmap = base_cmap
+    # Discrete colormap with n_levels bins, log-scaled
+    cmap = plt.get_cmap(cmap_name, n_levels)
+    norm = LogNorm(vmin=lo, vmax=hi)
 
     pad = 0.06
     for elem, (row, col) in PERIODIC_TABLE.items():
@@ -144,6 +143,7 @@ def draw_periodic_table(ax, values, title, units,
         sm.set_array([])
         cbar = plt.colorbar(sm, ax=ax, shrink=0.55, aspect=20, pad=0.02)
         cbar.set_label(units, fontsize=9)
+        cbar.ax.yaxis.set_major_formatter(ticker.LogFormatterSciNotation())
         cbar.ax.tick_params(labelsize=7)
 
 
@@ -399,7 +399,7 @@ def main():
 
     cooling_tags = [
         "shutdown", "1_hour", "1_day", "1_week",
-        "1_month", "1_year", "10_years", "100_years",
+        "1_month", "1_year", "5_years", "10_years", "50_years", "100_years",
     ]
     for m in metrics:
         for idx, tag in enumerate(cooling_tags):

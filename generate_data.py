@@ -20,7 +20,6 @@ import traceback
 
 import numpy as np
 import openmc
-import openmc.mgxs
 from openmc.deplete import Chain
 
 # ============================================================================
@@ -70,7 +69,7 @@ IRRADIATION_YEARS = 40       # full-power years
 
 # Timesteps: irradiation followed by cooling intervals
 # After these steps we have snapshots at:
-#   shutdown, +1h, +1d, +1wk, +1mo, +1yr, +10yr, +100yr
+#   shutdown, +1h, +1d, +1wk, +1mo, +1yr, +5yr, +10yr, +50yr, +100yr
 TIMESTEPS = [
     40 * YEAR,     # irradiation
     1 * HOUR,      # cool to shutdown + 1 hour
@@ -78,15 +77,17 @@ TIMESTEPS = [
     6 * DAY,       # cool to 1 week
     21 * DAY,      # cool to ~1 month (28 d total)
     337 * DAY,     # cool to 1 year
-    9 * YEAR,      # cool to 10 years
-    90 * YEAR,     # cool to 100 years
+    4 * YEAR,      # cool to 5 years
+    5 * YEAR,      # cool to 10 years
+    40 * YEAR,     # cool to 50 years
+    50 * YEAR,     # cool to 100 years
 ]
 
-SOURCE_RATES = [FLUX, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+SOURCE_RATES = [FLUX, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
 
 COOLING_LABELS = [
     "shutdown", "1 hour", "1 day", "1 week",
-    "1 month", "1 year", "10 years", "100 years",
+    "1 month", "1 year", "5 years", "10 years", "50 years", "100 years",
 ]
 
 
@@ -94,48 +95,59 @@ COOLING_LABELS = [
 # Spectrum
 # ============================================================================
 
-def build_dt_fw_spectrum():
-    """Approximate DT fusion first-wall spectrum for VITAMIN-J-42.
+def load_spectrum_file(path):
+    """Load a FISPACT-style spectrum file (e.g. HCPB-FW 616-group).
 
-    Returns 42-group relative flux with:
-      - 14.1 MeV uncollided fusion peak
-      - Evaporation/scattered component (1-10 MeV)
-      - 1/E slowing-down above 10 keV
-      - Minimal thermal flux (no moderator at first wall)
+    File format:
+      - 617 energy boundaries in eV (descending, high to low)
+      - blank line
+      - 616 flux values (same high-to-low order)
+      - optional trailing normalization and label lines
 
-    The spectrum shape is approximate.  For publication, replace with a
-    reference spectrum such as HCPB-FW from the FISPACT-II library.
+    Returns (flux, energy_boundaries) both in ascending energy order
+    as OpenMC expects.
     """
-    boundaries = np.array(openmc.mgxs.GROUP_STRUCTURES["VITAMIN-J-42"])
-    n_groups = len(boundaries) - 1
-    midpoints = np.sqrt(boundaries[:-1] * boundaries[1:])
+    with open(path) as f:
+        lines = f.read().strip().split("\n")
 
-    flux = np.zeros(n_groups)
-    for i, E in enumerate(midpoints):
-        E_MeV = E / 1e6
+    # Parse all numeric values
+    values = []
+    for line in lines:
+        line = line.strip()
+        if not line:
+            continue
+        try:
+            values.append(float(line))
+        except ValueError:
+            break  # stop at non-numeric lines (e.g. filename label)
 
-        # 14.1 MeV peak (Gaussian, sigma ~ 0.45 MeV)
-        peak = np.exp(-0.5 * ((E_MeV - 14.1) / 0.45) ** 2)
+    # 617 boundaries + 616 flux = 1233, possibly +1 normalization = 1234
+    n_boundaries = (len(values) + 1) // 2
+    n_groups = n_boundaries - 1
 
-        # Scattered/evaporation component peaking ~2 MeV
-        scattered = 0.2 * max(0.0, np.sqrt(E_MeV) * np.exp(-E_MeV / 2.5))
+    energies = np.array(values[:n_boundaries])    # descending
+    flux = np.array(values[n_boundaries:n_boundaries + n_groups])
 
-        # 1/E slowing-down above 10 keV
-        if E > 1e4:
-            slowing = 0.015 * (1e6 / E)
-        else:
-            slowing = 0.015 * np.sqrt(E / 1e4)
+    # Reverse to ascending energy order for OpenMC
+    energies = energies[::-1]
+    flux = flux[::-1]
 
-        flux[i] = peak + scattered + slowing
+    peak_idx = np.argmax(flux)
+    peak_mid = 0.5 * (energies[peak_idx] + energies[peak_idx + 1]) / 1e6
+    print(f"Loaded spectrum: {path}")
+    print(f"  {n_groups} groups, {energies[0]:.2e} – {energies[-1]:.2e} eV")
+    print(f"  Peak at {peak_mid:.2f} MeV (group {peak_idx})")
 
-    return flux
+    # The HCPB-FW file uses the LLNL-616 group structure
+    return flux, "LLNL-616"
+
 
 
 # ============================================================================
 # Depletion driver
 # ============================================================================
 
-def deplete_element(element, spectrum, chain_file=None):
+def deplete_element(element, spectrum, energy_groups, chain_file=None):
     """Deplete a pure element and extract activation metrics at each cooling time.
 
     Returns dict with activity (Bq/kg), contact dose (Sv/hr), and dominant
@@ -150,7 +162,7 @@ def deplete_element(element, spectrum, chain_file=None):
 
     results_list = mat.deplete(
         multigroup_flux=spectrum,
-        energy_group_structure="VITAMIN-J-42",
+        energy_group_structure=energy_groups,
         timesteps=TIMESTEPS,
         source_rates=SOURCE_RATES,
         timestep_units="s",
@@ -214,6 +226,8 @@ def main():
                         help="Path to depletion chain XML file")
     parser.add_argument("--cross_sections", default=None,
                         help="Path to cross_sections.xml file")
+    parser.add_argument("--spectrum", default="hcpb_fw_616.txt",
+                        help="Path to FISPACT-style spectrum file (default: hcpb_fw_616.txt)")
     parser.add_argument("--output", default="results/element_data.json",
                         help="Output JSON path")
     args = parser.parse_args()
@@ -235,8 +249,8 @@ def main():
     print(f"Flux: {FLUX:.2e} n/cm²/s")
     print(f"Cooling times: {', '.join(COOLING_LABELS)}\n")
 
-    spectrum = build_dt_fw_spectrum()
-    print(f"Spectrum: VITAMIN-J-42 ({len(spectrum)} groups), approx. DT first-wall\n")
+    spectrum, energy_groups = load_spectrum_file(args.spectrum)
+    print()
 
     # Load the full chain once, then reduce per-element
     full_chain = Chain.from_xml(args.chain) if args.chain else Chain.from_xml(
@@ -261,7 +275,8 @@ def main():
             initial_nuclides = list(mat_tmp.get_nuclides())
             reduced_chain = full_chain.reduce(initial_nuclides, level=5)
 
-            data = deplete_element(element, spectrum, chain_file=reduced_chain)
+            data = deplete_element(element, spectrum, energy_groups,
+                                   chain_file=reduced_chain)
             results[element] = data
             dt = time.time() - t0
             act0 = data["activity_Bq_per_kg"][0]

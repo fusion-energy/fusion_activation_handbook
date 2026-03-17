@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>report.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="systematic-activation-screening-of-the-elements-under-dt-fusion-neutron-irradiation-using-openmc">Systematic Activation Screening of the Elements Under DT Fusion Neutron Irradiation Using OpenMC</h1>
+<p><strong>Jonathan Shimwell</strong></p>
+<h2 id="abstract">Abstract</h2>
+<p>We present a systematic survey of neutron activation for all stable elements
+(Z = 1–83) under conditions representative of a deuterium-tritium (DT) fusion
+power plant first wall. Using OpenMC's transport-free material depletion
+capability, each element is irradiated with the HCPB first-wall neutron
+spectrum (LLNL-616 group structure) at 1 MW/m² wall loading for 40 full-power
+years, followed by cooling periods from shutdown to 100 years. We report
+specific activity (Bq/kg) and photon contact dose rate (Sv/hr) at ten cooling
+times, visualized as color-coded periodic tables. The elemental maps are
+validated against established reduced-activation criteria. The results
+provide an open-source, reproducible screening tool for fusion material
+selection.</p>
+<h2 id="1-introduction">1. Introduction</h2>
+<p>Structural materials in a DT fusion power plant are subjected to intense
+neutron irradiation dominated by the 14.1 MeV fusion peak. Transmutation of
+stable nuclei into radioactive products creates two practical challenges:</p>
+<ol>
+<li><strong>Maintenance access</strong> — the photon contact dose rate at the component
+surface determines whether hands-on or remote maintenance is required,
+and the waiting time after shutdown before personnel access.</li>
+<li><strong>Waste management</strong> — the specific activity of irradiated material at
+long cooling times determines its waste classification and disposal
+pathway.</li>
+</ol>
+<p>The concept of &quot;reduced activation&quot; structural materials was introduced in the
+late 1980s and has since guided the
+development of fusion-specific alloys such as V–4Cr–4Ti and
+SiC/SiC composites. The underlying principle is straightforward: avoid alloying
+elements whose isotopes produce long-lived or high-dose activation products
+under 14 MeV neutron irradiation.</p>
+<p>Despite decades of work, the reduced-activation criteria are typically
+presented as tables or lists of acceptable and problematic elements, derived
+from detailed calculations with dedicated inventory codes. These results
+are authoritative but not always accessible or easy to update with new
+nuclear data libraries.</p>
+<p>In this work, we take a complementary approach: a systematic, element-by-element
+activation screening using OpenMC's transport-free material
+depletion capability (<code>Material.deplete()</code>), which was contributed to OpenMC
+by the author of this report (<a href="https://github.com/openmc-dev/openmc/pull/3420">PR #3420</a>). By irradiating each element
+independently and mapping the results onto periodic tables color-coded by
+activity and dose rate, we produce an intuitive visual tool for material
+selection. The methodology is fully open-source and reproducible, requiring
+only OpenMC and a depletion chain file.</p>
+<h2 id="2-methods">2. Methods</h2>
+<h3 id="21-transport-free-material-depletion">2.1 Transport-Free Material Depletion</h3>
+<p>OpenMC (v0.15.3+) provides a <code>Material.deplete()</code> method that evolves nuclide
+densities under an externally specified multigroup neutron flux without
+requiring a full Monte Carlo transport simulation. Internally, the method:</p>
+<ol>
+<li>Collapses multigroup cross sections from the specified flux spectrum using
+pointwise nuclear data via <code>MicroXS.from_multigroup_flux()</code>.</li>
+<li>Constructs a depletion matrix including neutron reactions and radioactive
+decay.</li>
+<li>Solves the Bateman equations using the Predictor integrator
+(<code>PredictorIntegrator</code>) with the <code>IndependentOperator</code>.</li>
+</ol>
+<p>This approach is well-suited for parametric activation studies where the
+neutron spectrum is known a priori and self-shielding feedback is negligible
+— conditions that hold for elemental screening.</p>
+<h3 id="22-irradiation-conditions">2.2 Irradiation Conditions</h3>
+<p>Each element (Z = 1–83, excluding Tc and Pm which have no stable isotopes,
+81 elements total) is represented as a pure material at 1 g/cm³ with natural
+isotopic composition. Since specific activity (Bq/kg) and contact dose rate
+(Sv/hr in the semi-infinite slab model) are independent of density in this
+transport-free framework, the density choice is arbitrary.</p>
+<p>The irradiation parameters represent a generic DEMO-class fusion power plant
+first wall:</p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Neutron spectrum</td>
+<td>HCPB first-wall</td>
+</tr>
+<tr>
+<td>Energy group structure</td>
+<td>LLNL-616 (616 groups)</td>
+</tr>
+<tr>
+<td>Wall loading</td>
+<td>1.0 MW/m²</td>
+</tr>
+<tr>
+<td>Scalar flux</td>
+<td>4.4 × 10¹⁴ n/cm²/s</td>
+</tr>
+<tr>
+<td>Irradiation time</td>
+<td>40 full-power years</td>
+</tr>
+<tr>
+<td>Cooling times</td>
+<td>shutdown, 1 h, 1 d, 1 wk, 1 mo, 1 yr, 5 yr, 10 yr, 50 yr, 100 yr</td>
+</tr>
+</tbody>
+</table>
+<p>The neutron spectrum is the HCPB (Helium-Cooled Pebble Bed) first-wall
+reference spectrum, shown in Figure 1. The
+spectrum exhibits the characteristic 14.1 MeV DT fusion peak, a broad
+scattered/evaporation component in the 0.1–10 MeV range, and resonance
+structure at intermediate energies.</p>
+<p><img src="results/hcpb_spectrum.png" alt="HCPB First-Wall Neutron Spectrum">
+<em>Figure 1: HCPB first-wall neutron spectrum used for the activation screening.
+616 energy groups (LLNL-616 structure), spanning 10⁻⁵ eV to 20 MeV.</em></p>
+<h3 id="23-metrics">2.3 Metrics</h3>
+<p>Two quantities are computed at each cooling time:</p>
+<ul>
+<li><strong>Specific activity</strong> [Bq/kg]: total radioactivity per unit mass, relevant
+for waste classification. Computed via <code>Material.get_activity(units='Bq/kg')</code>.</li>
+<li><strong>Photon contact dose rate</strong> [Sv/hr]: effective dose rate at the surface of
+a semi-infinite slab, relevant for maintenance access. Computed via
+<code>Material.get_photon_contact_dose_rate(dose_quantity='effective')</code>,
+implementing the semi-infinite slab methodology with ICRP-116 dose
+coefficients and a build-up factor of 2.0.</li>
+</ul>
+<p>For each metric, the dominant contributing nuclide is also recorded.</p>
+<h2 id="3-results">3. Results</h2>
+<h3 id="31-elemental-activation-maps">3.1 Elemental Activation Maps</h3>
+<p>Figures 2–5 show the specific activity periodic tables at key cooling times.</p>
+<p><img src="results/periodic_table_activity_shutdown.png" alt="Activity at shutdown">
+<em>Figure 2: Specific activity (Bq/kg) at shutdown.</em></p>
+<p><img src="results/periodic_table_activity_1_day.png" alt="Activity at 1 day">
+<em>Figure 3: Specific activity (Bq/kg) at 1 day cooling.</em></p>
+<p><img src="results/periodic_table_activity_1_year.png" alt="Activity at 1 year">
+<em>Figure 4: Specific activity (Bq/kg) at 1 year cooling.</em></p>
+<p><img src="results/periodic_table_activity_100_years.png" alt="Activity at 100 years">
+<em>Figure 5: Specific activity (Bq/kg) at 100 years cooling.</em></p>
+<p>Figures 6–9 show the contact dose rate periodic tables at the same cooling times.</p>
+<p><img src="results/periodic_table_dose_shutdown.png" alt="Dose at shutdown">
+<em>Figure 6: Contact dose rate (Sv/hr) at shutdown.</em></p>
+<p><img src="results/periodic_table_dose_1_day.png" alt="Dose at 1 day">
+<em>Figure 7: Contact dose rate (Sv/hr) at 1 day cooling.</em></p>
+<p><img src="results/periodic_table_dose_1_year.png" alt="Dose at 1 year">
+<em>Figure 8: Contact dose rate (Sv/hr) at 1 year cooling.</em></p>
+<p><img src="results/periodic_table_dose_100_years.png" alt="Dose at 100 years">
+<em>Figure 9: Contact dose rate (Sv/hr) at 100 years cooling.</em></p>
+<p>The periodic table heatmaps reveal several patterns consistent with
+established reduced-activation knowledge:</p>
+<ul>
+<li><strong>Low-activation elements</strong> (cool colours): C, Si, Ti, V, Cr, Fe, W, Ta —
+these are the building blocks of reduced-activation alloys.</li>
+<li><strong>High-activation elements</strong> (hot colours): Co, Ni, Nb, Mo, Ag — these are
+known to produce long-lived activation products (⁶⁰Co, ⁶³Ni, ⁹⁴Nb,
+⁹⁹Mo→⁹⁹Tc, ¹⁰⁸ᵐAg).</li>
+<li><strong>Cooling-time dependence</strong>: Many elements appear problematic at shutdown
+but become acceptable at longer cooling times as short-lived products decay.
+The converse is also observed — some elements show persistent long-term
+activity from long-lived products.</li>
+</ul>
+<h3 id="32-summary-elements-to-avoid">3.2 Summary: Elements to Avoid</h3>
+<p>Figures 10–12 identify elements that appear in the top 10 worst performers
+at any cooling time, for activity, dose, or both.</p>
+<p><img src="results/top10_activity.png" alt="Top 10 activity">
+<em>Figure 10: Elements ever appearing in the top 10 by specific activity.</em></p>
+<p><img src="results/top10_dose.png" alt="Top 10 dose">
+<em>Figure 11: Elements ever appearing in the top 10 by contact dose rate.</em></p>
+<p><img src="results/top10_combined.png" alt="Top 10 combined">
+<em>Figure 12: Elements ever appearing in the top 10 by specific activity
+(red), contact dose rate (orange), or both (dark red) at any cooling time.
+Green elements are never in the top 10 for either metric.</em></p>
+<h3 id="33-cooling-time-dependence">3.3 Cooling Time Dependence</h3>
+<p>The ranking of elements changes significantly with cooling time:</p>
+<ul>
+<li>At <strong>shutdown</strong>: Activity is dominated by short-lived products. Most
+transition metals show high activity.</li>
+<li>At <strong>1 day to 1 month</strong>: Relevant for maintenance scheduling. Elements
+producing products with half-lives of hours to weeks determine when
+access is possible.</li>
+<li>At <strong>1 year to 100 years</strong>: Relevant for waste disposal. The problematic
+elements at these timescales are those producing long-lived isotopes
+(e.g., ⁶⁰Co from Co, ⁶³Ni from Ni, ⁹⁴Nb from Nb).</li>
+</ul>
+<h3 id="34-dominant-contributing-nuclides">3.4 Dominant Contributing Nuclides</h3>
+<p>[Table: Top contributing nuclides at 1 year and 100 years for key structural
+elements — to be populated from <code>element_data.json</code>]</p>
+<h2 id="4-discussion">4. Discussion</h2>
+<h3 id="41-implications-for-alloy-design">4.1 Implications for Alloy Design</h3>
+<p>The periodic table heatmaps directly inform alloy design by providing an
+<strong>activation penalty factor</strong> for each element. For example, if element A
+has 100× the specific activity of element B at 100-year cooling, then
+0.1 wt% of A in a steel contributes the same waste burden as 10 wt% of B.
+This framing is immediately actionable for metallurgists selecting
+alloying additions.</p>
+<p>Impurity specifications are also highlighted: trace elements like Co and Ag,
+even at ppm levels, can dominate long-term activation. The maps make this
+visually clear and may support more stringent impurity specifications for
+fusion-grade materials.</p>
+<h3 id="42-limitations">4.2 Limitations</h3>
+<ul>
+<li><strong>Chain file completeness</strong>: Results depend on the depletion chain file
+covering all relevant reaction pathways and decay chains. A comprehensive
+fusion activation chain should be used.</li>
+<li><strong>Single-element assumption</strong>: Cross-element transmutation paths (e.g.,
+element A transmuting into a nuclide that is also produced from element B)
+are not captured in the elemental screening. For typical alloy compositions
+where alloying additions are dilute, this is expected to be a minor effect.</li>
+<li><strong>Transport-free</strong>: No self-shielding or spatial effects. Valid for thin
+first-wall structures where the flux is externally determined.</li>
+<li><strong>No Bremsstrahlung</strong>: The contact dose calculation omits Bremsstrahlung
+contributions, which may be relevant for beta-emitters in close proximity.</li>
+</ul>
+<h2 id="5-conclusions">5. Conclusions</h2>
+<p>We have demonstrated a systematic, open-source approach to fusion material
+activation screening using OpenMC's transport-free depletion capability.
+The element-by-element periodic table visualization provides an intuitive
+tool for material selection that:</p>
+<ol>
+<li>Reproduces established reduced-activation criteria.</li>
+<li>Quantifies activation penalty factors for each element at multiple
+cooling times.</li>
+<li>Is fully reproducible with openly available tools.</li>
+</ol>
+<p>The scripts and data are provided as supplementary material. Users can
+regenerate the analysis with different spectra, irradiation conditions, or
+nuclear data libraries by modifying the input parameters.</p>
+<h2 id="references">References</h2>
+<ul>
+<li>Romano, P.K. et al. (2015). &quot;OpenMC: A state-of-the-art Monte Carlo code
+for research and development.&quot; Annals of Nuclear Energy, 82, 90–97.</li>
+<li>ICRP Publication 116 (2010). &quot;Conversion coefficients for radiological
+protection quantities for external radiation exposures.&quot;</li>
+<li>UKAEA. &quot;Reference input spectra.&quot; Available at:
+https://fispact.ukaea.uk/wiki/Reference_input_spectra</li>
+</ul>
+<h2 id="appendix-reproducing-this-analysis">Appendix: Reproducing This Analysis</h2>
+<pre class="hljs"><code><div><span class="hljs-comment"># 1. Generate elemental activation data (test: 10 elements)</span>
+python generate_data.py --<span class="hljs-built_in">test</span> \
+  --chain /path/to/chain-endf-b8.0.xml \
+  --cross_sections /path/to/cross_sections.xml \
+  --spectrum hcpb_fw_616.txt
+
+<span class="hljs-comment"># 2. Plot the input spectrum</span>
+python plot_spectrum.py
+
+<span class="hljs-comment"># 3. Generate periodic table visualizations</span>
+python plot_periodic_table.py
+
+<span class="hljs-comment"># Full run (all 81 elements):</span>
+python generate_data.py \
+  --chain /path/to/chain-endf-b8.0.xml \
+  --cross_sections /path/to/cross_sections.xml \
+  --spectrum hcpb_fw_616.txt
+python plot_periodic_table.py
+</div></code></pre>
+<p>Requirements: OpenMC &gt;= 0.15.3, numpy, matplotlib, ENDF/B-VIII.0 cross sections
+and depletion chain, HCPB-FW spectrum file.</p>
+<p>Other neutron spectra are available from the
+<a href="https://fispact.ukaea.uk/wiki/Reference_input_spectra">reference input spectra</a>
+and can be used in place of the HCPB first-wall spectrum by passing a different
+file to the <code>--spectrum</code> argument.</p>
+
+</body>
+</html>
