@@ -374,11 +374,10 @@ power plant first wall. Using OpenMC's transport-free material depletion
 capability, each element is irradiated with the HCPB first-wall neutron
 spectrum (LLNL-616 group structure) at 1 MW/m² wall loading for 40 full-power
 years, followed by cooling periods from shutdown to 100 years. We report
-specific activity (Bq/kg) and photon contact dose rate (Sv/hr) at ten cooling
-times, visualized as color-coded periodic tables. The elemental maps are
-validated against established reduced-activation criteria. The results
-provide an open-source, reproducible screening tool for fusion material
-selection.</p>
+waste disposal rating (Fetter limits) and photon contact dose rate (Sv/hr)
+at cooling times relevant to waste management and maintenance respectively,
+visualized as color-coded periodic tables. The results provide an open-source,
+reproducible screening tool for fusion material selection.</p>
 <h2 id="1-introduction">1. Introduction</h2>
 <p>Structural materials in a DT fusion power plant are subjected to intense
 neutron irradiation dominated by the 14.1 MeV fusion peak. Transmutation of
@@ -387,9 +386,9 @@ stable nuclei into radioactive products creates two practical challenges:</p>
 <li><strong>Maintenance access</strong> — the photon contact dose rate at the component
 surface determines whether hands-on or remote maintenance is required,
 and the waiting time after shutdown before personnel access.</li>
-<li><strong>Waste management</strong> — the specific activity of irradiated material at
-long cooling times determines its waste classification and disposal
-pathway.</li>
+<li><strong>Waste management</strong> — the waste disposal rating of irradiated material at
+long cooling times determines whether it can be disposed of as low-level
+waste or requires more costly intermediate/high-level waste pathways.</li>
 </ol>
 <p>The concept of &quot;reduced activation&quot; structural materials was introduced in the
 late 1980s and has since guided the
@@ -397,22 +396,80 @@ development of fusion-specific alloys such as V–4Cr–4Ti and
 SiC/SiC composites. The underlying principle is straightforward: avoid alloying
 elements whose isotopes produce long-lived or high-dose activation products
 under 14 MeV neutron irradiation.</p>
-<p>Despite decades of work, the reduced-activation criteria are typically
-presented as tables or lists of acceptable and problematic elements, derived
-from detailed calculations with dedicated inventory codes. These results
-are authoritative but not always accessible or easy to update with new
-nuclear data libraries.</p>
-<p>In this work, we take a complementary approach: a systematic, element-by-element
-activation screening using OpenMC's transport-free material
-depletion capability (<code>Material.deplete()</code>), which was contributed to OpenMC
-by the author of this report (<a href="https://github.com/openmc-dev/openmc/pull/3420">PR #3420</a>). By irradiating each element
-independently and mapping the results onto periodic tables color-coded by
-activity and dose rate, we produce an intuitive visual tool for material
-selection. The methodology is fully open-source and reproducible, requiring
-only OpenMC and a depletion chain file.</p>
+<h3 id="11-related-work">1.1 Related Work</h3>
+<p>The literature on fusion material selection can be broadly grouped into three
+categories.</p>
+<p><strong>Structural and thermo-mechanical assessments.</strong> A large body of work
+addresses the mechanical performance of candidate materials under fusion
+conditions — creep strength, irradiation hardening, ductile-to-brittle
+transition temperature shifts, helium embrittlement, and compatibility with
+coolants. Harries (1992) provided an early evaluation of reduced-activation
+options covering ferritic/martensitic steels, vanadium alloys, and SiC/SiC
+composites. Victoria et al. (2000) reviewed the development of low-activation
+materials at the European level, focusing on radiation damage mechanisms and
+alloy development for ferritic-martensitic steels (F82H, EUROFER97), titanium
+alloys, vanadium alloys, and SiC/SiC composites. Zinkle and Ghoniem (2000)
+gave an overview of materials research for fusion reactors covering mechanical
+property requirements and irradiation effects. More recently, Gorley (2015)
+assessed prospects for reduced-activation steels for fusion plant, and
+Şahin (2019) reviewed selection criteria for fusion reactor structures
+including DPA cross-sections, helium production, and thermo-mechanical
+performance of candidate alloys. Alba et al. (2022) surveyed materials for
+future magnetic confinement fusion reactors. While these works are essential
+for establishing which materials can survive the fusion environment, they
+generally do not present quantitative radiological screening — activity levels,
+contact dose rates, or waste disposal classifications are either absent or
+treated qualitatively.</p>
+<p><strong>Activation and inventory calculations.</strong> Noda (1988) was among the first to
+systematically screen elements for reduced activation under fusion neutron
+irradiation. The European Activation System (EASY) with the FISPACT inventory
+code has been used extensively for element-by-element activation surveys,
+and the UKAEA compilation (Gilbert et al., CCFE-R(16)36) provides the most
+comprehensive existing dataset of specific activity and contact dose rate for
+all stable elements under several fusion-relevant spectra. These surveys
+produce detailed inventory data (Bq/kg, Sv/hr) at multiple cooling times, but
+the results are typically presented as raw activity or dose values that require
+further interpretation to assess waste disposal implications. Furthermore,
+these calculations rely on closed-source inventory codes (FISPACT), making
+independent reproduction difficult.</p>
+<p><strong>Shutdown dose rate methods.</strong> A separate strand of work focuses on shutdown
+dose rate (SDR) analysis for specific reactor designs, coupling neutron
+transport with activation and photon transport. Palermo et al. developed the
+Advanced D1S method for SDR assessment of the European DCLL DEMO, and
+Bae et al. demonstrated SDR analysis with the Shift Monte Carlo code at ORNL.
+These are geometry-specific calculations for particular reactor designs rather
+than element-level screening tools.</p>
+<h3 id="12-contribution-of-this-work">1.2 Contribution of This Work</h3>
+<p>Despite the breadth of existing work, there is a gap between elemental
+activation surveys that report raw activity (Bq/kg) and the actionable
+metrics that engineers need for material selection decisions: <em>can this
+material qualify as low-level waste?</em> and <em>when can maintenance workers access
+this component?</em></p>
+<p>In this work, we bridge that gap by combining element-by-element activation
+screening with two directly actionable metrics: waste disposal rating (Fetter
+limits, where a value below 1.0 means the material meets low-level waste
+criteria) and contact dose rate (Sv/hr). By mapping these onto color-coded
+periodic tables at timescales relevant to each metric — years to decades for
+waste, days to weeks for maintenance — we produce an intuitive visual tool
+that compresses the output of detailed inventory calculations into immediate
+design guidance.</p>
+<p>A key differentiator of this work is that the underlying capabilities —
+transport-free material depletion (<code>Material.deplete()</code>,
+<a href="https://github.com/openmc-dev/openmc/pull/3420">PR #3420</a>), waste disposal
+rating (<code>Material.waste_disposal_rating()</code>,
+<a href="https://github.com/openmc-dev/openmc/pull/3366">PR #3366</a>), and contact dose
+rate (<code>Material.get_photon_contact_dose_rate()</code>) — have been contributed to
+OpenMC by the author of this report and are available to all users of the
+open-source code. This means the entire analysis is fully reproducible and
+transparent: anyone can inspect the methodology, verify the results, or extend
+the study. Users can select their own continuous-energy cross section libraries
+and depletion chain files, making it straightforward to repeat the analysis
+with different nuclear data evaluations (e.g. TENDL, JEFF) or updated chain
+files as they become available.</p>
 <h2 id="2-methods">2. Methods</h2>
 <h3 id="21-transport-free-material-depletion">2.1 Transport-Free Material Depletion</h3>
-<p>OpenMC (v0.15.3+) provides a <code>Material.deplete()</code> method that evolves nuclide
+<p>OpenMC version 0.15.3 development branch (commit <code>15786981</code>) was used for this
+analysis. OpenMC provides a <code>Material.deplete()</code> method that evolves nuclide
 densities under an externally specified multigroup neutron flux without
 requiring a full Monte Carlo transport simulation. Internally, the method:</p>
 <ol>
@@ -426,12 +483,19 @@ decay.</li>
 <p>This approach is well-suited for parametric activation studies where the
 neutron spectrum is known a priori and self-shielding feedback is negligible
 — conditions that hold for elemental screening.</p>
-<h3 id="22-irradiation-conditions">2.2 Irradiation Conditions</h3>
+<h3 id="22-nuclear-data">2.2 Nuclear Data</h3>
+<p>Cross sections and depletion chain data are derived from the ENDF/B-VIII.0
+nuclear data library. Pointwise neutron cross sections are used for spectrum
+collapsing, and the depletion chain file (<code>chain-endf-b8.0.xml</code>) provides
+the transmutation and decay pathways. The chain is reduced per element to
+nuclides reachable within 5 transmutation steps from the element's natural
+isotopes, balancing completeness against computational cost.</p>
+<h3 id="23-irradiation-conditions">2.3 Irradiation Conditions</h3>
 <p>Each element (Z = 1–83, excluding Tc and Pm which have no stable isotopes,
 81 elements total) is represented as a pure material at 1 g/cm³ with natural
-isotopic composition. Since specific activity (Bq/kg) and contact dose rate
-(Sv/hr in the semi-infinite slab model) are independent of density in this
-transport-free framework, the density choice is arbitrary.</p>
+isotopic composition. Since contact dose rate (Sv/hr in the semi-infinite
+slab model) is independent of density in this transport-free framework, the
+density choice is arbitrary.</p>
 <p>The irradiation parameters represent a generic DEMO-class fusion power plant
 first wall:</p>
 <table>
@@ -476,38 +540,43 @@ structure at intermediate energies.</p>
 <p><img src="results/hcpb_spectrum.png" alt="HCPB First-Wall Neutron Spectrum">
 <em>Figure 1: HCPB first-wall neutron spectrum used for the activation screening.
 616 energy groups (LLNL-616 structure), spanning 10⁻⁵ eV to 20 MeV.</em></p>
-<h3 id="23-metrics">2.3 Metrics</h3>
+<h3 id="24-metrics">2.4 Metrics</h3>
 <p>Two quantities are computed at each cooling time:</p>
 <ul>
-<li><strong>Specific activity</strong> [Bq/kg]: total radioactivity per unit mass, relevant
-for waste classification. Computed via <code>Material.get_activity(units='Bq/kg')</code>.</li>
+<li><strong>Waste disposal rating</strong> (dimensionless): the sum-of-fractions ratio of
+each nuclide's specific activity to its Fetter disposal limit. A value
+below 1.0 means the material meets low-level waste disposal criteria; above
+1.0 it exceeds them. Computed via <code>Material.waste_disposal_rating()</code> using
+the Fetter limits (Fetter et al. 1990), which extend the US 10 CFR 61
+methodology to fusion-relevant long-lived radionuclides. Plotted at
+waste-relevant timescales: 1 year, 10 years, 100 years.</li>
 <li><strong>Photon contact dose rate</strong> [Sv/hr]: effective dose rate at the surface of
 a semi-infinite slab, relevant for maintenance access. Computed via
 <code>Material.get_photon_contact_dose_rate(dose_quantity='effective')</code>,
 implementing the semi-infinite slab methodology with ICRP-116 dose
-coefficients and a build-up factor of 2.0.</li>
+coefficients and a build-up factor of 2.0. Plotted at maintenance-relevant
+timescales: 1 day, 1 week, 1 month.</li>
 </ul>
 <p>For each metric, the dominant contributing nuclide is also recorded.</p>
 <h2 id="3-results">3. Results</h2>
-<h3 id="31-elemental-activation-maps">3.1 Elemental Activation Maps</h3>
-<p>Figures 2–5 show the specific activity periodic tables at key cooling times.</p>
-<p><img src="results/periodic_table_activity_shutdown.png" alt="Activity at shutdown">
-<em>Figure 2: Specific activity (Bq/kg) at shutdown.</em></p>
-<p><img src="results/periodic_table_activity_1_day.png" alt="Activity at 1 day">
-<em>Figure 3: Specific activity (Bq/kg) at 1 day cooling.</em></p>
-<p><img src="results/periodic_table_activity_1_year.png" alt="Activity at 1 year">
-<em>Figure 4: Specific activity (Bq/kg) at 1 year cooling.</em></p>
-<p><img src="results/periodic_table_activity_100_years.png" alt="Activity at 100 years">
-<em>Figure 5: Specific activity (Bq/kg) at 100 years cooling.</em></p>
-<p>Figures 6–9 show the contact dose rate periodic tables at the same cooling times.</p>
-<p><img src="results/periodic_table_dose_shutdown.png" alt="Dose at shutdown">
-<em>Figure 6: Contact dose rate (Sv/hr) at shutdown.</em></p>
+<h3 id="31-waste-disposal-rating-maps">3.1 Waste Disposal Rating Maps</h3>
+<p>Figures 2–4 show the waste disposal rating periodic tables at long-term
+cooling times relevant to waste management.</p>
+<p><img src="results/periodic_table_wdr_1_year.png" alt="WDR at 1 year">
+<em>Figure 2: Waste disposal rating (Fetter limits) at 1 year cooling.</em></p>
+<p><img src="results/periodic_table_wdr_10_years.png" alt="WDR at 10 years">
+<em>Figure 3: Waste disposal rating (Fetter limits) at 10 years cooling.</em></p>
+<p><img src="results/periodic_table_wdr_100_years.png" alt="WDR at 100 years">
+<em>Figure 4: Waste disposal rating (Fetter limits) at 100 years cooling.</em></p>
+<h3 id="32-contact-dose-rate-maps">3.2 Contact Dose Rate Maps</h3>
+<p>Figures 5–7 show the contact dose rate periodic tables at maintenance-relevant
+cooling times.</p>
 <p><img src="results/periodic_table_dose_1_day.png" alt="Dose at 1 day">
-<em>Figure 7: Contact dose rate (Sv/hr) at 1 day cooling.</em></p>
-<p><img src="results/periodic_table_dose_1_year.png" alt="Dose at 1 year">
-<em>Figure 8: Contact dose rate (Sv/hr) at 1 year cooling.</em></p>
-<p><img src="results/periodic_table_dose_100_years.png" alt="Dose at 100 years">
-<em>Figure 9: Contact dose rate (Sv/hr) at 100 years cooling.</em></p>
+<em>Figure 5: Contact dose rate (Sv/hr) at 1 day cooling.</em></p>
+<p><img src="results/periodic_table_dose_1_week.png" alt="Dose at 1 week">
+<em>Figure 6: Contact dose rate (Sv/hr) at 1 week cooling.</em></p>
+<p><img src="results/periodic_table_dose_1_month.png" alt="Dose at 1 month">
+<em>Figure 7: Contact dose rate (Sv/hr) at 1 month cooling.</em></p>
 <p>The periodic table heatmaps reveal several patterns consistent with
 established reduced-activation knowledge:</p>
 <ul>
@@ -516,43 +585,291 @@ these are the building blocks of reduced-activation alloys.</li>
 <li><strong>High-activation elements</strong> (hot colours): Co, Ni, Nb, Mo, Ag — these are
 known to produce long-lived activation products (⁶⁰Co, ⁶³Ni, ⁹⁴Nb,
 ⁹⁹Mo→⁹⁹Tc, ¹⁰⁸ᵐAg).</li>
-<li><strong>Cooling-time dependence</strong>: Many elements appear problematic at shutdown
-but become acceptable at longer cooling times as short-lived products decay.
-The converse is also observed — some elements show persistent long-term
-activity from long-lived products.</li>
+<li><strong>Cooling-time dependence</strong>: Many elements appear problematic at short
+cooling times but become acceptable at longer times as short-lived products
+decay. The converse is also observed — some elements show persistent
+long-term waste disposal issues from long-lived products.</li>
 </ul>
-<h3 id="32-summary-elements-to-avoid">3.2 Summary: Elements to Avoid</h3>
-<p>Figures 10–12 identify elements that appear in the top 10 worst performers
-at any cooling time, for activity, dose, or both.</p>
-<p><img src="results/top10_activity.png" alt="Top 10 activity">
-<em>Figure 10: Elements ever appearing in the top 10 by specific activity.</em></p>
-<p><img src="results/top10_dose.png" alt="Top 10 dose">
-<em>Figure 11: Elements ever appearing in the top 10 by contact dose rate.</em></p>
-<p><img src="results/top10_combined.png" alt="Top 10 combined">
-<em>Figure 12: Elements ever appearing in the top 10 by specific activity
-(red), contact dose rate (orange), or both (dark red) at any cooling time.
-Green elements are never in the top 10 for either metric.</em></p>
-<h3 id="33-cooling-time-dependence">3.3 Cooling Time Dependence</h3>
-<p>The ranking of elements changes significantly with cooling time:</p>
+<h3 id="33-summary-problematic-elements">3.3 Summary: Problematic Elements</h3>
+<p>Figures 8–13 identify the 10 most problematic elements at each timescale for
+maintenance dose and waste disposal.</p>
+<p><img src="results/top10_dose_short.png" alt="Problematic short-term maintenance">
+<em>Figure 8: Problematic elements for short-term maintenance (1 day).</em></p>
+<p><img src="results/top10_dose_medium.png" alt="Problematic medium-term maintenance">
+<em>Figure 9: Problematic elements for medium-term maintenance (1 week).</em></p>
+<p><img src="results/top10_dose_long.png" alt="Problematic long-term maintenance">
+<em>Figure 10: Problematic elements for long-term maintenance (1 month).</em></p>
+<p><img src="results/top10_waste_short.png" alt="Problematic short-term waste">
+<em>Figure 11: Problematic elements for short-term waste (1 year).</em></p>
+<p><img src="results/top10_waste_medium.png" alt="Problematic medium-term waste">
+<em>Figure 12: Problematic elements for medium-term waste (10 years).</em></p>
+<p><img src="results/top10_waste_long.png" alt="Problematic long-term waste">
+<em>Figure 13: Problematic elements for long-term waste (100 years).</em></p>
+<p>Figure 14 combines all timescales into a single summary, showing elements that
+are problematic for waste disposal, maintenance dose, or both.</p>
+<p><img src="results/top10_combined.png" alt="Combined problematic elements">
+<em>Figure 14: Combined summary — elements problematic for waste (red),
+maintenance dose (orange), or both (dark red) across all timescales.
+Green elements are never in the problematic group for either metric.</em></p>
+<h3 id="34-cooling-time-dependence">3.4 Cooling Time Dependence</h3>
+<p>The choice of different timescales for each metric reflects their distinct
+practical relevance:</p>
 <ul>
-<li>At <strong>shutdown</strong>: Activity is dominated by short-lived products. Most
-transition metals show high activity.</li>
-<li>At <strong>1 day to 1 month</strong>: Relevant for maintenance scheduling. Elements
-producing products with half-lives of hours to weeks determine when
-access is possible.</li>
-<li>At <strong>1 year to 100 years</strong>: Relevant for waste disposal. The problematic
-elements at these timescales are those producing long-lived isotopes
-(e.g., ⁶⁰Co from Co, ⁶³Ni from Ni, ⁹⁴Nb from Nb).</li>
+<li>At <strong>1 day to 1 month</strong> (maintenance): Elements producing products with
+half-lives of hours to weeks determine when hands-on access is possible.
+The ranking changes as short-lived products decay through these timescales.</li>
+<li>At <strong>1 year to 100 years</strong> (waste): The problematic elements at these
+timescales are those producing long-lived isotopes (e.g., ⁶⁰Co from Co,
+⁶³Ni from Ni, ⁹⁴Nb from Nb). A waste disposal rating above 1.0 at any
+of these timescales indicates the material cannot qualify as low-level waste
+under Fetter limits.</li>
 </ul>
-<h3 id="34-dominant-contributing-nuclides">3.4 Dominant Contributing Nuclides</h3>
-<p>[Table: Top contributing nuclides at 1 year and 100 years for key structural
-elements — to be populated from <code>element_data.json</code>]</p>
+<h3 id="35-dominant-contributing-nuclides">3.5 Dominant Contributing Nuclides</h3>
+<p>Tables 1 and 2 show the waste disposal rating, contact dose rate, and dominant
+contributing nuclides for key structural and alloying elements at 1 year and
+100 years cooling.</p>
+<p><em>Table 1: Dominant nuclides at 1 year cooling.</em></p>
+<table>
+<thead>
+<tr>
+<th>Element</th>
+<th>WDR</th>
+<th>Dominant (WDR)</th>
+<th>Dose (Sv/hr)</th>
+<th>Dominant (dose)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Fe</td>
+<td>2.80e-05</td>
+<td>Co-60</td>
+<td>2.41e+03</td>
+<td>Mn-54</td>
+</tr>
+<tr>
+<td>Cr</td>
+<td>3.63e-08</td>
+<td>Ar-39</td>
+<td>2.70e+00</td>
+<td>Mn-54</td>
+</tr>
+<tr>
+<td>W</td>
+<td>5.43e-04</td>
+<td>Hf-182</td>
+<td>3.44e+02</td>
+<td>Ta-182</td>
+</tr>
+<tr>
+<td>V</td>
+<td>1.01e-07</td>
+<td>Ar-42</td>
+<td>1.16e-01</td>
+<td>Sc-46</td>
+</tr>
+<tr>
+<td>Ti</td>
+<td>7.07e-04</td>
+<td>Ar-39</td>
+<td>5.95e+02</td>
+<td>Sc-46</td>
+</tr>
+<tr>
+<td>Ni</td>
+<td>9.02e-01</td>
+<td>Ni-59</td>
+<td>4.54e+04</td>
+<td>Co-60</td>
+</tr>
+<tr>
+<td>Co</td>
+<td>6.29e-01</td>
+<td>Ni-59</td>
+<td>2.27e+06</td>
+<td>Co-60</td>
+</tr>
+<tr>
+<td>Mo</td>
+<td>4.21e+03</td>
+<td>Tc-99</td>
+<td>1.23e+01</td>
+<td>Y-88</td>
+</tr>
+<tr>
+<td>Nb</td>
+<td>8.34e+04</td>
+<td>Nb-94</td>
+<td>3.41e+02</td>
+<td>Nb-94</td>
+</tr>
+<tr>
+<td>Ta</td>
+<td>4.06e-02</td>
+<td>Hf-182</td>
+<td>2.76e+03</td>
+<td>Ta-182</td>
+</tr>
+<tr>
+<td>Cu</td>
+<td>6.37e-01</td>
+<td>Ni-63</td>
+<td>1.18e+04</td>
+<td>Co-60</td>
+</tr>
+<tr>
+<td>Al</td>
+<td>1.02e+02</td>
+<td>Al-26</td>
+<td>9.85e-01</td>
+<td>Na-22</td>
+</tr>
+<tr>
+<td>Si</td>
+<td>2.97e-01</td>
+<td>Al-26</td>
+<td>7.73e-03</td>
+<td>Na-22</td>
+</tr>
+<tr>
+<td>Mn</td>
+<td>5.43e-13</td>
+<td>Ar-42</td>
+<td>3.06e+04</td>
+<td>Mn-54</td>
+</tr>
+</tbody>
+</table>
+<p><em>Table 2: Dominant nuclides at 100 years cooling.</em></p>
+<table>
+<thead>
+<tr>
+<th>Element</th>
+<th>WDR</th>
+<th>Dominant (WDR)</th>
+<th>Dose (Sv/hr)</th>
+<th>Dominant (dose)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Fe</td>
+<td>6.55e-06</td>
+<td>Ni-59</td>
+<td>3.81e-04</td>
+<td>Co-60</td>
+</tr>
+<tr>
+<td>Cr</td>
+<td>2.31e-08</td>
+<td>Ar-39</td>
+<td>6.12e-08</td>
+<td>K-42</td>
+</tr>
+<tr>
+<td>W</td>
+<td>5.43e-04</td>
+<td>Hf-182</td>
+<td>1.59e-06</td>
+<td>Ta-182</td>
+</tr>
+<tr>
+<td>V</td>
+<td>1.43e-08</td>
+<td>Ar-42</td>
+<td>7.80e-07</td>
+<td>K-42</td>
+</tr>
+<tr>
+<td>Ti</td>
+<td>4.61e-04</td>
+<td>Ar-39</td>
+<td>1.06e-03</td>
+<td>K-42</td>
+</tr>
+<tr>
+<td>Ni</td>
+<td>8.08e-01</td>
+<td>Ni-59</td>
+<td>9.74e-02</td>
+<td>Co-60</td>
+</tr>
+<tr>
+<td>Co</td>
+<td>3.38e-01</td>
+<td>Ni-59</td>
+<td>5.02e+00</td>
+<td>Co-60</td>
+</tr>
+<tr>
+<td>Mo</td>
+<td>4.18e+03</td>
+<td>Tc-99</td>
+<td>1.10e+00</td>
+<td>Nb-91</td>
+</tr>
+<tr>
+<td>Nb</td>
+<td>8.31e+04</td>
+<td>Nb-94</td>
+<td>2.42e+02</td>
+<td>Nb-94</td>
+</tr>
+<tr>
+<td>Ta</td>
+<td>4.06e-02</td>
+<td>Hf-182</td>
+<td>1.11e-04</td>
+<td>Ta-182</td>
+</tr>
+<tr>
+<td>Cu</td>
+<td>4.32e-01</td>
+<td>Fe-60</td>
+<td>2.56e-02</td>
+<td>Co-60</td>
+</tr>
+<tr>
+<td>Al</td>
+<td>1.02e+02</td>
+<td>Al-26</td>
+<td>2.50e-01</td>
+<td>Al-26</td>
+</tr>
+<tr>
+<td>Si</td>
+<td>2.97e-01</td>
+<td>Al-26</td>
+<td>7.04e-04</td>
+<td>Al-26</td>
+</tr>
+<tr>
+<td>Mn</td>
+<td>7.09e-14</td>
+<td>Ar-42</td>
+<td>4.22e-12</td>
+<td>K-42</td>
+</tr>
+</tbody>
+</table>
+<p>Notable observations:</p>
+<ul>
+<li><strong>Fe, Cr, V, Mn</strong> all have WDR well below 1.0 at both timescales —
+confirming their suitability as reduced-activation structural elements.</li>
+<li><strong>Ni and Co</strong> approach or exceed WDR = 1.0 due to Ni-59 and Ni-63
+production, while Co-60 drives extreme contact dose rates.</li>
+<li><strong>Nb and Mo</strong> are the worst performers by WDR (8.3×10⁴ and 4.2×10³
+respectively), driven by Nb-94 and Tc-99 — long-lived products with
+no practical decay within engineering timescales.</li>
+<li><strong>Al</strong> exceeds WDR = 1.0 due to Al-26 (half-life 7.2×10⁵ years),
+which persists unchanged from 1 year to 100 years.</li>
+</ul>
 <h2 id="4-discussion">4. Discussion</h2>
 <h3 id="41-implications-for-alloy-design">4.1 Implications for Alloy Design</h3>
-<p>The periodic table heatmaps directly inform alloy design by providing an
-<strong>activation penalty factor</strong> for each element. For example, if element A
-has 100× the specific activity of element B at 100-year cooling, then
-0.1 wt% of A in a steel contributes the same waste burden as 10 wt% of B.
+<p>The periodic table heatmaps directly inform alloy design by providing a
+<strong>waste disposal penalty</strong> for each element. For example, if element A has
+a waste disposal rating of 1000 and element B has a rating of 1, then even
+a small fraction of A in an alloy will dominate the waste classification.
 This framing is immediately actionable for metallurgists selecting
 alloying additions.</p>
 <p>Impurity specifications are also highlighted: trace elements like Co and Ag,
@@ -572,6 +889,9 @@ where alloying additions are dilute, this is expected to be a minor effect.</li>
 first-wall structures where the flux is externally determined.</li>
 <li><strong>No Bremsstrahlung</strong>: The contact dose calculation omits Bremsstrahlung
 contributions, which may be relevant for beta-emitters in close proximity.</li>
+<li><strong>Fetter limits scope</strong>: The Fetter limits cover a specific set of
+fusion-relevant nuclides. Nuclides not in the Fetter list do not contribute
+to the waste disposal rating, even if they are radioactive.</li>
 </ul>
 <h2 id="5-conclusions">5. Conclusions</h2>
 <p>We have demonstrated a systematic, open-source approach to fusion material
@@ -580,8 +900,10 @@ The element-by-element periodic table visualization provides an intuitive
 tool for material selection that:</p>
 <ol>
 <li>Reproduces established reduced-activation criteria.</li>
-<li>Quantifies activation penalty factors for each element at multiple
-cooling times.</li>
+<li>Quantifies waste disposal ratings (Fetter limits) and contact dose rates
+for each element at relevant cooling times.</li>
+<li>Separates maintenance-relevant timescales (days to months) from
+waste-relevant timescales (years to decades).</li>
 <li>Is fully reproducible with openly available tools.</li>
 </ol>
 <p>The scripts and data are provided as supplementary material. Users can
@@ -589,12 +911,47 @@ regenerate the analysis with different spectra, irradiation conditions, or
 nuclear data libraries by modifying the input parameters.</p>
 <h2 id="references">References</h2>
 <ul>
-<li>Romano, P.K. et al. (2015). &quot;OpenMC: A state-of-the-art Monte Carlo code
-for research and development.&quot; Annals of Nuclear Energy, 82, 90–97.</li>
+<li>Alba, G. et al. (2022). &quot;Materials to Be Used in Future Magnetic Confinement
+Fusion Reactors.&quot; Materials, 15, 6853.
+DOI: <a href="https://doi.org/10.3390/ma15196853">10.3390/ma15196853</a></li>
+<li>Bae, J.W. et al. (2023). &quot;Shutdown Dose Rate Analysis with the Shift Monte
+Carlo Code.&quot; ORNL report. <!-- TODO: confirm exact report number --></li>
+<li>Brown, D.A. et al. (2018). &quot;ENDF/B-VIII.0: The 8th major release of the
+nuclear reaction data library with CIELO-project cross sections, new
+standards and thermal scattering data.&quot; Nuclear Data Sheets, 148, 1–142.</li>
+<li>Fetter, S., Cheng, E.T., Mann, F.M. (1990). &quot;Long-term radioactive waste
+from fusion reactors: Part II.&quot; Fusion Engineering and Design, 13, 239–248.</li>
+<li>Gilbert, M.R. et al. (2016). &quot;Handbook of Activation, Transmutation, and
+Radiation Damage Properties of the Elements Simulated Using FISPACT-II &amp;
+TENDL-2015.&quot; CCFE-R(16)36, UKAEA.
+Available at: https://scientific-publications.ukaea.uk/wp-content/uploads/CCFE-R1636.pdf</li>
+<li>Gorley, M.J. (2015). &quot;Prospects for reduced activation steel for fusion
+plant.&quot; Materials Research Innovations, 19:5.
+DOI: <a href="https://doi.org/10.1179/1743284714Y.0000000732">10.1179/1743284714Y.0000000732</a></li>
+<li>Harries, D.R. (1992). &quot;Evaluation of reduced-activation options for fusion
+reactors.&quot; Journal of Nuclear Materials, 191–194, 255–260.
+DOI: <a href="https://doi.org/10.1016/0022-3115(92)90331-7">10.1016/0022-3115(92)90331-7</a></li>
 <li>ICRP Publication 116 (2010). &quot;Conversion coefficients for radiological
 protection quantities for external radiation exposures.&quot;</li>
+<li>Noda, T. (1988). &quot;Materials selection for reduced activation of fusion
+reactors.&quot; Journal of Nuclear Materials, 155–157, 722–729.
+DOI: <a href="https://doi.org/10.1016/0022-3115(88)90375-3">10.1016/0022-3115(88)90375-3</a></li>
+<li>Palermo, I. et al. &quot;Shutdown dose rate assessment with the Advanced D1S
+method for the European DCLL DEMO.&quot; EUROfusion report.<!-- TODO: confirm exact citation / DOI -->
+</li>
+<li>Romano, P.K. et al. (2015). &quot;OpenMC: A state-of-the-art Monte Carlo code
+for research and development.&quot; Annals of Nuclear Energy, 82, 90–97.</li>
+<li>Şahin, S. (2019). &quot;Selection Criteria for Fusion Reactor Structures.&quot;
+Journal of Thermal Engineering, 5(2), Special Issue 9, 46–57.</li>
+<li>Victoria, M., Baluc, N., Spätig, P. (2000). &quot;Structural Materials for
+Fusion Reactors.&quot; Proc. IAEA TCM on Fusion Reactor Materials, Stresa.
+Available at: https://www-pub.iaea.org/MTCD/publications/PDF/csp_008c/pdf/ftp1_13.pdf<!-- TODO: confirm exact proceedings title / page numbers -->
+</li>
 <li>UKAEA. &quot;Reference input spectra.&quot; Available at:
 https://fispact.ukaea.uk/wiki/Reference_input_spectra</li>
+<li>Zinkle, S.J., Ghoniem, N.M. (2000). &quot;Overview of materials research for
+fusion reactors.&quot; Fusion Engineering and Design, 51–52, 55–71.
+DOI: <a href="https://doi.org/10.1016/S0920-3796(00)00319-3">10.1016/S0920-3796(00)00319-3</a></li>
 </ul>
 <h2 id="appendix-reproducing-this-analysis">Appendix: Reproducing This Analysis</h2>
 <pre class="hljs"><code><div><span class="hljs-comment"># 1. Generate elemental activation data (test: 10 elements)</span>
@@ -622,6 +979,32 @@ and depletion chain, HCPB-FW spectrum file.</p>
 <a href="https://fispact.ukaea.uk/wiki/Reference_input_spectra">reference input spectra</a>
 and can be used in place of the HCPB first-wall spectrum by passing a different
 file to the <code>--spectrum</code> argument.</p>
+<h2 id="todo">TODO</h2>
+<p>Items to resolve before finalising:</p>
+<h3 id="reference-details-to-confirm">Reference details to confirm</h3>
+<ul>
+<li>Bae, J.W. et al. — confirm exact ORNL report number / year for &quot;Shutdown
+Dose Rate Analysis with the Shift Monte Carlo Code&quot;</li>
+<li>Palermo, I. et al. — confirm exact citation, year, and DOI for &quot;Shutdown
+dose rate assessment with the Advanced D1S method for the European DCLL DEMO&quot;</li>
+<li>Victoria, M. et al. (2000) — confirm exact proceedings title and page
+numbers for IAEA TCM paper &quot;Structural Materials for Fusion Reactors&quot;</li>
+</ul>
+<h3 id="papers-to-read-and-potentially-cite-in-section-11">Papers to read and potentially cite in Section 1.1</h3>
+<ul>
+<li>Gilbert, M.R. et al. CCFE-R(16)36 — full frosted PDF (&gt;10 MB) could not be fetched;
+read and verify summary of content, confirm if later TENDL-2017 or
+TENDL-2019 updates were published as separate reports</li>
+<li>Piet, S.J., Cheng, E.T., Herring, S. (late 1980s) — original
+reduced-activation element screening work; check if this should be cited
+alongside Noda (1988)</li>
+<li>Conn, R.W. et al. (1983) &quot;Panel report on low activation materials for
+fusion applications&quot; — early foundational work on the concept</li>
+<li>Ehrlich, K. (1999) Phil. Trans. R. Soc. Lond. A 357, 595 — referenced by
+Victoria et al.; may be relevant as a review of reduced-activation criteria</li>
+<li>Any Khripunov or ITER material selection reports that cover element-level
+activation screening</li>
+</ul>
 
 </body>
 </html>
