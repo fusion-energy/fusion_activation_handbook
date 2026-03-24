@@ -2,8 +2,8 @@
 """Generate periodic table heatmaps of activation metrics.
 
 Reads element_data.json from generate_data.py and produces color-coded
-periodic tables showing specific activity (Bq/kg) and photon contact dose
-rate (Sv/hr) at each cooling time.
+periodic tables showing waste disposal rating (Fetter limits) and photon
+contact dose rate (Sv/hr) at each cooling time.
 
 Usage:
     python plot_periodic_table.py
@@ -177,14 +177,12 @@ def _global_range(data, metric_key):
 def plot_single_table(data, metric, cooling_idx, output_path):
     """Single periodic-table figure for one metric at one cooling time."""
     cooling = data["metadata"]["cooling_times"]
-    key = "activity_Bq_per_kg" if metric == "activity" else "contact_dose_Sv_per_hr"
-    units = "Bq/kg" if metric == "activity" else "Sv/hr"
+    key = "waste_disposal_rating" if metric == "wdr" else "contact_dose_Sv_per_hr"
+    units = "WDR (Fetter)" if metric == "wdr" else "Sv/hr"
     label = cooling[cooling_idx]
 
-    # Use global range across all cooling times so colour scale is consistent
-    vmin, vmax = _global_range(data, key)
     vals = _extract_values(data, key, cooling_idx)
-    metric_label = "Specific Activity" if metric == "activity" else "Contact Dose Rate"
+    metric_label = "Waste Disposal Rating (Fetter)" if metric == "wdr" else "Contact Dose Rate"
     irr = data["metadata"]["irradiation_fpy"]
     wl = data["metadata"]["wall_loading_MW_m2"]
     title = (
@@ -194,38 +192,57 @@ def plot_single_table(data, metric, cooling_idx, output_path):
 
     cmap_name = "viridis" if metric == "dose" else "YlOrRd"
     fig, ax = plt.subplots(figsize=(18, 9))
-    draw_periodic_table(ax, vals, title, units, cmap_name=cmap_name,
-                        vmin=vmin, vmax=vmax)
+    draw_periodic_table(ax, vals, title, units, cmap_name=cmap_name)
     plt.savefig(output_path, dpi=200, bbox_inches="tight")
     plt.close()
     print(f"Saved: {output_path}")
 
 
 # ============================================================================
-# "Ever in top N" summary plots
+# Summary plots — problematic elements by category
 # ============================================================================
 
-def _find_top_n_elements(data, metric_key, n=10):
-    """Return the set of elements that appear in the top *n* at any cooling time."""
-    cooling_times = data["metadata"]["cooling_times"]
-    top_set = set()
-    for idx in range(len(cooling_times)):
-        vals = _extract_values(data, metric_key, idx)
-        ranked = sorted(vals, key=lambda e: vals[e], reverse=True)
-        top_set.update(ranked[:n])
-    return top_set
+# Cooling time categories mapped to data array indices
+# (indices match COOLING_LABELS in generate_data.py)
+COOLING_INDEX = {
+    "shutdown": 0, "1 hour": 1, "1 day": 2, "1 week": 3,
+    "1 month": 4, "1 year": 5, "5 years": 6, "10 years": 7,
+    "50 years": 8, "100 years": 9,
+}
+
+SUMMARY_CATEGORIES = [
+    # (label, metric_key, cooling_time, filename_tag)
+    ("Problematic for Short-Term Maintenance (1 day)",
+     "contact_dose_Sv_per_hr", "1 day", "dose_short"),
+    ("Problematic for Medium-Term Maintenance (1 week)",
+     "contact_dose_Sv_per_hr", "1 week", "dose_medium"),
+    ("Problematic for Long-Term Maintenance (1 month)",
+     "contact_dose_Sv_per_hr", "1 month", "dose_long"),
+    ("Problematic for Short-Term Waste (1 year)",
+     "waste_disposal_rating", "1 year", "waste_short"),
+    ("Problematic for Medium-Term Waste (10 years)",
+     "waste_disposal_rating", "10 years", "waste_medium"),
+    ("Problematic for Long-Term Waste (100 years)",
+     "waste_disposal_rating", "100 years", "waste_long"),
+]
 
 
-def plot_top_n_table(ax, data, metric_key, n, title):
-    """Draw a red/green periodic table: red = ever in top *n*, green = never."""
-    top = _find_top_n_elements(data, metric_key, n)
+def _find_top_n_at_time(data, metric_key, cooling_idx, n=10):
+    """Return the set of top *n* elements at a specific cooling time."""
+    vals = _extract_values(data, metric_key, cooling_idx)
+    ranked = sorted(vals, key=lambda e: vals[e], reverse=True)
+    return set(ranked[:n])
+
+
+def _draw_red_green_table(ax, data, top_set, title, n):
+    """Draw a red/green periodic table: red = in top set, green = not."""
     all_elems = set(data["elements"].keys())
 
     pad = 0.06
     for elem, (row, col) in PERIODIC_TABLE.items():
         x, y = col, -row
 
-        if elem in top:
+        if elem in top_set:
             color = "#e53935"   # red
             tc = "white"
         elif elem in all_elems:
@@ -257,77 +274,69 @@ def plot_top_n_table(ax, data, metric_key, n, title):
     ax.axis("off")
     ax.set_title(title, fontsize=11, fontweight="bold", pad=10)
 
-    # Legend
     legend_patches = [
-        mpatches.Patch(facecolor="#e53935", edgecolor="#666", label=f"Top {n} at any cooling time"),
-        mpatches.Patch(facecolor="#43a047", edgecolor="#666", label="Never in top group"),
-        mpatches.Patch(facecolor="#f5f5f5", edgecolor="#666", label="No data"),
+        mpatches.Patch(facecolor="#e53935", edgecolor="#666",
+                       label=f"Problematic (worst {n})"),
+        mpatches.Patch(facecolor="#43a047", edgecolor="#666",
+                       label="Not in problematic group"),
+        mpatches.Patch(facecolor="#f5f5f5", edgecolor="#666",
+                       label="No data"),
     ]
     ax.legend(handles=legend_patches, loc="lower left", fontsize=9,
               framealpha=0.9)
 
 
 def plot_top_n_summaries(data, output_dir, n=10):
-    """Generate three summary periodic tables: activity, dose, combined."""
+    """Generate 6 category summary tables plus a combined waste/dose table."""
     irr = data["metadata"]["irradiation_fpy"]
     wl = data["metadata"]["wall_loading_MW_m2"]
     subtitle = f"{irr} FPY DT First-Wall ({wl} MW/m²)"
 
-    act_key = "activity_Bq_per_kg"
-    dose_key = "contact_dose_Sv_per_hr"
+    # Collect top sets for the combined plot
+    all_top_dose = set()
+    all_top_waste = set()
 
-    # Activity
+    for label, metric_key, cooling_time, tag in SUMMARY_CATEGORIES:
+        cooling_idx = COOLING_INDEX[cooling_time]
+        top_set = _find_top_n_at_time(data, metric_key, cooling_idx, n)
+
+        if "dose" in metric_key:
+            all_top_dose |= top_set
+        else:
+            all_top_waste |= top_set
+
+        fig, ax = plt.subplots(figsize=(18, 9))
+        _draw_red_green_table(ax, data, top_set,
+                              f"{label}\n{subtitle}", n)
+        path = os.path.join(output_dir, f"top{n}_{tag}.png")
+        plt.savefig(path, dpi=200, bbox_inches="tight")
+        plt.close()
+        print(f"Saved: {path}")
+
+    # --- Combined: problematic waste / dose / both ---
     fig, ax = plt.subplots(figsize=(18, 9))
-    plot_top_n_table(ax, data, act_key, n,
-                     f"Elements Ever in Top {n} by Specific Activity\n{subtitle}")
-    path = os.path.join(output_dir, f"top{n}_activity.png")
-    plt.savefig(path, dpi=200, bbox_inches="tight")
-    plt.close()
-    print(f"Saved: {path}")
-
-    # Dose
-    fig, ax = plt.subplots(figsize=(18, 9))
-    plot_top_n_table(ax, data, dose_key, n,
-                     f"Elements Ever in Top {n} by Contact Dose Rate\n{subtitle}")
-    path = os.path.join(output_dir, f"top{n}_dose.png")
-    plt.savefig(path, dpi=200, bbox_inches="tight")
-    plt.close()
-    print(f"Saved: {path}")
-
-    # Combined: union of top-N activity and top-N dose
-    top_act = _find_top_n_elements(data, act_key, n)
-    top_dose = _find_top_n_elements(data, dose_key, n)
-    combined = top_act | top_dose
-
-    fig, ax = plt.subplots(figsize=(18, 9))
-    # Draw manually since combined comes from two sources
     all_elems = set(data["elements"].keys())
     pad = 0.06
     for elem, (row, col) in PERIODIC_TABLE.items():
         x, y = col, -row
-        in_act = elem in top_act
-        in_dose = elem in top_dose
+        in_waste = elem in all_top_waste
+        in_dose = elem in all_top_dose
 
-        if in_act and in_dose:
+        if in_waste and in_dose:
             color = "#b71c1c"   # dark red — both
             tc = "white"
-            marker = "A+D"
-        elif in_act:
-            color = "#e53935"   # red — activity only
+        elif in_waste:
+            color = "#e53935"   # red — waste only
             tc = "white"
-            marker = "A"
         elif in_dose:
             color = "#f57c00"   # orange — dose only
             tc = "white"
-            marker = "D"
         elif elem in all_elems:
             color = "#43a047"   # green
             tc = "white"
-            marker = ""
         else:
             color = "#f5f5f5"
             tc = "#aaaaaa"
-            marker = ""
 
         rect = mpatches.FancyBboxPatch(
             (x + pad, y - 1 + pad), 1 - 2 * pad, 1 - 2 * pad,
@@ -340,9 +349,6 @@ def plot_top_n_summaries(data, output_dir, n=10):
                 fontweight="bold", color=tc)
         ax.text(x + 0.5, y - 0.15, str(ELEMENT_Z.get(elem, "")),
                 ha="center", va="center", fontsize=5, color=tc, alpha=0.7)
-        if marker:
-            ax.text(x + 0.5, y - 0.7, marker,
-                    ha="center", va="center", fontsize=5, color=tc, alpha=0.8)
 
     ax.text(2.5, -5.5, "*", ha="center", va="center", fontsize=14, color="#666")
     ax.text(2.5, -7.5, "*", ha="center", va="center", fontsize=14, color="#666")
@@ -351,18 +357,18 @@ def plot_top_n_summaries(data, output_dir, n=10):
     ax.set_aspect("equal")
     ax.axis("off")
     ax.set_title(
-        f"Elements Ever in Top {n} by Activity and/or Dose\n{subtitle}",
+        f"Problematic Elements for Waste and/or Maintenance\n{subtitle}",
         fontsize=11, fontweight="bold", pad=10,
     )
     legend_patches = [
         mpatches.Patch(facecolor="#b71c1c", edgecolor="#666",
-                       label=f"Top {n} activity AND dose"),
+                       label="Problematic for waste AND dose"),
         mpatches.Patch(facecolor="#e53935", edgecolor="#666",
-                       label=f"Top {n} activity only"),
+                       label="Problematic for waste only"),
         mpatches.Patch(facecolor="#f57c00", edgecolor="#666",
-                       label=f"Top {n} dose only"),
+                       label="Problematic for dose only"),
         mpatches.Patch(facecolor="#43a047", edgecolor="#666",
-                       label="Never in top group"),
+                       label="Not in problematic group"),
         mpatches.Patch(facecolor="#f5f5f5", edgecolor="#666",
                        label="No data"),
     ]
@@ -385,28 +391,38 @@ def main():
     )
     parser.add_argument("--input", default="results/element_data.json")
     parser.add_argument("--output-dir", default="results")
-    parser.add_argument("--metric", choices=["activity", "dose", "both"],
+    parser.add_argument("--metric", choices=["wdr", "dose", "both"],
                         default="both")
     parser.add_argument("--top-n", type=int, default=10,
-                        help="Number of worst elements to flag in summary plots")
+                        help="Number of worst elements to flag as problematic in summary plots")
     args = parser.parse_args()
 
     with open(args.input) as f:
         data = json.load(f)
 
     os.makedirs(args.output_dir, exist_ok=True)
-    metrics = ["activity", "dose"] if args.metric == "both" else [args.metric]
+    metrics = ["wdr", "dose"] if args.metric == "both" else [args.metric]
 
-    cooling_tags = [
+    # All cooling tags with their indices into the data arrays
+    all_cooling_tags = [
         "shutdown", "1_hour", "1_day", "1_week",
         "1_month", "1_year", "5_years", "10_years", "50_years", "100_years",
     ]
+
+    # WDR: long-term waste-relevant timescales
+    # Dose: maintenance-relevant timescales
+    metric_cooling_tags = {
+        "wdr": ["1_year", "10_years", "100_years"],
+        "dose": ["1_day", "1_week", "1_month"],
+    }
+
     for m in metrics:
-        for idx, tag in enumerate(cooling_tags):
+        for tag in metric_cooling_tags[m]:
+            idx = all_cooling_tags.index(tag)
             path = os.path.join(args.output_dir, f"periodic_table_{m}_{tag}.png")
             plot_single_table(data, m, idx, path)
 
-    # Summary "ever in top N" plots
+    # Summary problematic element plots
     plot_top_n_summaries(data, args.output_dir, n=args.top_n)
 
 

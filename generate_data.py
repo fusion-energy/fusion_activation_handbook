@@ -2,8 +2,9 @@
 """Systematic activation screening of elements under DT fusion first-wall irradiation.
 
 Depletes each element (Z=1-83) under a representative DT fusion neutron spectrum
-for 40 full-power years, then tracks activity and contact dose rate through
-multiple cooling times. Results saved as JSON for visualization.
+for 40 full-power years, then tracks waste disposal rating (Fetter limits) and
+contact dose rate through multiple cooling times. Results saved as JSON for
+visualization.
 
 Usage:
     python generate_data.py              # Run all 81 elements
@@ -150,8 +151,8 @@ def load_spectrum_file(path):
 def deplete_element(element, spectrum, energy_groups, chain_file=None):
     """Deplete a pure element and extract activation metrics at each cooling time.
 
-    Returns dict with activity (Bq/kg), contact dose (Sv/hr), and dominant
-    contributing nuclides at each cooling-time snapshot.
+    Returns dict with waste disposal rating (Fetter limits), contact dose
+    (Sv/hr), and dominant contributing nuclides at each cooling-time snapshot.
     """
     mat = openmc.Material()
     mat.add_element(element, 1.0)
@@ -172,20 +173,20 @@ def deplete_element(element, spectrum, energy_groups, chain_file=None):
     # results_list[0] = initial (pristine), [1] = end of irradiation, …
     depleted = results_list[1:]
 
-    activities = []
+    wdr_values = []
     dose_rates = []
-    dominant_act = []
+    dominant_wdr = []
     dominant_dose = []
 
     for mat_step in depleted:
-        # --- specific activity ---
-        act = mat_step.get_activity(units="Bq/kg")
-        act_nuc = mat_step.get_activity(units="Bq/kg", by_nuclide=True)
-        activities.append(act)
-        if act_nuc:
-            dominant_act.append(max(act_nuc, key=act_nuc.get))
+        # --- waste disposal rating (Fetter limits) ---
+        wdr = mat_step.waste_disposal_rating()
+        wdr_nuc = mat_step.waste_disposal_rating(by_nuclide=True)
+        wdr_values.append(wdr)
+        if wdr_nuc:
+            dominant_wdr.append(max(wdr_nuc, key=wdr_nuc.get))
         else:
-            dominant_act.append(None)
+            dominant_wdr.append(None)
 
         # --- contact dose rate ---
         dose = mat_step.get_photon_contact_dose_rate(dose_quantity="effective")
@@ -201,9 +202,9 @@ def deplete_element(element, spectrum, energy_groups, chain_file=None):
     return {
         "Z": ELEMENT_Z[element],
         "symbol": element,
-        "activity_Bq_per_kg": activities,
+        "waste_disposal_rating": wdr_values,
         "contact_dose_Sv_per_hr": dose_rates,
-        "dominant_nuclide_activity": dominant_act,
+        "dominant_nuclide_wdr": dominant_wdr,
         "dominant_nuclide_dose": dominant_dose,
     }
 
@@ -279,9 +280,9 @@ def main():
                                    chain_file=reduced_chain)
             results[element] = data
             dt = time.time() - t0
-            act0 = data["activity_Bq_per_kg"][0]
+            wdr0 = data["waste_disposal_rating"][0]
             dose0 = data["contact_dose_Sv_per_hr"][0]
-            print(f"OK ({dt:.1f}s)  shutdown: {act0:.2e} Bq/kg  {dose0:.2e} Sv/hr")
+            print(f"OK ({dt:.1f}s)  shutdown: WDR={wdr0:.2e}  {dose0:.2e} Sv/hr")
         except Exception as exc:
             dt = time.time() - t0
             print(f"FAILED ({dt:.1f}s): {exc}")
@@ -302,9 +303,11 @@ def main():
             "cooling_times": COOLING_LABELS,
             "density_g_cm3": 1.0,
             "volume_cm3": 1.0,
+            "waste_limits": "Fetter",
             "notes": (
-                "Density/volume are arbitrary; Bq/kg and Sv/hr are "
-                "density-independent in this transport-free framework."
+                "Density/volume are arbitrary. Waste disposal rating uses "
+                "Fetter limits (sum-of-fractions; <1 = meets disposal limits). "
+                "Sv/hr are density-independent in this transport-free framework."
             ),
         },
         "elements": results,
